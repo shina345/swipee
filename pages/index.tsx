@@ -47,15 +47,15 @@ const Home: NextPage = () => {
             <span className="hamburger-icon"></span>
           </button>
           <ul className={`nav-list ${isMenuOpen ? 'open' : ''}`}>
-            <li><a href="/" onClick={toggleMenu}>Home</a></li>
-            <li><a href="#features" onClick={toggleMenu}>Features</a></li>
-            <li><a href="#services" onClick={toggleMenu}>Services</a></li>
-            <li><a href="#faqs" onClick={toggleMenu}>FAQs</a></li>
-            <li><a href="#contact" onClick={toggleMenu}>Contact Us</a></li>
+            <li><link ="/" onClick={toggleMenu}>Home</link ></li>
+            <li><link ="#features" onClick={toggleMenu}>Features</link></li>
+            <li><link ="#services" onClick={toggleMenu}>Services</link</li>
+            <li><link ="#faqs" onClick={toggleMenu}>FAQs</link></li>
+            <li><link ="#contact" onClick={toggleMenu}>Contact Us</link></li>
           </ul>
           <div className="buttons">
-            <button className="login"><a href="/login">Login</a></button>
-            <button className="signup"><a href="/signup">Signup</a></button>
+            <button className="login"><link ="/login">Login</link</button>
+            <button className="signup"><link="/signup">Signup</link></button>
           </div>
         </nav>
       </header>
