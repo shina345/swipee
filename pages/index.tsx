@@ -48,11 +48,11 @@ const Home: NextPage = () => {
             <span className="hamburger-icon"></span>
           </button>
           <ul className={`nav-list ${isMenuOpen ? 'open' : ''}`}>
-            <li><link href="/" onClick={toggleMenu}>Home</link ></li>
-            <li><link href="#features" onClick={toggleMenu}>Features</link></li>
-            <li><link href="#services" onClick={toggleMenu}>Services</link</li>
-            <li><link href="#faqs" onClick={toggleMenu}>FAQs</link></li>
-            <li><link href="#contact" onClick={toggleMenu}>Contact Us</link></li>
+            <li><Link href="/" onClick={toggleMenu}>Home</Link ></li>
+            <li><Link href="#features" onClick={toggleMenu}>Features</link></li>
+            <li><Link href="#services" onClick={toggleMenu}>Services</Link</li>
+            <li><Link href="#faqs" onClick={toggleMenu}>FAQs</Link></li>
+            <li><Link href="#contact" onClick={toggleMenu}>Contact Us</Link></li>
           </ul>
           <div className="buttons">
             <button className="login"><link href ="/login">Login</link</button>
@@ -71,8 +71,8 @@ const Home: NextPage = () => {
             </h1>
             <p>Enjoy the best rates and quick support. Pay for cable, TV, and utilities with ease. Get affordable airtime and data plans.</p>
             <div className="buttons">
-              <button className="login"><link href="/login">Login</link></button>
-              <button className="signup"><link href="/signup">Signup</link></button>
+              <button className="login"><Link href="/login">Login</link></button>
+              <button className="signup"><Link href="/signup">Signup</link></button>
             </div>
           </div>
           <div className="hero-image">
