@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Swipe Telecom - Airtime, Data, and Bill Payments</title>
         <meta name="description" content="Your one-stop platform for airtime, data, and bill payments in Nigeria." />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta property="og:title" content="Swipe Telecom - Airtime, Data, and Bill Payments" />
         <meta property="og:description" content="Your one-stop platform for airtime, data, and bill payments in Nigeria." />
         <meta property="og:image" content="/asset/swipelogo.png" />
@@ -32,10 +32,10 @@ const Home: NextPage = () => {
             <Image
               src="/asset/swipelogo.png"
               alt="Swipe Telecom Logo"
-              width={36}
-              height={36}
+              width={40}
+              height={40}
               priority
-              sizes="(max-width: 768px) 28px, 36px"
+              sizes="(max-width: 768px) 32px, 40px"
             />
             <span>Swipe-Telecoms</span>
           </div>
@@ -84,7 +84,7 @@ const Home: NextPage = () => {
               alt="Person with smartphone"
               width={600}
               height={400}
-              sizes="(max-width: 768px) 90vw, 40vw"
+              sizes="(max-width: 768px) 100vw, 40vw"
               style={{ objectFit: 'contain' }}
               priority
             />
@@ -105,9 +105,9 @@ const Home: NextPage = () => {
                 <Image
                   src="/asset/wallet.png"
                   alt="E-Wallet"
-                  width={60}
-                  height={60}
-                  sizes="(max-width: 768px) 48px, 60px"
+                  width={64}
+                  height={64}
+                  sizes="(max-width: 768px) 48px, 64px"
                   style={{ objectFit: 'contain' }}
                   loading="lazy"
                 />
@@ -120,9 +120,9 @@ const Home: NextPage = () => {
                 <Image
                   src="/asset/fast.png"
                   alt="Fast Transaction"
-                  width={60}
-                  height={60}
-                  sizes="(max-width: 768px) 48px, 60px"
+                  width={64}
+                  height={64}
+                  sizes="(max-width: 768px) 48px, 64px"
                   style={{ objectFit: 'contain' }}
                   loading="lazy"
                 />
@@ -135,9 +135,9 @@ const Home: NextPage = () => {
                 <Image
                   src="/asset/seacurity.png"
                   alt="Security"
-                  width={60}
-                  height={60}
-                  sizes="(max-width: 768px) 48px, 60px"
+                  width={64}
+                  height={64}
+                  sizes="(max-width: 768px) 48px, 64px"
                   style={{ objectFit: 'contain' }}
                   loading="lazy"
                 />
@@ -150,15 +150,15 @@ const Home: NextPage = () => {
                 <Image
                   src="/asset/customer.png"
                   alt="Customer Support"
-                  width={60}
-                  height={60}
-                  sizes="(max-width: 768px) 48px, 60px"
-                  style={{ object beacons: 'contain' }}
+                  width={64}
+                  height={64}
+                  sizes="(max-width: 768px) 48px, 64px"
+                  style={{ objectFit: 'contain' }}
                   loading="lazy"
                 />
               </div>
               <h3>Customer Support</h3>
-              <p>24/7 support to address your needs wzi efficiently.</p>
+              <p>24/7 support to address your needs efficiently.</p>
             </div>
           </div>
         </div>
@@ -176,9 +176,9 @@ const Home: NextPage = () => {
                 <Image
                   src="/asset/dataoffers.png"
                   alt="Data Subscription"
-                  width={60}
-                  height={60}
-                  sizes="(max-width: 768px) 48px, 60px"
+                  width={64}
+                  height={64}
+                  sizes="(max-width: 768px) 48px, 64px"
                   style={{ objectFit: 'contain' }}
                   loading="lazy"
                 />
@@ -198,9 +198,9 @@ const Home: NextPage = () => {
                 <Image
                   src="/asset/phonedial.jpg"
                   alt="Airtime Recharge"
-                  width={60}
-                  height={60}
-                  sizes="(max-width: 768px) 48px, 60px"
+                  width={64}
+                  height={64}
+                  sizes="(max-width: 768px) 48px, 64px"
                   style={{ objectFit: 'contain' }}
                   loading="lazy"
                 />
@@ -220,9 +220,9 @@ const Home: NextPage = () => {
                 <Image
                   src="/asset/cabletv.jpg"
                   alt="TV & Cable Subscription"
-                  width={60}
-                  height={60}
-                  sizes="(max-width: 768px) 48px, 60px"
+                  width={64}
+                  height={64}
+                  sizes="(max-width: 768px) 48px, 64px"
                   style={{ objectFit: 'contain' }}
                   loading="lazy"
                 />
@@ -242,9 +242,9 @@ const Home: NextPage = () => {
                 <Image
                   src="/asset/electricitybill.jpg"
                   alt="Bills Payment"
-                  width={60}
-                  height={60}
-                  sizes="(max-width: 768px) 48px, 60px"
+                  width={64}
+                  height={64}
+                  sizes="(max-width: 768px) 48px, 64px"
                   style={{ objectFit: 'contain' }}
                   loading="lazy"
                 />
@@ -270,13 +270,13 @@ const Home: NextPage = () => {
           <h2>Supported Networks</h2>
           <div className="underline pink"></div>
           <div className="network-logos">
-            <Image src="/asset/mtn.jpg" alt="MTN" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} loading="lazy" />
-            <Image src="/asset/airtel.png" alt="Airtel" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} loading="lazy" />
-            <Image src="/asset/glo.jpg" alt="Glo" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} loading="lazy" />
-            <Image src="/asset/9mobile.png" alt="9mobile" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} loading="lazy" />
-            <Image src="/asset/dstvstarsat.png" alt="DSTV" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} loading="lazy" />
-            <Image src="/asset/ekedc.png" alt="EKEDC" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} loading="lazy" />
-            <Image src="/asset/ibedcpng.png" alt="IBEDC" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} loading="lazy" />
+            <Image src="/asset/mtn.jpg" alt="MTN" width={120} height={60} sizes="(max-width: 768px) 90px, 120px" style={{ objectFit: 'contain' }} loading="lazy" />
+            <Image src="/asset/airtel.png" alt="Airtel" width={120} height={60} sizes="(max-width: 768px) 90px, 120px" style={{ objectFit: 'contain' }} loading="lazy" />
+            <Image src="/asset/glo.jpg" alt="Glo" width={120} height={60} sizes="(max-width: 768px) 90px, 120px" style={{ objectFit: 'contain' }} loading="lazy" />
+            <Image src="/asset/9mobile.png" alt="9mobile" width={120} height={60} sizes="(max-width: 768px) 90px, 120px" style={{ objectFit: 'contain' }} loading="lazy" />
+            <Image src="/asset/dstvstarsat.png" alt="DSTV" width={120} height={60} sizes="(max-width: 768px) 90px, 120px" style={{ objectFit: 'contain' }} loading="lazy" />
+            <Image src="/asset/ekedc.png" alt="EKEDC" width={120} height={60} sizes="(max-width: 768px) 90px, 120px" style={{ objectFit: 'contain' }} loading="lazy" />
+            <Image src="/asset/ibedcpng.png" alt="IBEDC" width={120} height={60} sizes="(max-width: 768px) 90px, 120px" style={{ objectFit: 'contain' }} loading="lazy" />
           </div>
         </div>
       </section>
@@ -287,15 +287,15 @@ const Home: NextPage = () => {
           <h2>Contact Us</h2>
           <div className="underline pink"></div>
           <p className="subtitle">Have questions or need assistance? Reach out to our support team!</p>
-          <p className="contact-intro">We’re here to help with inquiries about airtime, data, TV subscriptions, or bill payments. Contact us via phone, email, or the form below.</p>
+          <p className="contact-intro">We’re here to help with inquiries about airtime, data, TV subscriptions, or bill payments. Contact us via phone, email, or WhatsApp.</p>
           <div className="contact-info">
             <div className="contact-item" style={{ animationDelay: '0.2s' }}>
               <Image
-                src="https://img.icons8.com/ios-filled/40/FFFFFF/marker.png"
+                src="https://img.icons8.com/ios-filled/48/FFFFFF/marker.png"
                 alt="Address"
-                width={40}
-                height={40}
-                sizes="(max-width: 768px) 32px, 40px"
+                width={48}
+                height={48}
+                sizes="(max-width: 768px) 36px, 48px"
                 style={{ objectFit: 'contain' }}
                 loading="lazy"
               />
@@ -304,11 +304,11 @@ const Home: NextPage = () => {
             </div>
             <div className="contact-item" style={{ animationDelay: '0.4s' }}>
               <Image
-                src="https://img.icons8.com/ios-filled/40/FFFFFF/phone.png"
+                src="https://img.icons8.com/ios-filled/48/FFFFFF/phone.png"
                 alt="Phone"
-                width={40}
-                height={40}
-                sizes="(max-width: 768px) 32px, 40px"
+                width={48}
+                height={48}
+                sizes="(max-width: 768px) 36px, 48px"
                 style={{ objectFit: 'contain' }}
                 loading="lazy"
               />
@@ -317,11 +317,11 @@ const Home: NextPage = () => {
             </div>
             <div className="contact-item" style={{ animationDelay: '0.6s' }}>
               <Image
-                src="https://img.icons8.com/ios-filled/40/FFFFFF/email.png"
+                src="https://img.icons8.com/ios-filled/48/FFFFFF/email.png"
                 alt="Email"
-                width={40}
-                height={40}
-                sizes="(max-width: 768px) 32px, 40px"
+                width={48}
+                height={48}
+                sizes="(max-width: 768px) 36px, 48px"
                 style={{ objectFit: 'contain' }}
                 loading="lazy"
               />
@@ -329,7 +329,6 @@ const Home: NextPage = () => {
               <p>swipetelecomsnigeria@gmail.com</p>
             </div>
           </div>
-          {/* Placeholder for future contact form */}
         </div>
       </section>
 
@@ -342,11 +341,11 @@ const Home: NextPage = () => {
       <div className="whatsapp">
         <a href="https://wa.me/2348150423800" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
           <Image
-            src="https://img.icons8.com/color/48/25D366/whatsapp.png"
+            src="https://img.icons8.com/color/56/25D366/whatsapp.png"
             alt="WhatsApp"
-            width={48}
-            height={48}
-            sizes="(max-width: 768px) 40px, 48px"
+            width={56}
+            height={56}
+            sizes="(max-width: 768px) 48px, 56px"
             style={{ objectFit: 'contain' }}
             loading="lazy"
           />
@@ -359,29 +358,33 @@ const Home: NextPage = () => {
           padding: 0;
           box-sizing: border-box;
           font-family: 'Poppins', sans-serif;
+          -webkit-tap-highlight-color: transparent;
         }
 
         .main {
           width: 100%;
           margin: 0 auto;
           overflow-x: hidden;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
         }
 
         .container {
           width: 100%;
-          max-width: clamp(300px, 90vw, 1440px);
+          max-width: clamp(320px, 90vw, 1400px);
           margin: 0 auto;
-          padding: 0 clamp(0.75rem, 2vw, 1.5rem);
+          padding: 0 clamp(0.75rem, 2.5vw, 1.5rem);
         }
 
         /* Header Styles */
         header {
           background-color: #E0F2FF;
-          padding: clamp(0.75rem, 2vh, 1.25rem) 0;
+          padding: clamp(0.75rem, 2.5vh, 1.25rem) 0;
           position: sticky;
           top: 0;
           z-index: 1000;
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
 
         nav {
@@ -389,50 +392,58 @@ const Home: NextPage = () => {
           justify-content: space-between;
           align-items: center;
           flex-wrap: wrap;
+          gap: clamp(0.5rem, 2vw, 1rem);
         }
 
         .logo {
           display: flex;
           align-items: center;
-          gap: clamp(0.4rem, 1vw, 0.6rem);
+          gap: clamp(0.5rem, 1.5vw, 0.75rem);
           color: #003087;
-          font-size: clamp(1rem, 2.5vw, 1.5rem);
+          font-size: clamp(1.1rem, 2.8vw, 1.6rem);
           font-weight: 600;
         }
 
         .nav-container {
           display: flex;
           align-items: center;
-          gap: clamp(1rem, 3vw, 2rem);
+          gap: clamp(1rem, 3.5vw, 2rem);
+          flex-grow: 1;
+          justify-content: flex-end;
         }
 
         .nav-list {
           list-style: none;
           display: flex;
-          gap: clamp(0.75rem, 2vw, 1.25rem);
+          gap: clamp(0.75rem, 2.5vw, 1.25rem);
           margin: 0;
         }
 
         .nav-link {
           color: #1E3A8A;
           text-decoration: none;
-          font-size: clamp(0.8rem, 2vw, 1rem);
+          font-size: clamp(0.85rem, 2.2vw, 1.1rem);
           font-weight: 500;
-          padding: clamp(0.4rem, 1vw, 0.6rem);
-          border-radius: 6px;
-          transition: color 0.3s ease, background-color 0.3s ease;
+          padding: clamp(0.5rem, 1.5vw, 0.75rem);
+          border-radius: 8px;
+          transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+          touch-action: manipulation;
         }
 
         .nav-link:hover {
           color: #EC4899;
           background-color: rgba(236, 72, 153, 0.1);
+          transform: translateY(-2px);
         }
 
-        .nav-link:active,
         .nav-link:focus {
           color: #F472B6;
           outline: none;
-          box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.3);
+          box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.3);
+        }
+
+        .nav-link:active {
+          transform: translateY(0);
         }
 
         .hamburger {
@@ -440,17 +451,18 @@ const Home: NextPage = () => {
           background: none;
           border: none;
           cursor: pointer;
-          padding: 0.6rem;
+          padding: clamp(0.5rem, 1.5vw, 0.75rem);
           z-index: 1001;
+          touch-action: manipulation;
         }
 
         .hamburger-icon {
           display: block;
-          width: clamp(1.5rem, 4vw, 1.8rem);
+          width: clamp(1.6rem, 4.5vw, 2rem);
           height: 0.25rem;
           background: #1E3A8A;
           position: relative;
-          transition: background 0.3s ease;
+          transition: background 0.2s ease;
         }
 
         .hamburger-icon::before,
@@ -460,15 +472,15 @@ const Home: NextPage = () => {
           width: 100%;
           height: 0.25rem;
           background: #1E3A8A;
-          transition: transform 0.3s ease;
+          transition: transform 0.2s ease;
         }
 
         .hamburger-icon::before {
-          top: -0.6rem;
+          top: -0.65rem;
         }
 
         .hamburger-icon::after {
-          top: 0.6rem;
+          top: 0.65rem;
         }
 
         .hamburger[aria-expanded="true"] .hamburger-icon {
@@ -476,21 +488,22 @@ const Home: NextPage = () => {
         }
 
         .hamburger[aria-expanded="true"] .hamburger-icon::before {
-          transform: rotate(45deg) translate(0.45rem, 0.45rem);
+          transform: rotate(45deg) translate(0.5rem, 0.5rem);
         }
 
         .hamburger[aria-expanded="true"] .hamburger-icon::after {
-          transform: rotate(-45deg) translate(0.45rem, -0.45rem);
+          transform: rotate(-45deg) translate(0.5rem, -0.5rem);
         }
 
         .nav-container.open {
           transform: translateY(0);
           opacity: 1;
+          visibility: visible;
         }
 
         .buttons {
           display: flex;
-          gap: clamp(0.6rem, 1.5vw, 1rem);
+          gap: clamp(0.75rem, 2vw, 1.25rem);
           flex-wrap: wrap;
           justify-content: center;
         }
@@ -501,10 +514,10 @@ const Home: NextPage = () => {
           justify-content: center;
           align-items: center;
           width: 100%;
-          max-width: clamp(8.5rem, 25vw, 10.5rem);
-          padding: clamp(0.65rem, 2vw, 0.85rem) clamp(1.25rem, 3vw, 1.5rem);
-          border-radius: 10px;
-          font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+          max-width: clamp(9rem, 30vw, 11rem);
+          padding: clamp(0.7rem, 2.2vw, 0.9rem) clamp(1.5rem, 3.5vw, 1.75rem);
+          border-radius: 12px;
+          font-size: clamp(0.95rem, 2.3vw, 1.15rem);
           font-weight: 600;
           text-decoration: none;
           text-align: center;
@@ -512,11 +525,12 @@ const Home: NextPage = () => {
           transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
           border: none;
           line-height: 1.5;
+          touch-action: manipulation;
         }
 
         :global(.button:hover) {
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-          transform: translateY(-2px);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+          transforma: translateY(-2px);
         }
 
         :global(.button:focus) {
@@ -525,7 +539,7 @@ const Home: NextPage = () => {
         }
 
         :global(.button:active) {
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
           transform: translateY(0);
         }
 
@@ -553,7 +567,7 @@ const Home: NextPage = () => {
         /* Hero Section Styles */
         .hero {
           background: linear-gradient(180deg, #003087 0%, #3B82F6 100%);
-          padding: clamp(2.5rem, 8vh, 5rem) 0;
+          padding: clamp(2rem, 7vh, 4.5rem) 0;
           position: relative;
           overflow: hidden;
           display: flex;
@@ -567,48 +581,48 @@ const Home: NextPage = () => {
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: clamp(1.5rem, 4vw, 2rem);
+          gap: clamp(1.25rem, 3.5vw, 1.75rem);
           max-width: 100%;
-          padding: 0 clamp(0.75rem, 2vw, 1.5rem);
+          padding: 0 clamp(0.75rem, 2.5vw, 1.5rem);
         }
 
         .hero-content {
-          max-width: clamp(22rem, 90vw, 45rem);
+          max-width: clamp(20rem, 90vw, 42rem);
           z-index: 1;
-          animation: fadeIn 1s ease-out;
+          animation: fadeIn 0.8s ease-out;
           text-align: center;
         }
 
         .hero-content h1 {
-          font-size: clamp(1.5rem, 5vw, 3rem);
+          font-size: clamp(1.4rem, 4.8vw, 2.8rem);
           font-weight: 700;
-          margin: 0 0 clamp(0.75rem, 2vw, 1.25rem);
-          line-height: 1.2;
+          margin: 0 0 clamp(0.6rem, 2vw, 1rem);
+          line-height: 1.3;
         }
 
         .hero-content .highlight {
-          font-size: clamp(2rem, 6vw, 3.5rem);
+          font-size: clamp(1.8rem, 5.5vw, 3.2rem);
           color: #EC4899;
           font-weight: 700;
         }
 
         .hero-content p {
-          font-size: clamp(0.9rem, 2.5vw, 1.3rem);
-          margin: 0 0 clamp(1rem, 3vw, 1.5rem);
+          font-size: clamp(0.85rem, 2.3vw, 1.2rem);
+          margin: 0 0 clamp(0.9rem, 2.8vw, 1.3rem);
           line-height: 1.6;
           color: #E0F2FF;
         }
 
         .hero-content .buttons {
-          gap: clamp(0.75rem, 2vw, 1rem);
+          gap: clamp(0.6rem, 1.8vw, 1rem);
           flex-direction: column;
           align-items: center;
         }
 
         .hero-image {
-          max-width: clamp(18rem, 85vw, 35rem);
+          max-width: clamp(16rem, 90vw, 32rem);
           z-index: 1;
-          animation: slideInRight 1s ease-out;
+          animation: slideInRight 0.8s ease-out;
         }
 
         .wave {
@@ -616,32 +630,32 @@ const Home: NextPage = () => {
           bottom: 0;
           left: 0;
           width: 100%;
-          height: clamp(3rem, 10vw, 5rem);
+          height: clamp(2.5rem, 9vw, 4.5rem);
           background: url('/wave.svg') no-repeat;
           background-size: cover;
-          animation: waveMove 6s infinite ease-in-out;
+          animation: waveMove 5s infinite ease-in-out;
         }
 
         /* Features Section Styles */
         .features {
-          padding: clamp(2rem, 6vh, 4rem) 0;
+          padding: clamp(1.75rem, 5.5vh, 3.5rem) 0;
           text-align: center;
           background: #FFFFFF;
           width: 100%;
         }
 
         .features h2 {
-          font-size: clamp(1.4rem, 3.5vw, 2rem);
+          font-size: clamp(1.3rem, 3.2vw, 1.9rem);
           color: #1E3A8A;
           font-weight: 600;
-          margin: 0 0 clamp(0.4rem, 1.5vw, 0.6rem);
+          margin: 0 0 clamp(0.3rem, 1.2vw, 0.5rem);
         }
 
         .underline {
-          width: clamp(2.5rem, 6vw, 3.5rem);
-          height: 0.3rem;
+          width: clamp(2.2rem, 5.5vw, 3.2rem);
+          height: 0.25rem;
           background-color: #FFFFFF;
-          margin: 0 auto clamp(0.4rem, 1.5vw, 0.6rem);
+          margin: 0 auto clamp(0.3rem, 1.2vw, 0.5rem);
         }
 
         .underline.pink {
@@ -649,15 +663,15 @@ const Home: NextPage = () => {
         }
 
         .subtitle {
-          font-size: clamp(0.8rem, 2.2vw, 1.1rem);
+          font-size: clamp(0.75rem, 2.1vw, 1rem);
           color: #6B7280;
-          margin: 0 0 clamp(1rem, 3vw, 1.5rem);
+          margin: 0 0 clamp(0.9rem, 2.8vw, 1.3rem);
           font-weight: 500;
         }
 
         .feature-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(clamp(10rem, 30vw, 12rem), 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(clamp(9.5rem, 28vw, 11.5rem), 1fr));
           gap: clamp(0.75rem, 2.5vw, 1.25rem);
         }
 
@@ -665,34 +679,34 @@ const Home: NextPage = () => {
           background: #FFFFFF;
           border-radius: 10px;
           padding: clamp(0.75rem, 2.5vw, 1.25rem);
-          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
           text-align: center;
-          animation: fadeInUp 0.6s ease-out forwards;
+          animation: fadeInUp 0.5s ease-out forwards;
         }
 
         .feature-card:hover {
           transform: translateY(-4px);
-          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
         }
 
         .feature-card h3 {
-          font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+          font-size: clamp(0.85rem, 2.3vw, 1.2rem);
           color: #1E3A8A;
-          margin: clamp(0.4rem, 1.5vw, 0.6rem) 0;
+          margin: clamp(0.3rem, 1.2vw, 0.5rem) 0;
           font-weight: 600;
         }
 
         .feature-card p {
-          font-size: clamp(0.7rem, 2vw, 1rem);
+          font-size: clamp(0.65rem, 1.9vw, 0.95rem);
           color: #6B7280;
           line-height: 1.6;
         }
 
         .feature-image-wrapper {
-          width: clamp(3rem, 9vw, 4rem);
-          height: clamp(3rem, 9vw, 4rem);
-          margin: 0 auto clamp(0.5rem, 1.5vw, 0.75rem);
+          width: clamp(2.8rem, 8.5vw, 3.8rem);
+          height: clamp(2.8rem, 8.5vw, 3.8rem);
+          margin: 0 auto clamp(0.4rem, 1.2vw, 0.6rem);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -702,74 +716,74 @@ const Home: NextPage = () => {
         }
 
         .feature-image-wrapper img {
-          width: clamp(2rem, 7vw, 2.75rem);
-          height: clamp(2rem, 7vw, 2.75rem);
+          width: clamp(1.9rem, 6.5vw, 2.6rem);
+          height: clamp(1.9rem, 6.5vw, 2.6rem);
           object-fit: contain;
         }
 
         /* Services Section Styles */
         .services {
-          padding: clamp(2rem, 6vh, 4rem) 0;
+          padding: clamp(1.75rem, 5.5vh, 3.5rem) 0;
           text-align: center;
           background: #EFF6FF;
           width: 100%;
         }
 
         .services h2 {
-          font-size: clamp(1.4rem, 3.5vw, 2rem);
+          font-size: clamp(1.3rem, 3.2vw, 1.9rem);
           color: #1E3A8A;
           font-weight: 600;
-          margin: 0 0 clamp(0.4rem, 1.5vw, 0.6rem);
+          margin: 0 0 clamp(0.3rem, 1.2vw, 0.5rem);
         }
 
         .service-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(clamp(10rem, 30vw, 12rem), 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(clamp(9.5rem, 28vw, 11.5rem), 1fr));
           gap: clamp(0.75rem, 2.5vw, 1.25rem);
-          margin: 0 0 clamp(1rem, 3vw, 1.5rem);
+          margin: 0 0 clamp(0.9rem, 2.8vw, 1.3rem);
         }
 
         .service-card {
           background: #FFFFFF;
           border-radius: 10px;
           padding: clamp(0.75rem, 2.5vw, 1.25rem);
-          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
           text-align: center;
-          animation: scaleIn 0.6s ease-out forwards;
+          animation: scaleIn 0.5s ease-out forwards;
         }
 
         .service-card:hover {
           transform: translateY(-4px);
-          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
         }
 
         .service-card h3 {
-          font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+          font-size: clamp(0.85rem, 2.3vw, 1.2rem);
           color: #1E3A8A;
-          margin: clamp(0.4rem, 1.5vw, 0.6rem) 0;
+          margin: clamp(0.3rem, 1.2vw, 0.5rem) 0;
           font-weight: 600;
         }
 
         .service-card p {
-          font-size: clamp(0.7rem, 2vw, 1rem);
+          font-size: clamp(0.65rem, 1.9vw, 0.95rem);
           color: #6B7280;
-          margin: 0 0 clamp(0.5rem, 1.5vw, 0.75rem);
+          margin: 0 0 clamp(0.4rem, 1.2vw, 0.6rem);
           line-height: 1.6;
         }
 
         .service-features {
           list-style: none;
           text-align: left;
-          margin: 0 0 clamp(0.5rem, 1.5vw, 0.75rem);
-          padding: 0 clamp(0.4rem, 1.5vw, 0.6rem);
-          font-size: clamp(0.65rem, 1.8vw, 0.9rem);
+          margin: 0 0 clamp(0.4rem, 1.2vw, 0.6rem);
+          padding: 0 clamp(0.5rem, 1.5vw, 0.75rem);
+          font-size: clamp(0.6rem, 1.7vw, 0.85rem);
           color: #6B7280;
           line-height: 1.7;
         }
 
         .service-features li {
-          margin-bottom: clamp(0.25rem, 1vw, 0.4rem);
+          margin-bottom: clamp(0.2rem, 0.8vw, 0.3rem);
           position: relative;
           padding-left: clamp(1rem, 2.5vw, 1.25rem);
         }
@@ -779,13 +793,13 @@ const Home: NextPage = () => {
           position: absolute;
           left: 0;
           color: #EC4899;
-          font-size: clamp(0.8rem, 2vw, 1rem);
+          font-size: clamp(0.75rem, 1.8vw, 0.9rem);
         }
 
         .service-image-wrapper {
-          width: clamp(3rem, 9vw, 4rem);
-          height: clamp(3rem, 9vw, 4rem);
-          margin: 0 auto clamp(0.5rem, 1.5vw, 0.75rem);
+          width: clamp(2.8rem, 8.5vw, 3.8rem);
+          height: clamp(2.8rem, 8.5vw, 3.8rem);
+          margin: 0 auto clamp(0.4rem, 1.2vw, 0.6rem);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -795,34 +809,34 @@ const Home: NextPage = () => {
         }
 
         .service-image-wrapper img {
-          width: clamp(2rem, 7vw, 2.75rem);
-          height: clamp(2rem, 7vw, 2.75rem);
+          width: clamp(1.9rem, 6.5vw, 2.6rem);
+          height: clamp(1.9rem, 6.5vw, 2.6rem);
           object-fit: contain;
         }
 
         .service-cta {
-          font-size: clamp(0.8rem, 2.2vw, 1.1rem);
+          font-size: clamp(0.75rem, 2.1vw, 1rem);
           color: #1E3A8A;
           margin: clamp(0.75rem, 2.5vw, 1.25rem) 0 0;
           line-height: 1.6;
-          max-width: clamp(20rem, 85vw, 35rem);
+          max-width: clamp(18rem, 85vw, 32rem);
           margin-left: auto;
           margin-right: auto;
         }
 
         /* Networks Section Styles */
         .networks {
-          padding: clamp(2rem, 6vh, 4rem) 0;
+          padding: clamp(1.75rem, 5.5vh, 3.5rem) 0;
           text-align: center;
           background: #FFFFFF;
           width: 100%;
         }
 
         .networks h2 {
-          font-size: clamp(1.4rem, 3.5vw, 2rem);
+          font-size: clamp(1.3rem, 3.2vw, 1.9rem);
           color: #1E3A8A;
           font-weight: 600;
-          margin: 0 0 clamp(0.4rem, 1.5vw, 0.6rem);
+          margin: 0 0 clamp(0.3rem, 1.2vw, 0.5rem);
         }
 
         .network-logos {
@@ -833,13 +847,13 @@ const Home: NextPage = () => {
         }
 
         .network-logos img {
-          width: clamp(4.5rem, 12vw, 6.5rem);
-          height: clamp(2.25rem, 6vw, 3.25rem);
+          width: clamp(4rem, 10vw, 6rem);
+          height: clamp(2rem, 5vw, 3rem);
         }
 
         /* Contact Section Styles */
         .contact {
-          padding: clamp(2rem, 6vh, 4rem) 0;
+          padding: clamp(1.75rem, 5.5vh, 3.5rem) 0;
           text-align: center;
           background-color: #1E3A8A;
           color: #FFFFFF;
@@ -847,22 +861,22 @@ const Home: NextPage = () => {
         }
 
         .contact h2 {
-          font-size: clamp(1.4rem, 3.5vw, 2rem);
+          font-size: clamp(1.3rem, 3.2vw, 1.9rem);
           font-weight: 700;
-          margin: 0 0 clamp(0.4rem, 1.5vw, 0.6rem);
+          margin: 0 0 clamp(0.3rem, 1.2vw, 0.5rem);
         }
 
         .contact .subtitle {
-          font-size: clamp(0.8rem, 2.2vw, 1.1rem);
-          margin: 0 0 clamp(0.6rem, 2vw, 1rem);
+          font-size: clamp(0.75rem, 2.1vw, 1rem);
+          margin: 0 0 clamp(0.6rem, 1.8vw, 0.9rem);
           font-weight: 500;
         }
 
         .contact-intro {
-          font-size: clamp(0.7rem, 2vw, 1rem);
+          font-size: clamp(0.65rem, 1.9vw, 0.95rem);
           color: #E0F2FF;
-          margin: 0 0 clamp(1rem, 3vw, 1.5rem);
-          max-width: clamp(20rem, 85vw, 35rem);
+          margin: 0 0 clamp(0.9rem, 2.8vw, 1.3rem);
+          max-width: clamp(18rem, 85vw, 32rem);
           margin-left: auto;
           margin-right: auto;
           line-height: 1.6;
@@ -870,26 +884,26 @@ const Home: NextPage = () => {
 
         .contact-info {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(clamp(10rem, 30vw, 12rem), 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(clamp(9.5rem, 28vw, 11.5rem), 1fr));
           gap: clamp(0.75rem, 2.5vw, 1.25rem);
-          max-width: clamp(22rem, 85vw, 45rem);
-          margin: 0 auto clamp(1rem, 3vw, 1.5rem);
+          max-width: clamp(20rem, 85vw, 40rem);
+          margin: 0 auto clamp(0.9rem, 2.8vw, 1.3rem);
         }
 
         .contact-item {
           text-align: center;
           padding: clamp(0.75rem, 2.5vw, 1.25rem);
-          animation: slideInLeft 0.6s ease-out forwards;
+          animation: slideInLeft 0.5s ease-out forwards;
         }
 
         .contact-item h3 {
-          font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+          font-size: clamp(0.85rem, 2.3vw, 1.1rem);
           font-weight: 600;
-          margin: clamp(0.4rem, 1.5vw, 0.6rem) 0;
+          margin: clamp(0.3rem, 1.2vw, 0.5rem) 0;
         }
 
         .contact-item p {
-          font-size: clamp(0.7rem, 2vw, 1rem);
+          font-size: clamp(0.65rem, 1.9vw, 0.95rem);
           color: #E0F2FF;
         }
 
@@ -898,8 +912,9 @@ const Home: NextPage = () => {
           background-color: #1E3A8A;
           color: #FFFFFF;
           text-align: center;
-          padding: clamp(0.75rem, 2vh, 1.25rem);
-          font-size: clamp(0.7rem, 2vw, 1rem);
+          padding: clamp(0.75rem, 2.5vh, 1.25rem);
+          font-size: clamp(0.65rem, 1.9vw, 0.95rem);
+          margin-top: auto;
         }
 
         footer p {
@@ -914,18 +929,19 @@ const Home: NextPage = () => {
           z-index: 1000;
           background: #25D366;
           border-radius: 50%;
-          padding: clamp(0.4rem, 1.5vw, 0.6rem);
-          box-shadow: 0 3px 8px rgba(37, 211, 102, 0.5);
-          transition: transform 0.3s ease;
+          padding: clamp(0.4rem, 1.2vw, 0.6rem);
+          box-shadow: 0 3px 8px rgba(37, 211, 102, 0.4);
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .whatsapp:hover {
-          transform: scale(1.1);
+          transform: scale(1.15);
+          box-shadow: 0 4px 10px rgba(37, 211, 102, 0.6);
         }
 
         .whatsapp img {
-          width: clamp(2.25rem, 7vw, 2.75rem);
-          height: clamp(2.25rem, 7vw, 2.75rem);
+          width: clamp(2.2rem, 6.5vw, 2.8rem);
+          height: clamp(2.2rem, 6.5vw, 2.8rem);
         }
 
         /* Animations */
@@ -935,18 +951,18 @@ const Home: NextPage = () => {
         }
 
         @keyframes slideInRight {
-          from { transform: translateX(100%); opacity: 0; }
+          from { transform: translateX(50%); opacity: 0; }
           to { transform: translateX(0); opacity: 1; }
         }
 
         @keyframes waveMove {
           0% { transform: translateY(0); }
-          50% { transform: translateY(-0.5rem); }
+          50% { transform: translateY(-0.3rem); }
           100% { transform: translateY(0); }
         }
 
         @keyframes fadeInUp {
-          from { opacity: 0; transform: translateY(1rem); }
+          from { opacity: 0; transform: translateY(0.75rem); }
           to { opacity: 1; transform: translateY(0); }
         }
 
@@ -956,14 +972,14 @@ const Home: NextPage = () => {
         }
 
         @keyframes slideInLeft {
-          from { opacity: 0; transform: translateX(-1rem); }
+          from { opacity: 0; transform: translateX(-0.75rem); }
           to { opacity: 1; transform: translateX(0); }
         }
 
         /* Responsive Design */
-        @media (max-width: 480px) {
+        @media (max-width: 360px) {
           .container { padding: 0 0.5rem; }
-          .logo { font-size: 1.1rem; }
+          .logo { font-size: 1rem; }
           .logo img { width: 28px; height: 28px; }
           .hamburger { display: block; }
           .nav-container {
@@ -976,51 +992,95 @@ const Home: NextPage = () => {
             flex-direction: column;
             padding: 0.75rem;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transform: translateY(-20px);
+            transform: translateY(-10px);
             opacity: 0;
-            transition: transform 0.3s ease, opacity 0.3s ease;
+            visibility: hidden;
+            transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
           }
           .nav-container.open {
             display: flex;
             transform: translateY(0);
             opacity: 1;
+            visibility: visible;
           }
           .nav-list {
             flex-direction: column;
             gap: 0.5rem;
             align-items: center;
+            width: 100%;
           }
-          .nav-link { font-size: 0.9rem; padding: 0.5rem 1rem; width: 100%; text-align: center; }
+          .nav-link { font-size: 0.9rem; padding: 0.6rem 1rem; width: 100%; text-align: center; }
           .buttons { flex-direction: column; gap: 0.5rem; width: 100%; padding: 0.5rem 0; }
-          :global(.button) { font-size: 0.9rem; padding: 0.6rem 1rem; max-width: 100%; }
-          .hero { padding: 1.5rem 0; }
-          .hero-wrapper { gap: 1rem; }
-          .hero-content h1 { font-size: 1.3rem; }
-          .hero-content .highlight { font-size: 1.8rem; }
-          .hero-content p { font-size: 0.85rem; margin-bottom: 0.75rem; }
+          :global(.button) { font-size: 0.85rem; padding: 0.6rem 1rem; max-width: 100%; }
+          .hero { padding: 1.25rem 0; }
+          .hero-wrapper { gap: 0.75rem; }
+          .hero-content h1 { font-size: 1.2rem; }
+          .hero-content .highlight { font-size: 1.6rem; }
+          .hero-content p { font-size: 0.8rem; margin-bottom: 0.6rem; }
           .hero-content .buttons { gap: 0.5rem; }
           .hero-image { max-width: 100%; }
-          .wave { height: 2.5rem; }
-          .features, .services, .networks, .contact { padding: 1.5rem 0; }
-          .features h2, .services h2, .networks h2, .contact h2 { font-size: 1.2rem; }
-          .subtitle { font-size: 0.8rem; margin-bottom: 0.75rem; }
-          .feature-grid, .service-grid, .contact-info { grid-template-columns: 1fr; gap: 0.75rem; }
-          .feature-card, .service-card { padding: 0.75rem; }
-          .feature-card h3, .service-card h3 { font-size: 1rem; }
-          .feature-card p, .service-card p { font-size: 0.8rem; }
+          .wave { height: 2rem; }
+          .features, .services, .networks, .contact { padding: 1.25rem 0; }
+          .features h2, .services h2, .networks h2, .contact h2 { font-size: 1.1rem; }
+          .subtitle { font-size: 0.75rem; margin-bottom: 0.6rem; }
+          .feature-grid, .service-grid, .contact-info { grid-template-columns: 1fr; gap: 0.5rem; }
+          .feature-card, .service-card { padding: 0.6rem; }
+          .feature-card h3, .service-card h3 { font-size: 0.9rem; }
+          .feature-card p, .service-card p { font-size: 0.7rem; }
           .feature-image-wrapper, .service-image-wrapper { width: 2.5rem; height: 2.5rem; }
-          .feature-image-wrapper img, .service-image-wrapper img { width: 1.75rem; height: 1.75rem; }
-          .service-features { font-size: 0.75rem; padding: 0 0.5rem; }
-          .service-features li { padding-left: 1rem; }
+          .feature-image-wrapper img, .service-image-wrapper img { width: 1.8rem; height: 1.8rem; }
+          .service-features { font-size: 0.65rem; padding: 0 0.4rem; }
+          .service-features li { padding-left: 0.9rem; }
           .network-logos { gap: 0.5rem; }
-          .network-logos img { width: 4rem; height: 2rem; }
+          .network-logos img { width: 3.5rem; height: 1.75rem; }
           .contact-info { grid-template-columns: 1fr; }
-          .contact-item { padding: 0.75rem; }
-          .contact-item img { width: 1.75rem; height: 1.75rem; }
-          .contact-item h3 { font-size: 0.9rem; }
-          .contact-item p { font-size: 0.8rem; }
+          .contact-item { padding: 0.6rem; }
+          .contact-item img { width: 1.6rem; height: 1.6rem; }
+          .contact-item h3 { font-size: 0.85rem; }
+          .contact-item p { font-size: 0.7rem; }
           .whatsapp img { width: 2rem; height: 2rem; }
-          footer { font-size: 0.75rem; padding: 0.75rem 0; }
+          footer { font-size: 0.7rem; padding: 0.6rem 0; }
+        }
+
+        @media (min-width: 361px) and (max-width: 480px) {
+          .container { padding: 0 0.75rem; }
+          .logo { font-size: 1.1rem; }
+          .hamburger { display: block; }
+          .nav-container {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: #E0F2FF;
+            flex-direction: column;
+            padding: 0.75rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: translateY(-10px);
+            opacity: 0;
+            visibility: hidden;
+            transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+          }
+          .nav-container.open {
+            display: flex;
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+          }
+          .nav-list { flex-direction: column; gap: 0.6rem; align-items: center; width: 100%; }
+          .nav-link { font-size: 0.95rem; padding: 0.6rem 1rem; width: 100%; text-align: center; }
+          .buttons { flex-direction: column; gap: 0.6rem; width: 100%; padding: 0.6rem 0; }
+          :global(.button) { font-size: 0.9rem; padding: 0.65rem 1.25rem; max-width: 100%; }
+          .hero { padding: 1.5rem 0; }
+          .hero-wrapper { gap: 1rem; }
+          .hero-content h1 { font-size: 1.4rem; }
+          .hero-content .highlight { font-size: 1.8rem; }
+          .hero-content p { font-size: 0.85rem; }
+          .hero-image { max-width: 100%; }
+          .features, .services, .networks, .contact { padding: 1.5rem 0; }
+          .feature-grid, .service-grid, .contact-info { grid-template-columns: 1fr; gap: 0.75rem; }
+          .network-logos { gap: 0.6rem; }
+          .network-logos img { width: 4rem; height: 2rem; }
         }
 
         @media (min-width: 481px) and (max-width: 768px) {
@@ -1037,72 +1097,101 @@ const Home: NextPage = () => {
             flex-direction: column;
             padding: 1rem;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transform: translateY(-20px);
+            transform: translateY(-10px);
             opacity: 0;
-            transition: transform 0.3s ease, opacity 0.3s ease;
+            visibility: hidden;
+            transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
           }
           .nav-container.open {
             display: flex;
             transform: translateY(0);
             opacity: 1;
+            visibility: visible;
           }
-          .nav-list { flex-direction: column; gap: 0.75rem; align-items: center; }
-          .nav-link { font-size: 1rem; padding: 0.6rem 1.2rem; width: 100%; text-align: center; }
+          .nav-list { flex-direction: column; gap: 0.75rem; align-items: center; width: 100%; }
+          .nav-link { font-size: 1rem; padding: 0.75rem 1.25rem; width: 100%; text-align: center; }
           .buttons { flex-direction: column; gap: 0.75rem; width: 100%; padding: 0.75rem 0; }
-          :global(.button) { font-size: 0.95rem; padding: 0.7rem 1.2rem; max-width: 100%; }
+          :global(.button) { font-size: 1rem; padding: 0.75rem 1.5rem; max-width: 100%; }
           .hero { padding: 2rem 0; }
-          .hero-wrapper { gap: 1.5rem; }
-          .hero-content h1 { font-size: 1.8rem; }
-          .hero-content .highlight { font-size: 2.2rem; }
-          .hero-content p { font-size: 1rem; }
+          .hero-wrapper { gap: 1.25rem; }
+          .hero-content h1 { font-size: 1.6rem; }
+          .hero-content .highlight { font-size: 2rem; }
+          .hero-content p { font-size: 0.95rem; }
           .hero-image { max-width: 90%; }
           .features, .services, .networks, .contact { padding: 2rem 0; }
-          .feature-grid, .service-grid { grid-template-columns: repeat(2, 1fr); }
+          .feature-grid, .service-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
           .contact-info { grid-template-columns: repeat(2, 1fr); }
           .network-logos { gap: 0.75rem; }
-          .network-logos img { width: 5rem; height: 2.5rem; }
+          .network-logos img { width: 4.5rem; height: 2.25rem; }
         }
 
         @media (min-width: 769px) and (max-width: 1024px) {
           .container { max-width: 960px; }
           .hamburger { display: none; }
-          .nav-container { display: flex; }
+          .nav-container { display: flex; flex-direction: row; }
           .nav-list { flex-direction: row; }
           .buttons { flex-direction: row; }
-          .hero-wrapper { flex-direction: row; justify-content: space-between; }
-          .hero-content { max-width: 50%; }
-          .hero-image { max-width: 45%; }
+          .hero-wrapper { flex-direction: row; justify-content: space-between; align-items: center; }
+          .hero-content { max-width: 55%; }
+          .hero-image { max-width: 40%; }
           .hero-content .buttons { flex-direction: row; }
           .feature-grid, .service-grid { grid-template-columns: repeat(2, 1fr); }
           .contact-info { grid-template-columns: repeat(3, 1fr); }
-          :global(.button) { font-size: 1rem; padding: 0.75rem 1.5rem; max-width: 11rem; }
+          :global(.button) { font-size: 1rem; padding: 0.75rem 1.5rem; max-width: 10rem; }
         }
 
-        @media (min-width: 1025px) {
-          .container { max-width: 1440px; }
+        @media (min-width: 1025px) and (max-width: 1440px) {
+          .container { max-width: 1200px; }
           .hamburger { display: none; }
-          .nav-container { display: flex; }
+          .nav-container { display: flex; flex-direction: row; }
           .nav-list { flex-direction: row; }
-          .logo { font-size: 1.5rem; }
-          .nav-link { font-size: 1.1rem; }
-          :global(.button) { font-size: 1.1rem; padding: 0.85rem 1.75rem; max-width: 12rem; }
+          .logo { font-size: 1.4rem; }
+          .nav-link { font-size: 1.05rem; }
+          :global(.button) { font-size: 1.05rem; padding: 0.8rem 1.6rem; max-width: 11rem; }
+          .hero { padding: 4rem 0; }
+          .hero-wrapper { flex-direction: row; justify-content: space-between; }
+          .hero-content { max-width: 50%; }
+          .hero-content h1 { font-size: 2.6rem; }
+          .hero-content .highlight { font-size: 3rem; }
+          .hero-content p { font-size: 1.15rem; }
+          .hero-content .buttons { flex-direction: row; }
+          .hero-image { max-width: 45%; }
+          .features h2, .services h2, .networks h2, .contact h2 { font-size: 1.8rem; }
+          .subtitle { font-size: 1rem; }
+          .feature-card h3, .service-card h3 { font-size: 1.15rem; }
+          .feature-card p, .service-card p { font-size: 0.95rem; }
+          .service-features { font-size: 0.85rem; }
+          .network-logos img { width: 5.5rem; height: 2.75rem; }
+          .contact-item h3 { font-size: 1.1rem; }
+          .contact-item p { font-size: 0.95rem; }
+        }
+
+        @media (min-width: 1441px) {
+          .container { max-width: 1400px; }
+          .hamburger { display: none; }
+          .nav-container { display: flex; flex-direction: row; }
+          .nav-list { flex-direction: row; }
+          .logo { font-size: 1.6rem; }
+          .nav-link { font-size: 1.15rem; }
+          :global(.button) { font-size: 1.15rem; padding: 0.9rem 1.75rem; max-width: 12rem; }
           .hero { padding: 5rem 0; }
           .hero-wrapper { flex-direction: row; justify-content: space-between; }
           .hero-content { max-width: 45%; }
           .hero-content h1 { font-size: 3rem; }
           .hero-content .highlight { font-size: 3.5rem; }
-          .hero-content p { font-size: 1.3rem; }
+          .hero-content p { font-size: 1.25rem; }
           .hero-content .buttons { flex-direction: row; }
           .hero-image { max-width: 40%; }
           .features h2, .services h2, .networks h2, .contact h2 { font-size: 2rem; }
           .subtitle { font-size: 1.1rem; }
-          .feature-card h3, .service-card h3 { font-size: 1.3rem; }
+          .feature-grid, .service-grid { grid-template-columns: repeat(4, 1fr); }
+          .feature-card h3, .service-card h3 { font-size: 1.25rem; }
           .feature-card p, .service-card p { font-size: 1rem; }
           .service-features { font-size: 0.9rem; }
-          .network-logos img { width: 6.5rem; height: 3.25rem; }
+          .network-logos img { width: 6rem; height: 3rem; }
           .contact-item h3 { font-size: 1.2rem; }
           .contact-item p { font-size: 1rem; }
-          .whatsapp img { width: 2.75rem; height: 2.75rem; }
+          .whatsapp img { width: 2.8rem; height: 2.8rem; }
           footer { font-size: 1rem; }
         }
       `}</style>
