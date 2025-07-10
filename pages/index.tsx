@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link'; 
+import Link from 'next/link';
 import { useState } from 'react';
 
 const Home: NextPage = () => {
@@ -21,7 +21,8 @@ const Home: NextPage = () => {
         <meta property="og:description" content="Your one-stop platform for airtime, data, and bill payments in Nigeria." />
         <meta property="og:image" content="/asset/swipelogo.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
       </Head>
 
       {/* Header */}
@@ -48,11 +49,11 @@ const Home: NextPage = () => {
             <span className="hamburger-icon"></span>
           </button>
           <ul className={`nav-list ${isMenuOpen ? 'open' : ''}`}>
-            <li><Link href="/" onClick={toggleMenu}>Home</Link></li>
-            <li><Link href="#features" onClick={toggleMenu}>Features</Link></li>
-            <li><Link href="#services" onClick={toggleMenu}>Services</Link></li>
-            <li><Link href="#faqs" onClick={toggleMenu}>FAQs</Link></li>
-            <li><Link href="#contact" onClick={toggleMenu}>Contact Us</Link></li>
+            <li><Link href="/" className="nav-link" onClick={toggleMenu}>Home</Link></li>
+            <li><Link href="#features" className="nav-link" onClick={toggleMenu}>Features</Link></li>
+            <li><Link href="#services" className="nav-link" onClick={toggleMenu}>Services</Link></li>
+            <li><Link href="#faqs" className="nav-link" onClick={toggleMenu}>FAQs</Link></li>
+            <li><Link href="#contact" className="nav-link" onClick={toggleMenu}>Contact Us</Link></li>
           </ul>
           <div className="buttons">
             <Link href="/login" className="login">Login</Link>
@@ -84,9 +85,6 @@ const Home: NextPage = () => {
               sizes="(max-width: 768px) 80vw, 40vw"
               style={{ objectFit: 'contain' }}
               priority
-              onError={() => {
-                // For Next/Image, fallback onError not supported. Use on loading error fallback in production
-              }}
             />
           </div>
         </div>
@@ -109,6 +107,7 @@ const Home: NextPage = () => {
                   height={60}
                   sizes="(max-width: 768px) 50px, 60px"
                   style={{ objectFit: 'contain' }}
+                  loading="lazy"
                 />
               </div>
               <h3>E-Wallet</h3>
@@ -123,6 +122,7 @@ const Home: NextPage = () => {
                   height={60}
                   sizes="(max-width: 768px) 50px, 60px"
                   style={{ objectFit: 'contain' }}
+                  loading="lazy"
                 />
               </div>
               <h3>Fast Transactions</h3>
@@ -137,6 +137,7 @@ const Home: NextPage = () => {
                   height={60}
                   sizes="(max-width: 768px) 50px, 60px"
                   style={{ objectFit: 'contain' }}
+                  loading="lazy"
                 />
               </div>
               <h3>Security</h3>
@@ -151,6 +152,7 @@ const Home: NextPage = () => {
                   height={60}
                   sizes="(max-width: 768px) 50px, 60px"
                   style={{ objectFit: 'contain' }}
+                  loading="lazy"
                 />
               </div>
               <h3>Customer Support</h3>
@@ -176,6 +178,7 @@ const Home: NextPage = () => {
                   height={60}
                   sizes="(max-width: 768px) 50px, 60px"
                   style={{ objectFit: 'contain' }}
+                  loading="lazy"
                 />
               </div>
               <h3>Data Subscription</h3>
@@ -197,6 +200,7 @@ const Home: NextPage = () => {
                   height={60}
                   sizes="(max-width: 768px) 50px, 60px"
                   style={{ objectFit: 'contain' }}
+                  loading="lazy"
                 />
               </div>
               <h3>Airtime Recharge</h3>
@@ -218,6 +222,7 @@ const Home: NextPage = () => {
                   height={60}
                   sizes="(max-width: 768px) 50px, 60px"
                   style={{ objectFit: 'contain' }}
+                  loading="lazy"
                 />
               </div>
               <h3>TV & Cable Subscription</h3>
@@ -239,6 +244,7 @@ const Home: NextPage = () => {
                   height={60}
                   sizes="(max-width: 768px) 50px, 60px"
                   style={{ objectFit: 'contain' }}
+                  loading="lazy"
                 />
               </div>
               <h3>Bills Payment</h3>
@@ -262,13 +268,13 @@ const Home: NextPage = () => {
           <h2>Supported Networks</h2>
           <div className="underline pink"></div>
           <div className="network-logos">
-            <Image src="/asset/mtn.jpg" alt="MTN" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} />
-            <Image src="/asset/airtel.png" alt="Airtel" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} />
-            <Image src="/asset/glo.jpg" alt="Glo" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} />
-            <Image src="/asset/9mobile.png" alt="9mobile" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} />
-            <Image src="/asset/dstvstarsat.png" alt="DSTV" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} />
-            <Image src="/asset/ekedc.png" alt="EKEDC" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} />
-            <Image src="/asset/ibedcpng.png" alt="IBEDC" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} />
+            <Image src="/asset/mtn.jpg" alt="MTN" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} loading="lazy" />
+            <Image src="/asset/airtel.png" alt="Airtel" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} loading="lazy" />
+            <Image src="/asset/glo.jpg" alt="Glo" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} loading="lazy" />
+            <Image src="/asset/9mobile.png" alt="9mobile" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} loading="lazy" />
+            <Image src="/asset/dstvstarsat.png" alt="DSTV" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} loading="lazy" />
+            <Image src="/asset/ekedc.png" alt="EKEDC" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} loading="lazy" />
+            <Image src="/asset/ibedcpng.png" alt="IBEDC" width={100} height={50} sizes="(max-width: 768px) 80px, 100px" style={{ objectFit: 'contain' }} loading="lazy" />
           </div>
         </div>
       </section>
@@ -289,6 +295,7 @@ const Home: NextPage = () => {
                 height={40}
                 sizes="(max-width: 768px) 30px, 40px"
                 style={{ objectFit: 'contain' }}
+                loading="lazy"
               />
               <h3>Address</h3>
               <p>No. 4, Mercyland Estate Ayobo-Ipaja, Lagos</p>
@@ -301,6 +308,7 @@ const Home: NextPage = () => {
                 height={40}
                 sizes="(max-width: 768px) 30px, 40px"
                 style={{ objectFit: 'contain' }}
+                loading="lazy"
               />
               <h3>Phone Number</h3>
               <p>+234 - 815 042 3800</p>
@@ -313,6 +321,7 @@ const Home: NextPage = () => {
                 height={40}
                 sizes="(max-width: 768px) 30px, 40px"
                 style={{ objectFit: 'contain' }}
+                loading="lazy"
               />
               <h3>Email</h3>
               <p>swipetelecomsnigeria@gmail.com</p>
@@ -337,11 +346,11 @@ const Home: NextPage = () => {
             height={48}
             sizes="(max-width: 768px) 36px, 48px"
             style={{ objectFit: 'contain' }}
+            loading="lazy"
           />
         </a>
       </div>
 
-      {/* All the existing <style jsx> block remains unchanged */}
       <style jsx>{`
         :global(*) {
           margin: 0;
@@ -394,16 +403,44 @@ const Home: NextPage = () => {
           margin: 0;
         }
 
-        .nav-list a {
+        .nav-link {
           color: #1E3A8A;
           text-decoration: none;
           font-size: clamp(0.7rem, 2vw, 1rem);
           font-weight: 500;
-          transition: color 0.3s ease;
+          padding: clamp(0.3rem, 1vw, 0.5rem);
+          border-radius: 5px;
+          transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+          position: relative;
         }
 
-        .nav-list a:hover {
+        .nav-link:hover {
           color: #EC4899;
+          background-color: rgba(236, 72, 153, 0.1);
+          transform: translateY(-2px);
+        }
+
+        .nav-link:active,
+        .nav-link:focus {
+          color: #F472B6;
+          outline: none;
+          box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.3);
+        }
+
+        .nav-link::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0;
+          height: 2px;
+          background-color: #EC4899;
+          transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+          width: 100%;
+          left: 0;
         }
 
         .hamburger {
@@ -420,6 +457,7 @@ const Home: NextPage = () => {
           height: 0.2rem;
           background: #1E3A8A;
           position: relative;
+          transition: background 0.3s ease;
         }
 
         .hamburger-icon::before,
@@ -440,6 +478,18 @@ const Home: NextPage = () => {
           top: 0.5rem;
         }
 
+        .hamburger[aria-expanded="true"] .hamburger-icon {
+          background: transparent;
+        }
+
+        .hamburger[aria-expanded="true"] .hamburger-icon::before {
+          transform: rotate(45deg) translate(0.35rem, 0.35rem);
+        }
+
+        .hamburger[aria-expanded="true"] .hamburger-icon::after {
+          transform: rotate(-45deg) translate(0.35rem, -0.35rem);
+        }
+
         .nav-list.open {
           transform: translateX(0);
         }
@@ -451,34 +501,34 @@ const Home: NextPage = () => {
 
         .login,
         .signup {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
           padding: clamp(0.4rem, 1.5vw, 0.6rem) clamp(0.8rem, 2vw, 1rem);
           border-radius: 5px;
           font-size: clamp(0.7rem, 2vw, 0.9rem);
-          cursor: pointer;
-          transition: transform 0.3s ease, background-color 0.3s ease;
-          border: none;
           font-weight: 500;
-        }
-
-        .login a,
-        .signup a {
-          color: inherit;
           text-decoration: none;
+          transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+          cursor: pointer;
         }
 
         .login {
           background-color: #BFDBFE;
           color: #1E3A8A;
+          border: 1px solid #93C5FD;
         }
 
         .signup {
           background-color: #EC4899;
           color: #FFFFFF;
+          border: none;
         }
 
         .login:hover,
         .signup:hover {
-          transform: scale(1.05);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         .login:hover {
@@ -487,6 +537,12 @@ const Home: NextPage = () => {
 
         .signup:hover {
           background-color: #F472B6;
+        }
+
+        .login:focus,
+        .signup:focus {
+          outline: none;
+          box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
         }
 
         /* Hero Section Styles */
@@ -869,59 +925,6 @@ const Home: NextPage = () => {
           animation: slideInLeft 0.6s ease-out forwards;
         }
 
-        .contact-form h3 {
-          font-size: clamp(0.9rem, 2.5vw, 1.4rem);
-          font-weight: 600;
-          margin: 0 0 clamp(0.5rem, 1.5vw, 1rem);
-          text-align: center;
-        }
-
-        .form-group {
-          margin-bottom: clamp(0.8rem, 2vw, 1rem);
-        }
-
-        .form-group label {
-          display: block;
-          font-size: clamp(0.7rem, 2vw, 0.9rem);
-          font-weight: 500;
-          margin-bottom: clamp(0.3rem, 1vw, 0.4rem);
-          color: #E0F2FF;
-        }
-
-        .form-group input,
-        .form-group textarea {
-          width: 100%;
-          padding: clamp(0.4rem, 1.5vw, 0.6rem);
-          border-radius: 5px;
-          border: 1px solid #E5E7EB;
-          font-size: clamp(0.7rem, 2vw, 0.9rem);
-          color: #1E3A8A;
-          background-color: #FFFFFF;
-        }
-
-        .form-group textarea {
-          resize: vertical;
-          min-height: clamp(5rem, 15vw, 8rem);
-        }
-
-        .form-submit {
-          display: block;
-          padding: clamp(0.5rem, 1.5vw, 0.7rem) clamp(1rem, 2vw, 1.4rem);
-          background-color: #EC4899;
-          color: #FFFFFF;
-          border: none;
-          border-radius: 5px;
-          font-size: clamp(0.7rem, 2vw, 0.9rem);
-          font-weight: 500;
-          cursor: not-allowed;
-          transition: background-color 0.3s ease;
-          margin: 0 auto;
-        }
-
-        .form-submit:hover {
-          background-color: #F472B6;
-        }
-
         /* Footer Styles */
         footer {
           background-color: #1E3A8A;
@@ -994,25 +997,11 @@ const Home: NextPage = () => {
         }
 
         /* Responsive Design */
-        /* Smartwatch (<320px) */
         @media (max-width: 320px) {
-          .container {
-            padding: 0 0.5rem;
-          }
-
-          .logo {
-            font-size: 0.8rem;
-          }
-
-          .logo img {
-            width: 1.2rem;
-            height: 1.2rem;
-          }
-
-          .hamburger {
-            display: block;
-          }
-
+          .container { padding: 0 0.5rem; }
+          .logo { font-size: 0.8rem; }
+          .logo img { width: 1.2rem; height: 1.2rem; }
+          .hamburger { display: block; }
           .nav-list {
             display: none;
             position: absolute;
@@ -1024,206 +1013,45 @@ const Home: NextPage = () => {
             padding: 0.5rem;
             z-index: 999;
           }
-
-          .nav-list.open {
-            display: flex;
-          }
-
-          .nav-list a {
-            font-size: 0.7rem;
-            padding: 0.3rem;
-          }
-
-          .buttons {
-            display: none;
-          }
-
-          .hero {
-            padding: 1rem 0;
-          }
-
-          .hero-wrapper {
-            flex-direction: column;
-            gap: 0.5rem;
-          }
-
-          .hero-content {
-            max-width: 100%;
-          }
-
-          .hero-content h1 {
-            font-size: 1rem;
-          }
-
-          .hero-content .highlight {
-            font-size: 1.2rem;
-          }
-
-          .hero-content p {
-            font-size: 0.7rem;
-            margin-bottom: 0.5rem;
-          }
-
-          .hero-content .buttons {
-            flex-direction: column;
-            gap: 0.3rem;
-          }
-
-          .login,
-          .signup {
-            font-size: 0.7rem;
-            padding: 0.3rem 0.6rem;
-          }
-
-          .hero-image {
-            display: none;
-          }
-
-          .wave {
-            height: 2rem;
-          }
-
-          .features,
-          .services,
-          .networks,
-          .contact {
-            padding: 1rem 0;
-          }
-
-          .features h2,
-          .services h2,
-          .networks h2,
-          .contact h2 {
-            font-size: 1rem;
-          }
-
-          .subtitle {
-            font-size: 0.7rem;
-            margin-bottom: 0.5rem;
-          }
-
-          .feature-grid,
-          .service-grid,
-          .contact-info {
-            grid-template-columns: 1fr;
-            gap: 0.5rem;
-          }
-
-          .feature-card,
-          .service-card {
-            padding: 0.5rem;
-          }
-
-          .feature-card h3,
-          .service-card h3 {
-            font-size: 0.9rem;
-          }
-
-          .feature-card p,
-          .service-card p {
-            font-size: 0.7rem;
-          }
-
-          .feature-image-wrapper,
-          .service-image-wrapper {
-            width: 2.5rem;
-            height: 2.5rem;
-          }
-
-          .feature-image-wrapper img,
-          .service-image-wrapper img {
-            width: 1.8rem;
-            height: 1.8rem;
-          }
-
-          .service-features {
-            font-size: 0.65rem;
-            padding: 0 0.3rem;
-          }
-
-          .service-card .btn {
-            font-size: 0.7rem;
-            padding: 0.3rem 0.6rem;
-          }
-
-          .network-logos {
-            gap: 0.5rem;
-          }
-
-          .network-logos img {
-            width: 2.5rem;
-            height: 1.2rem;
-          }
-
-          .contact-info {
-            grid-template-columns: 1fr;
-          }
-
-          .contact-item {
-            padding: 0.5rem;
-          }
-
-          .contact-item img {
-            width: 1.5rem;
-            height: 1.5rem;
-          }
-
-          .contact-item h3 {
-            font-size: 0.8rem;
-          }
-
-          .contact-item p {
-            font-size: 0.7rem;
-          }
-
-          .contact-form {
-            text-align: center;
-          }
-
-          .contact-form h3 {
-            font-size: 0.9rem;
-          }
-
-          .form-group label {
-            font-size: 0.7rem;
-          }
-
-          .form-group input,
-          .form-group textarea {
-            font-size: 0.7rem;
-            padding: 0.3rem;
-          }
-
-          .form-submit {
-            font-size: 0.7rem;
-            padding: 0.3rem 0.6rem;
-          }
-
-          .whatsapp img {
-            width: 1.5rem;
-            height: 1.5rem;
-          }
-
-          footer {
-            font-size: 0.65rem;
-            padding: 0.5rem 0;
-          }
+          .nav-list.open { display: flex; }
+          .nav-link { font-size: 0.7rem; padding: 0.3rem; }
+          .buttons { display: none; }
+          .hero { padding: 1rem 0; }
+          .hero-wrapper { flex-direction: column; gap: 0.5rem; }
+          .hero-content { max-width: 100%; }
+          .hero-content h1 { font-size: 1rem; }
+          .hero-content .highlight { font-size: 1.2rem; }
+          .hero-content p { font-size: 0.7rem; margin-bottom: 0.5rem; }
+          .hero-content .buttons { flex-direction: column; gap: 0.3rem; }
+          .login, .signup { font-size: 0.7rem; padding: 0.3rem 0.6rem; }
+          .hero-image { display: none; }
+          .wave { height: 2rem; }
+          .features, .services, .networks, .contact { padding: 1rem 0; }
+          .features h2, .services h2, .networks h2, .contact h2 { font-size: 1rem; }
+          .subtitle { font-size: 0.7rem; margin-bottom: 0.5rem; }
+          .feature-grid, .service-grid, .contact-info { grid-template-columns: 1fr; gap: 0.5rem; }
+          .feature-card, .service-card { padding: 0.5rem; }
+          .feature-card h3, .service-card h3 { font-size: 0.9rem; }
+          .feature-card p, .service-card p { font-size: 0.7rem; }
+          .feature-image-wrapper, .service-image-wrapper { width: 2.5rem; height: 2.5rem; }
+          .feature-image-wrapper img, .service-image-wrapper img { width: 1.8rem; height: 1.8rem; }
+          .service-features { font-size: 0.65rem; padding: 0 0.3rem; }
+          .service-card .btn { font-size: 0.7rem; padding: 0.3rem 0.6rem; }
+          .network-logos { gap: 0.5rem; }
+          .network-logos img { width: 2.5rem; height: 1.2rem; }
+          .contact-info { grid-template-columns: 1fr; }
+          .contact-item { padding: 0.5rem; }
+          .contact-item img { width: 1.5rem; height: 1.5rem; }
+          .contact-item h3 { font-size: 0.8rem; }
+          .contact-item p { font-size: 0.7rem; }
+          .whatsapp img { width: 1.5rem; height: 1.5rem; }
+          footer { font-size: 0.65rem; padding: 0.5rem 0; }
         }
 
-        /* Mobile (321px–480px) */
         @media (min-width: 321px) and (max-width: 480px) {
-          .container {
-            padding: 0 0.8rem;
-          }
-
-          .logo {
-            font-size: 1rem;
-          }
-
-          .hamburger {
-            display: block;
-          }
-
+          .container { padding: 0 0.8rem; }
+          .logo { font-size: 1rem; }
+          .hamburger { display: block; }
           .nav-list {
             display: none;
             position: absolute;
@@ -1235,97 +1063,26 @@ const Home: NextPage = () => {
             padding: 0.5rem;
             z-index: 999;
           }
-
-          .nav-list.open {
-            display: flex;
-          }
-
-          .nav-list a {
-            font-size: 0.8rem;
-            padding: 0.4rem;
-          }
-
-          .buttons {
-            flex-direction: column;
-            gap: 0.5rem;
-            width: 100%;
-            align-items: center;
-          }
-
-          .login,
-          .signup {
-            width: 100%;
-            max-width: 10rem;
-            font-size: 0.8rem;
-          }
-
-          .hero {
-            padding: 1.5rem 0;
-          }
-
-          .hero-wrapper {
-            flex-direction: column;
-            gap: 1rem;
-          }
-
-          .hero-content {
-            max-width: 100%;
-          }
-
-          .hero-content h1 {
-            font-size: 1.4rem;
-          }
-
-          .hero-content .highlight {
-            font-size: 1.8rem;
-          }
-
-          .hero-content p {
-            font-size: 0.8rem;
-          }
-
-          .hero-image {
-            max-width: 80%;
-            margin: 0 auto;
-          }
-
-          .features,
-          .services,
-          .networks,
-          .contact {
-            padding: 1.5rem 0;
-          }
-
-          .feature-grid,
-          .service-grid,
-          .contact-info {
-            grid-template-columns: 1fr;
-          }
-
-          .network-logos {
-            gap: 1rem;
-          }
-
-          .network-logos img {
-            width: 4rem;
-            height: 2rem;
-          }
-
-          .contact-form {
-            text-align: center;
-          }
+          .nav-list.open { display: flex; }
+          .nav-link { font-size: 0.8rem; padding: 0.4rem; }
+          .buttons { flex-direction: column; gap: 0.5rem; width: 100%; align-items: center; }
+          .login, .signup { width: 100%; max-width: 10rem; font-size: 0.8rem; }
+          .hero { padding: 1.5rem 0; }
+          .hero-wrapper { flex-direction: column; gap: 1rem; }
+          .hero-content { max-width: 100%; }
+          .hero-content h1 { font-size: 1.4rem; }
+          .hero-content .highlight { font-size: 1.8rem; }
+          .hero-content p { font-size: 0.8rem; }
+          .hero-image { max-width: 80%; margin: 0 auto; }
+          .features, .services, .networks, .contact { padding: 1.5rem 0; }
+          .feature-grid, .service-grid, .contact-info { grid-template-columns: 1fr; }
+          .network-logos { gap: 1rem; }
+          .network-logos img { width: 4rem; height: 2rem; }
         }
 
-        /* Tablet (481px–768px) */
         @media (min-width: 481px) and (max-width: 768px) {
-          .container {
-            padding: 0 1rem;
-          }
-
-          .hamburger {
-            display: block;
-          }
-
+          .container { padding: 0 1rem; }
+          .hamburger { display: block; }
           .nav-list {
             display: none;
             position: absolute;
@@ -1337,192 +1094,49 @@ const Home: NextPage = () => {
             padding: 1rem;
             z-index: 999;
           }
-
-          .nav-list.open {
-            display: flex;
-          }
-
-          .nav-list a {
-            font-size: 0.9rem;
-            padding: 0.5rem;
-          }
-
-          .buttons {
-            flex-direction: row;
-            gap: 0.5rem;
-          }
-
-          .hero {
-            padding: 2rem 0;
-          }
-
-          .hero-wrapper {
-            flex-direction: column;
-            gap: 1.5rem;
-          }
-
-          .hero-content {
-            max-width: 100%;
-          }
-
-          .hero-content h1 {
-            font-size: 2rem;
-          }
-
-          .hero-content .highlight {
-            font-size: 2.5rem;
-          }
-
-          .hero-content p {
-            font-size: 1rem;
-          }
-
-          .hero-image {
-            max-width: 70%;
-            margin: 0 auto;
-          }
-
-          .feature-grid,
-          .service-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-
-          .contact-info {
-            grid-template-columns: repeat(2, 1fr);
-          }
-
-          .network-logos {
-            gap: 1.2rem;
-          }
+          .nav-list.open { display: flex; }
+          .nav-link { font-size: 0.9rem; padding: 0.5rem; }
+          .buttons { flex-direction: row; gap: 0.5rem; }
+          .hero { padding: 2rem 0; }
+          .hero-wrapper { flex-direction: column; gap: 1.5rem; }
+          .hero-content { max-width: 100%; }
+          .hero-content h1 { font-size: 2rem; }
+          .hero-content .highlight { font-size: 2.5rem; }
+          .hero-content p { font-size: 1rem; }
+          .hero-image { max-width: 70%; margin: 0 auto; }
+          .feature-grid, .service-grid { grid-template-columns: repeat(2, 1fr); }
+          .contact-info { grid-template-columns: repeat(2, 1fr); }
+          .network-logos { gap: 1.2rem; }
         }
 
-        /* Desktop (769px–1200px) */
         @media (min-width: 769px) and (max-width: 1200px) {
-          .container {
-            max-width: 960px;
-          }
-
-          .hero-content {
-            max-width: 50%;
-          }
-
-          .hero-image {
-            max-width: 40%;
-          }
-
-          .feature-grid,
-          .service-grid {
-            grid-template-columns: repeat(3, 1fr);
-          }
+          .container { max-width: 960px; }
+          .hero-content { max-width: 50%; }
+          .hero-image { max-width: 40%; }
+          .feature-grid, .service-grid { grid-template-columns: repeat(3, 1fr); }
         }
 
-        /* Large Screens and TVs (>1200px) */
         @media (min-width: 1201px) {
-          .container {
-            max-width: 1600px;
-          }
-
-          .logo {
-            font-size: 1.4rem;
-          }
-
-          .nav-list a {
-            font-size: 1rem;
-          }
-
-          .login,
-          .signup {
-            font-size: 1rem;
-            padding: 0.6rem 1.2rem;
-          }
-
-          .hero {
-            padding: 6rem 0;
-          }
-
-          .hero-content h1 {
-            font-size: 3.5rem;
-          }
-
-          .hero-content .highlight {
-            font-size: 4.5rem;
-          }
-
-          .hero-content p {
-            font-size: 1.8rem;
-          }
-
-          .hero-image {
-            max-width: 35%;
-          }
-
-          .features h2,
-          .services h2,
-          .networks h2,
-          .contact h2 {
-            font-size: 2.2rem;
-          }
-
-          .subtitle {
-            font-size: 1.2rem;
-          }
-
-          .feature-card h3,
-          .service-card h3 {
-            font-size: 1.4rem;
-          }
-
-          .feature-card p,
-          .service-card p {
-            font-size: 1rem;
-          }
-
-          .service-features {
-            font-size: 0.95rem;
-          }
-
-          .network-logos img {
-            width: 6rem;
-            height: 3rem;
-          }
-
-          .contact-item h3 {
-            font-size: 1.3rem;
-          }
-
-          .contact-item p {
-            font-size: 1rem;
-          }
-
-          .contact-form h3 {
-            font-size: 1.4rem;
-          }
-
-          .form-group label {
-            font-size: 1rem;
-          }
-
-          .form-group input,
-          .form-group textarea {
-            font-size: 1rem;
-            padding: 0.6rem;
-          }
-
-          .form-submit {
-            font-size: 1rem;
-            padding: 0.7rem 1.4rem;
-          }
-
-          .whatsapp img {
-            width: 3.5rem;
-            height: 3.5rem;
-          }
-
-          footer {
-            font-size: 0.9rem;
-          }
+          .container { max-width: 1600px; }
+          .logo { font-size: 1.4rem; }
+          .nav-link { font-size: 1rem; }
+          .login, .signup { font-size: 1rem; padding: 0.6rem 1.2rem; }
+          .hero { padding: 6rem 0; }
+          .hero-content h1 { font-size: 3.5rem; }
+          .hero-content .highlight { font-size: 4.5rem; }
+          .hero-content p { font-size: 1.8rem; }
+          .hero-image { max-width: 35%; }
+          .features h2, .services h2, .networks h2, .contact h2 { font-size: 2.2rem; }
+          .subtitle { font-size: 1.2rem; }
+          .feature-card h3, .service-card h3 { font-size: 1.4rem; }
+          .feature-card p, .service-card p { font-size: 1rem; }
+          .service-features { font-size: 0.95rem; }
+          .network-logos img { width: 6rem; height: 3rem; }
+          .contact-item h3 { font-size: 1.3rem; }
+          .contact-item p { font-size: 1rem; }
+          .whatsapp img { width: 3.5rem; height: 3.5rem; }
+          footer { font-size: 0.9rem; }
         }
-      
       `}</style>
     </div>
   );
