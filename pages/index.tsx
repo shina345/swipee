@@ -32,10 +32,10 @@ const Home: NextPage = () => {
             <Image
               src="/asset/swipelogo.png"
               alt="Swipe Telecom Logo"
-              width={30}
-              height={30}
+              width={36}
+              height={36}
               priority
-              sizes="(max-width: 768px) 24px, 30px"
+              sizes="(max-width: 768px) 28px, 36px"
             />
             <span>Swipe-Telecoms</span>
           </div>
@@ -48,16 +48,18 @@ const Home: NextPage = () => {
           >
             <span className="hamburger-icon"></span>
           </button>
-          <ul className={`nav-list ${isMenuOpen ? 'open' : ''}`}>
-            <li><Link href="/" className="nav-link" onClick={toggleMenu}>Home</Link></li>
-            <li><Link href="#features" className="nav-link" onClick={toggleMenu}>Features</Link></li>
-            <li><Link href="#services" className="nav-link" onClick={toggleMenu}>Services</Link></li>
-            <li><Link href="#faqs" className="nav-link" onClick={toggleMenu}>FAQs</Link></li>
-            <li><Link href="#contact" className="nav-link" onClick={toggleMenu}>Contact Us</Link></li>
-          </ul>
-          <div className="buttons">
-            <Link href="/login" className="button login">Login</Link>
-            <Link href="/signup" className="button signup">Signup</Link>
+          <div className={`nav-container ${isMenuOpen ? 'open' : ''}`}>
+            <ul className="nav-list">
+              <li><Link href="/" className="nav-link" onClick={toggleMenu}>Home</Link></li>
+              <li><Link href="#features" className="nav-link" onClick={toggleMenu}>Features</Link></li>
+              <li><Link href="#services" className="nav-link" onClick={toggleMenu}>Services</Link></li>
+              <li><Link href="#faqs" className="nav-link" onClick={toggleMenu}>FAQs</Link></li>
+              <li><Link href="#contact" className="nav-link" onClick={toggleMenu}>Contact Us</Link></li>
+            </ul>
+            <div className="buttons">
+              <Link href="/login" className="button login">Login</Link>
+              <Link href="/signup" className="button signup">Signup</Link>
+            </div>
           </div>
         </nav>
       </header>
@@ -82,7 +84,7 @@ const Home: NextPage = () => {
               alt="Person with smartphone"
               width={600}
               height={400}
-              sizes="(max-width: 768px) 80vw, 40vw"
+              sizes="(max-width: 768px) 90vw, 40vw"
               style={{ objectFit: 'contain' }}
               priority
             />
@@ -105,7 +107,7 @@ const Home: NextPage = () => {
                   alt="E-Wallet"
                   width={60}
                   height={60}
-                  sizes="(max-width: 768px) 50px, 60px"
+                  sizes="(max-width: 768px) 48px, 60px"
                   style={{ objectFit: 'contain' }}
                   loading="lazy"
                 />
@@ -120,7 +122,7 @@ const Home: NextPage = () => {
                   alt="Fast Transaction"
                   width={60}
                   height={60}
-                  sizes="(max-width: 768px) 50px, 60px"
+                  sizes="(max-width: 768px) 48px, 60px"
                   style={{ objectFit: 'contain' }}
                   loading="lazy"
                 />
@@ -135,7 +137,7 @@ const Home: NextPage = () => {
                   alt="Security"
                   width={60}
                   height={60}
-                  sizes="(max-width: 768px) 50px, 60px"
+                  sizes="(max-width: 768px) 48px, 60px"
                   style={{ objectFit: 'contain' }}
                   loading="lazy"
                 />
@@ -150,13 +152,13 @@ const Home: NextPage = () => {
                   alt="Customer Support"
                   width={60}
                   height={60}
-                  sizes="(max-width: 768px) 50px, 60px"
-                  style={{ objectFit: 'contain' }}
+                  sizes="(max-width: 768px) 48px, 60px"
+                  style={{ object beacons: 'contain' }}
                   loading="lazy"
                 />
               </div>
               <h3>Customer Support</h3>
-              <p>24/7 support to address your needs efficiently.</p>
+              <p>24/7 support to address your needs wzi efficiently.</p>
             </div>
           </div>
         </div>
@@ -176,7 +178,7 @@ const Home: NextPage = () => {
                   alt="Data Subscription"
                   width={60}
                   height={60}
-                  sizes="(max-width: 768px) 50px, 60px"
+                  sizes="(max-width: 768px) 48px, 60px"
                   style={{ objectFit: 'contain' }}
                   loading="lazy"
                 />
@@ -198,7 +200,7 @@ const Home: NextPage = () => {
                   alt="Airtime Recharge"
                   width={60}
                   height={60}
-                  sizes="(max-width: 768px) 50px, 60px"
+                  sizes="(max-width: 768px) 48px, 60px"
                   style={{ objectFit: 'contain' }}
                   loading="lazy"
                 />
@@ -220,7 +222,7 @@ const Home: NextPage = () => {
                   alt="TV & Cable Subscription"
                   width={60}
                   height={60}
-                  sizes="(max-width: 768px) 50px, 60px"
+                  sizes="(max-width: 768px) 48px, 60px"
                   style={{ objectFit: 'contain' }}
                   loading="lazy"
                 />
@@ -242,7 +244,7 @@ const Home: NextPage = () => {
                   alt="Bills Payment"
                   width={60}
                   height={60}
-                  sizes="(max-width: 768px) 50px, 60px"
+                  sizes="(max-width: 768px) 48px, 60px"
                   style={{ objectFit: 'contain' }}
                   loading="lazy"
                 />
@@ -293,7 +295,7 @@ const Home: NextPage = () => {
                 alt="Address"
                 width={40}
                 height={40}
-                sizes="(max-width: 768px) 30px, 40px"
+                sizes="(max-width: 768px) 32px, 40px"
                 style={{ objectFit: 'contain' }}
                 loading="lazy"
               />
@@ -306,7 +308,7 @@ const Home: NextPage = () => {
                 alt="Phone"
                 width={40}
                 height={40}
-                sizes="(max-width: 768px) 30px, 40px"
+                sizes="(max-width: 768px) 32px, 40px"
                 style={{ objectFit: 'contain' }}
                 loading="lazy"
               />
@@ -319,7 +321,7 @@ const Home: NextPage = () => {
                 alt="Email"
                 width={40}
                 height={40}
-                sizes="(max-width: 768px) 30px, 40px"
+                sizes="(max-width: 768px) 32px, 40px"
                 style={{ objectFit: 'contain' }}
                 loading="lazy"
               />
@@ -344,7 +346,7 @@ const Home: NextPage = () => {
             alt="WhatsApp"
             width={48}
             height={48}
-            sizes="(max-width: 768px) 36px, 48px"
+            sizes="(max-width: 768px) 40px, 48px"
             style={{ objectFit: 'contain' }}
             loading="lazy"
           />
@@ -362,85 +364,75 @@ const Home: NextPage = () => {
         .main {
           width: 100%;
           margin: 0 auto;
+          overflow-x: hidden;
         }
 
         .container {
           width: 100%;
-          max-width: clamp(300px, 90vw, 1600px);
+          max-width: clamp(300px, 90vw, 1440px);
           margin: 0 auto;
-          padding: 0 clamp(0.5rem, 2vw, 1rem);
+          padding: 0 clamp(0.75rem, 2vw, 1.5rem);
         }
 
         /* Header Styles */
         header {
           background-color: #E0F2FF;
-          padding: clamp(0.5rem, 2vh, 1rem) 0;
+          padding: clamp(0.75rem, 2vh, 1.25rem) 0;
           position: sticky;
           top: 0;
           z-index: 1000;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         nav {
           display: flex;
           justify-content: space-between;
           align-items: center;
+          flex-wrap: wrap;
         }
 
         .logo {
           display: flex;
           align-items: center;
-          gap: clamp(0.3rem, 1vw, 0.5rem);
+          gap: clamp(0.4rem, 1vw, 0.6rem);
           color: #003087;
-          font-size: clamp(0.9rem, 2.5vw, 1.4rem);
+          font-size: clamp(1rem, 2.5vw, 1.5rem);
           font-weight: 600;
+        }
+
+        .nav-container {
+          display: flex;
+          align-items: center;
+          gap: clamp(1rem, 3vw, 2rem);
         }
 
         .nav-list {
           list-style: none;
           display: flex;
-          gap: clamp(0.5rem, 2vw, 1rem);
+          gap: clamp(0.75rem, 2vw, 1.25rem);
           margin: 0;
         }
 
         .nav-link {
           color: #1E3A8A;
           text-decoration: none;
-          font-size: clamp(0.7rem, 2vw, 1rem);
+          font-size: clamp(0.8rem, 2vw, 1rem);
           font-weight: 500;
-          padding: clamp(0.3rem, 1vw, 0.5rem);
-          border-radius: 5px;
-          transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
-          position: relative;
+          padding: clamp(0.4rem, 1vw, 0.6rem);
+          border-radius: 6px;
+          transition: color 0.3s ease, background-color 0.3s ease;
         }
 
         .nav-link:hover {
           color: #EC4899;
           background-color: rgba(236, 72, 153, 0.1);
-          transform: translateY(-2px);
         }
 
         .nav-link:active,
         .nav-link:focus {
           color: #F472B6;
           outline: none;
-          box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.3);
-        }
-
-        .nav-link::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          width: 0;
-          height: 2px;
-          background-color: #EC4899;
-          transition: width 0.3s ease, left 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-          width: 100%;
-          left: 0;
+          box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.3);
         }
 
         .hamburger {
@@ -448,13 +440,14 @@ const Home: NextPage = () => {
           background: none;
           border: none;
           cursor: pointer;
-          padding: 0.5rem;
+          padding: 0.6rem;
+          z-index: 1001;
         }
 
         .hamburger-icon {
           display: block;
-          width: clamp(1.2rem, 4vw, 1.5rem);
-          height: 0.2rem;
+          width: clamp(1.5rem, 4vw, 1.8rem);
+          height: 0.25rem;
           background: #1E3A8A;
           position: relative;
           transition: background 0.3s ease;
@@ -465,17 +458,17 @@ const Home: NextPage = () => {
           content: '';
           position: absolute;
           width: 100%;
-          height: 0.2rem;
+          height: 0.25rem;
           background: #1E3A8A;
           transition: transform 0.3s ease;
         }
 
         .hamburger-icon::before {
-          top: -0.5rem;
+          top: -0.6rem;
         }
 
         .hamburger-icon::after {
-          top: 0.5rem;
+          top: 0.6rem;
         }
 
         .hamburger[aria-expanded="true"] .hamburger-icon {
@@ -483,20 +476,23 @@ const Home: NextPage = () => {
         }
 
         .hamburger[aria-expanded="true"] .hamburger-icon::before {
-          transform: rotate(45deg) translate(0.35rem, 0.35rem);
+          transform: rotate(45deg) translate(0.45rem, 0.45rem);
         }
 
         .hamburger[aria-expanded="true"] .hamburger-icon::after {
-          transform: rotate(-45deg) translate(0.35rem, -0.35rem);
+          transform: rotate(-45deg) translate(0.45rem, -0.45rem);
         }
 
-        .nav-list.open {
-          transform: translateX(0);
+        .nav-container.open {
+          transform: translateY(0);
+          opacity: 1;
         }
 
         .buttons {
           display: flex;
-          gap: clamp(0.3rem, 1vw, 0.5rem);
+          gap: clamp(0.6rem, 1.5vw, 1rem);
+          flex-wrap: wrap;
+          justify-content: center;
         }
 
         /* Button Base Styles */
@@ -504,19 +500,23 @@ const Home: NextPage = () => {
           display: inline-flex;
           justify-content: center;
           align-items: center;
-          padding: clamp(0.5rem, 1.5vw, 0.7rem) clamp(1rem, 2vw, 1.4rem);
-          border-radius: 8px;
-          font-size: clamp(0.8rem, 2vw, 1rem);
+          width: 100%;
+          max-width: clamp(8.5rem, 25vw, 10.5rem);
+          padding: clamp(0.65rem, 2vw, 0.85rem) clamp(1.25rem, 3vw, 1.5rem);
+          border-radius: 10px;
+          font-size: clamp(0.9rem, 2.2vw, 1.1rem);
           font-weight: 600;
           text-decoration: none;
+          text-align: center;
           cursor: pointer;
-          transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+          transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
           border: none;
+          line-height: 1.5;
         }
 
         :global(.button:hover) {
-          transform: translateY(-2px);
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+          transform: translateY(-2px);
         }
 
         :global(.button:focus) {
@@ -525,8 +525,8 @@ const Home: NextPage = () => {
         }
 
         :global(.button:active) {
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
           transform: translateY(0);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         :global(.login) {
@@ -553,7 +553,7 @@ const Home: NextPage = () => {
         /* Hero Section Styles */
         .hero {
           background: linear-gradient(180deg, #003087 0%, #3B82F6 100%);
-          padding: clamp(2rem, 8vh, 6rem) 0;
+          padding: clamp(2.5rem, 8vh, 5rem) 0;
           position: relative;
           overflow: hidden;
           display: flex;
@@ -565,48 +565,48 @@ const Home: NextPage = () => {
 
         .hero-wrapper {
           display: flex;
-          justify-content: center;
+          flex-direction: column;
           align-items: center;
-          gap: clamp(1rem, 3vw, 2rem);
+          gap: clamp(1.5rem, 4vw, 2rem);
           max-width: 100%;
-          padding: 0 clamp(0.5rem, 2vw, 1rem);
+          padding: 0 clamp(0.75rem, 2vw, 1.5rem);
         }
 
         .hero-content {
-          max-width: 50%;
+          max-width: clamp(22rem, 90vw, 45rem);
           z-index: 1;
           animation: fadeIn 1s ease-out;
           text-align: center;
         }
 
         .hero-content h1 {
-          font-size: clamp(1.5rem, 5vw, 3.5rem);
+          font-size: clamp(1.5rem, 5vw, 3rem);
           font-weight: 700;
-          margin: 0 0 clamp(0.5rem, 2vw, 1rem);
+          margin: 0 0 clamp(0.75rem, 2vw, 1.25rem);
           line-height: 1.2;
         }
 
         .hero-content .highlight {
-          font-size: clamp(2rem, 6vw, 4.5rem);
+          font-size: clamp(2rem, 6vw, 3.5rem);
           color: #EC4899;
           font-weight: 700;
         }
 
         .hero-content p {
-          font-size: clamp(0.9rem, 2.5vw, 1.8rem);
-          margin: 0 0 clamp(0.8rem, 2vw, 1.2rem);
-          line-height: 1.5;
+          font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+          margin: 0 0 clamp(1rem, 3vw, 1.5rem);
+          line-height: 1.6;
           color: #E0F2FF;
         }
 
         .hero-content .buttons {
-          gap: clamp(0.3rem, 1vw, 0.5rem);
-          display: flex;
-          justify-content: center;
+          gap: clamp(0.75rem, 2vw, 1rem);
+          flex-direction: column;
+          align-items: center;
         }
 
         .hero-image {
-          max-width: clamp(30%, 40vw, 40%);
+          max-width: clamp(18rem, 85vw, 35rem);
           z-index: 1;
           animation: slideInRight 1s ease-out;
         }
@@ -616,10 +616,10 @@ const Home: NextPage = () => {
           bottom: 0;
           left: 0;
           width: 100%;
-          height: clamp(3rem, 10vw, 6rem);
+          height: clamp(3rem, 10vw, 5rem);
           background: url('/wave.svg') no-repeat;
           background-size: cover;
-          animation: waveMove 5s infinite ease-in-out;
+          animation: waveMove 6s infinite ease-in-out;
         }
 
         /* Features Section Styles */
@@ -631,17 +631,17 @@ const Home: NextPage = () => {
         }
 
         .features h2 {
-          font-size: clamp(1.2rem, 3vw, 2.2rem);
+          font-size: clamp(1.4rem, 3.5vw, 2rem);
           color: #1E3A8A;
           font-weight: 600;
-          margin: 0 0 clamp(0.3rem, 1vw, 0.5rem);
+          margin: 0 0 clamp(0.4rem, 1.5vw, 0.6rem);
         }
 
         .underline {
-          width: clamp(2rem, 5vw, 3rem);
-          height: 0.25rem;
+          width: clamp(2.5rem, 6vw, 3.5rem);
+          height: 0.3rem;
           background-color: #FFFFFF;
-          margin: 0 auto clamp(0.3rem, 1vw, 0.5rem);
+          margin: 0 auto clamp(0.4rem, 1.5vw, 0.6rem);
         }
 
         .underline.pink {
@@ -649,7 +649,7 @@ const Home: NextPage = () => {
         }
 
         .subtitle {
-          font-size: clamp(0.8rem, 2vw, 1.2rem);
+          font-size: clamp(0.8rem, 2.2vw, 1.1rem);
           color: #6B7280;
           margin: 0 0 clamp(1rem, 3vw, 1.5rem);
           font-weight: 500;
@@ -657,41 +657,42 @@ const Home: NextPage = () => {
 
         .feature-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(clamp(10rem, 25vw, 12rem), 1fr));
-          gap: clamp(0.8rem, 2vw, 1.2rem);
+          grid-template-columns: repeat(auto-fit, minmax(clamp(10rem, 30vw, 12rem), 1fr));
+          gap: clamp(0.75rem, 2.5vw, 1.25rem);
         }
 
         .feature-card {
           background: #FFFFFF;
           border-radius: 10px;
-          padding: clamp(0.8rem, 2vw, 1.2rem);
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease;
+          padding: clamp(0.75rem, 2.5vw, 1.25rem);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
           text-align: center;
           animation: fadeInUp 0.6s ease-out forwards;
         }
 
         .feature-card:hover {
-          transform: translateY(-0.3rem);
+          transform: translateY(-4px);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
         .feature-card h3 {
-          font-size: clamp(0.9rem, 2.5vw, 1.4rem);
+          font-size: clamp(0.9rem, 2.5vw, 1.3rem);
           color: #1E3A8A;
-          margin: clamp(0.3rem, 1vw, 0.5rem) 0;
+          margin: clamp(0.4rem, 1.5vw, 0.6rem) 0;
           font-weight: 600;
         }
 
         .feature-card p {
           font-size: clamp(0.7rem, 2vw, 1rem);
           color: #6B7280;
-          line-height: 1.5;
+          line-height: 1.6;
         }
 
         .feature-image-wrapper {
-          width: clamp(3rem, 10vw, 4rem);
-          height: clamp(3rem, 10vw, 4rem);
-          margin: 0 auto clamp(0.5rem, 1vw, 0.8rem);
+          width: clamp(3rem, 9vw, 4rem);
+          height: clamp(3rem, 9vw, 4rem);
+          margin: 0 auto clamp(0.5rem, 1.5vw, 0.75rem);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -701,80 +702,76 @@ const Home: NextPage = () => {
         }
 
         .feature-image-wrapper img {
-          width: clamp(2rem, 8vw, 3rem);
-          height: clamp(2rem, 8vw, 3rem);
+          width: clamp(2rem, 7vw, 2.75rem);
+          height: clamp(2rem, 7vw, 2.75rem);
           object-fit: contain;
-          transition: transform 0.3s ease;
-        }
-
-        .feature-image-wrapper img:hover {
-          animation: pulse 0.5s ease-in-out;
         }
 
         /* Services Section Styles */
         .services {
-          padding: clamp(2rem, 6vh, 5rem) 0;
+          padding: clamp(2rem, 6vh, 4rem) 0;
           text-align: center;
           background: #EFF6FF;
           width: 100%;
         }
 
         .services h2 {
-          font-size: clamp(1.2rem, 3vw, 2.2rem);
+          font-size: clamp(1.4rem, 3.5vw, 2rem);
           color: #1E3A8A;
           font-weight: 600;
-          margin: 0 0 clamp(0.3rem, 1vw, 0.5rem);
+          margin: 0 0 clamp(0.4rem, 1.5vw, 0.6rem);
         }
 
         .service-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(clamp(10rem, 25vw, 12rem), 1fr));
-          gap: clamp(0.8rem, 2vw, 1.2rem);
+          grid-template-columns: repeat(auto-fit, minmax(clamp(10rem, 30vw, 12rem), 1fr));
+          gap: clamp(0.75rem, 2.5vw, 1.25rem);
           margin: 0 0 clamp(1rem, 3vw, 1.5rem);
         }
 
         .service-card {
           background: #FFFFFF;
           border-radius: 10px;
-          padding: clamp(0.8rem, 2vw, 1.2rem);
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease;
+          padding: clamp(0.75rem, 2.5vw, 1.25rem);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
           text-align: center;
           animation: scaleIn 0.6s ease-out forwards;
         }
 
         .service-card:hover {
-          transform: translateY(-0.3rem);
+          transform: translateY(-4px);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
         .service-card h3 {
-          font-size: clamp(0.9rem, 2.5vw, 1.4rem);
+          font-size: clamp(0.9rem, 2.5vw, 1.3rem);
           color: #1E3A8A;
-          margin: clamp(0.3rem, 1vw, 0.5rem) 0;
+          margin: clamp(0.4rem, 1.5vw, 0.6rem) 0;
           font-weight: 600;
         }
 
         .service-card p {
           font-size: clamp(0.7rem, 2vw, 1rem);
           color: #6B7280;
-          margin: 0 0 clamp(0.5rem, 1vw, 0.8rem);
-          line-height: 1.5;
+          margin: 0 0 clamp(0.5rem, 1.5vw, 0.75rem);
+          line-height: 1.6;
         }
 
         .service-features {
           list-style: none;
           text-align: left;
-          margin: 0 0 clamp(0.5rem, 1vw, 0.8rem);
-          padding: 0 clamp(0.3rem, 1vw, 0.5rem);
+          margin: 0 0 clamp(0.5rem, 1.5vw, 0.75rem);
+          padding: 0 clamp(0.4rem, 1.5vw, 0.6rem);
           font-size: clamp(0.65rem, 1.8vw, 0.9rem);
           color: #6B7280;
-          line-height: 1.6;
+          line-height: 1.7;
         }
 
         .service-features li {
-          margin-bottom: clamp(0.2rem, 1vw, 0.4rem);
+          margin-bottom: clamp(0.25rem, 1vw, 0.4rem);
           position: relative;
-          padding-left: clamp(0.8rem, 2vw, 1.2rem);
+          padding-left: clamp(1rem, 2.5vw, 1.25rem);
         }
 
         .service-features li::before {
@@ -782,12 +779,13 @@ const Home: NextPage = () => {
           position: absolute;
           left: 0;
           color: #EC4899;
+          font-size: clamp(0.8rem, 2vw, 1rem);
         }
 
         .service-image-wrapper {
-          width: clamp(3rem, 10vw, 4rem);
-          height: clamp(3rem, 10vw, 4rem);
-          margin: 0 auto clamp(0.5rem, 1vw, 0.8rem);
+          width: clamp(3rem, 9vw, 4rem);
+          height: clamp(3rem, 9vw, 4rem);
+          margin: 0 auto clamp(0.5rem, 1.5vw, 0.75rem);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -797,22 +795,17 @@ const Home: NextPage = () => {
         }
 
         .service-image-wrapper img {
-          width: clamp(2rem, 8vw, 3rem);
-          height: clamp(2rem, 8vw, 3rem);
+          width: clamp(2rem, 7vw, 2.75rem);
+          height: clamp(2rem, 7vw, 2.75rem);
           object-fit: contain;
-          transition: transform 0.3s ease;
-        }
-
-        .service-image-wrapper img:hover {
-          animation: pulse 0.5s ease-in-out;
         }
 
         .service-cta {
-          font-size: clamp(0.8rem, 2vw, 1.2rem);
+          font-size: clamp(0.8rem, 2.2vw, 1.1rem);
           color: #1E3A8A;
-          margin: clamp(0.8rem, 2vw, 1.2rem) 0 0;
-          line-height: 1.5;
-          max-width: clamp(20rem, 50vw, 40rem);
+          margin: clamp(0.75rem, 2.5vw, 1.25rem) 0 0;
+          line-height: 1.6;
+          max-width: clamp(20rem, 85vw, 35rem);
           margin-left: auto;
           margin-right: auto;
         }
@@ -826,30 +819,27 @@ const Home: NextPage = () => {
         }
 
         .networks h2 {
-          font-size: clamp(1.2rem, 3vw, 2.2rem);
+          font-size: clamp(1.4rem, 3.5vw, 2rem);
           color: #1E3A8A;
           font-weight: 600;
-          margin: 0 0 clamp(0.3rem, 1vw, 0.5rem);
+          margin: 0 0 clamp(0.4rem, 1.5vw, 0.6rem);
         }
 
         .network-logos {
           display: flex;
           justify-content: center;
-          gap: clamp(0.8rem, 2vw, 1.5rem);
+          gap: clamp(0.75rem, 2.5vw, 1.25rem);
           flex-wrap: wrap;
         }
 
         .network-logos img {
-          transition: transform 0.3s ease;
-        }
-
-        .network-logos img:hover {
-          transform: scale(1.1);
+          width: clamp(4.5rem, 12vw, 6.5rem);
+          height: clamp(2.25rem, 6vw, 3.25rem);
         }
 
         /* Contact Section Styles */
         .contact {
-          padding: clamp(2rem, 6vh, 5rem) 0;
+          padding: clamp(2rem, 6vh, 4rem) 0;
           text-align: center;
           background-color: #1E3A8A;
           color: #FFFFFF;
@@ -857,14 +847,14 @@ const Home: NextPage = () => {
         }
 
         .contact h2 {
-          font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+          font-size: clamp(1.4rem, 3.5vw, 2rem);
           font-weight: 700;
-          margin: 0 0 clamp(0.3rem, 1vw, 0.5rem);
+          margin: 0 0 clamp(0.4rem, 1.5vw, 0.6rem);
         }
 
         .contact .subtitle {
-          font-size: clamp(0.8rem, 2vw, 1.2rem);
-          margin: 0 0 clamp(0.5rem, 1.5vw, 1rem);
+          font-size: clamp(0.8rem, 2.2vw, 1.1rem);
+          margin: 0 0 clamp(0.6rem, 2vw, 1rem);
           font-weight: 500;
         }
 
@@ -872,30 +862,30 @@ const Home: NextPage = () => {
           font-size: clamp(0.7rem, 2vw, 1rem);
           color: #E0F2FF;
           margin: 0 0 clamp(1rem, 3vw, 1.5rem);
-          max-width: clamp(20rem, 50vw, 40rem);
+          max-width: clamp(20rem, 85vw, 35rem);
           margin-left: auto;
           margin-right: auto;
-          line-height: 1.5;
+          line-height: 1.6;
         }
 
         .contact-info {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(clamp(10rem, 25vw, 12rem), 1fr));
-          gap: clamp(0.8rem, 2vw, 1.2rem);
-          max-width: clamp(30rem, 80vw, 60rem);
+          grid-template-columns: repeat(auto-fit, minmax(clamp(10rem, 30vw, 12rem), 1fr));
+          gap: clamp(0.75rem, 2.5vw, 1.25rem);
+          max-width: clamp(22rem, 85vw, 45rem);
           margin: 0 auto clamp(1rem, 3vw, 1.5rem);
         }
 
         .contact-item {
           text-align: center;
-          padding: clamp(0.8rem, 2vw, 1.2rem);
+          padding: clamp(0.75rem, 2.5vw, 1.25rem);
           animation: slideInLeft 0.6s ease-out forwards;
         }
 
         .contact-item h3 {
-          font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+          font-size: clamp(0.9rem, 2.5vw, 1.2rem);
           font-weight: 600;
-          margin: clamp(0.3rem, 1vw, 0.5rem) 0;
+          margin: clamp(0.4rem, 1.5vw, 0.6rem) 0;
         }
 
         .contact-item p {
@@ -903,17 +893,13 @@ const Home: NextPage = () => {
           color: #E0F2FF;
         }
 
-        .contact-item:hover {
-          transform: translateY(-0.3rem);
-        }
-
         /* Footer Styles */
         footer {
           background-color: #1E3A8A;
           color: #FFFFFF;
           text-align: center;
-          padding: clamp(0.8rem, 2vh, 1.2rem) 0;
-          font-size: clamp(0.7rem, 2vw, 0.9rem);
+          padding: clamp(0.75rem, 2vh, 1.25rem);
+          font-size: clamp(0.7rem, 2vw, 1rem);
         }
 
         footer p {
@@ -923,21 +909,23 @@ const Home: NextPage = () => {
         /* WhatsApp Icon Styles */
         .whatsapp {
           position: fixed;
-          bottom: clamp(0.5rem, 2vw, 1rem);
-          right: clamp(0.5rem, 2vw, 1rem);
+          bottom: clamp(0.75rem, 2.5vw, 1.25rem);
+          right: clamp(0.75rem, 2.5vw, 1.25rem);
           z-index: 1000;
           background: #25D366;
           border-radius: 50%;
-          padding: clamp(0.3rem, 1vw, 0.5rem);
-          box-shadow: 0 2px 10px rgba(37, 211, 102, 0.5);
-        }
-
-        .whatsapp img {
+          padding: clamp(0.4rem, 1.5vw, 0.6rem);
+          box-shadow: 0 3px 8px rgba(37, 211, 102, 0.5);
           transition: transform 0.3s ease;
         }
 
-        .whatsapp img:hover {
+        .whatsapp:hover {
           transform: scale(1.1);
+        }
+
+        .whatsapp img {
+          width: clamp(2.25rem, 7vw, 2.75rem);
+          height: clamp(2.25rem, 7vw, 2.75rem);
         }
 
         /* Animations */
@@ -947,13 +935,13 @@ const Home: NextPage = () => {
         }
 
         @keyframes slideInRight {
-          from { transform: translateX(100%); }
-          to { transform: translateX(0); }
+          from { transform: translateX(100%); opacity: 0; }
+          to { transform: translateX(0); opacity: 1; }
         }
 
         @keyframes waveMove {
           0% { transform: translateY(0); }
-          50% { transform: translateY(-0.6rem); }
+          50% { transform: translateY(-0.5rem); }
           100% { transform: translateY(0); }
         }
 
@@ -963,7 +951,7 @@ const Home: NextPage = () => {
         }
 
         @keyframes scaleIn {
-          from { opacity: 0; transform: scale(0.8); }
+          from { opacity: 0; transform: scale(0.95); }
           to { opacity: 1; transform: scale(1); }
         }
 
@@ -972,153 +960,150 @@ const Home: NextPage = () => {
           to { opacity: 1; transform: translateX(0); }
         }
 
-        @keyframes pulse {
-          0% { transform: scale(1); }
-          50% { transform: scale(1.2); }
-          100% { transform: scale(1); }
-        }
-
         /* Responsive Design */
-        @media (max-width: 320px) {
+        @media (max-width: 480px) {
           .container { padding: 0 0.5rem; }
-          .logo { font-size: 0.8rem; }
-          .logo img { width: 1.2rem; height: 1.2rem; }
+          .logo { font-size: 1.1rem; }
+          .logo img { width: 28px; height: 28px; }
           .hamburger { display: block; }
-          .nav-list {
+          .nav-container {
             display: none;
             position: absolute;
-            top: 3rem;
+            top: 100%;
             left: 0;
             width: 100%;
             background: #E0F2FF;
             flex-direction: column;
-            padding: 0.5rem;
-            z-index: 999;
+            padding: 0.75rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: translateY(-20px);
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
           }
-          .nav-list.open { display: flex; }
-          .nav-link { font-size: 0.7rem; padding: 0.3rem; }
-          .buttons { display: none; }
-          .hero { padding: 1rem 0; }
-          .hero-wrapper { flex-direction: column; gap: 0.5rem; }
-          .hero-content { max-width: 100%; }
-          .hero-content h1 { font-size: 1rem; }
-          .hero-content .highlight { font-size: 1.2rem; }
-          .hero-content p { font-size: 0.7rem; margin-bottom: 0.5rem; }
-          .hero-content .buttons { flex-direction: column; gap: 0.3rem; }
-          :global(.button) { font-size: 0.7rem; padding: 0.4rem 0.8rem; }
-          .hero-image { display: none; }
-          .wave { height: 2rem; }
-          .features, .services, .networks, .contact { padding: 1rem 0; }
-          .features h2, .services h2, .networks h2, .contact h2 { font-size: 1rem; }
-          .subtitle { font-size: 0.7rem; margin-bottom: 0.5rem; }
-          .feature-grid, .service-grid, .contact-info { grid-template-columns: 1fr; gap: 0.5rem; }
-          .feature-card, .service-card { padding: 0.5rem; }
-          .feature-card h3, .service-card h3 { font-size: 0.9rem; }
-          .feature-card p, .service-card p { font-size: 0.7rem; }
-          .feature-image-wrapper, .service-image-wrapper { width: 2.5rem; height: 2.5rem; }
-          .feature-image-wrapper img, .service-image-wrapper img { width: 1.8rem; height: 1.8rem; }
-          .service-features { font-size: 0.65rem; padding: 0 0.3rem; }
-          .network-logos { gap: 0.5rem; }
-          .network-logos img { width: 2.5rem; height: 1.2rem; }
-          .contact-info { grid-template-columns: 1fr; }
-          .contact-item { padding: 0.5rem; }
-          .contact-item img { width: 1.5rem; height: 1.5rem; }
-          .contact-item h3 { font-size: 0.8rem; }
-          .contact-item p { font-size: 0.7rem; }
-          .whatsapp img { width: 1.5rem; height: 1.5rem; }
-          footer { font-size: 0.65rem; padding: 0.5rem 0; }
-        }
-
-        @media (min-width: 321px) and (max-width: 480px) {
-          .container { padding: 0 0.8rem; }
-          .logo { font-size: 1rem; }
-          .hamburger { display: block; }
+          .nav-container.open {
+            display: flex;
+            transform: translateY(0);
+            opacity: 1;
+          }
           .nav-list {
-            display: none;
-            position: absolute;
-            top: 3.5rem;
-            left: 0;
-            width: 100%;
-            background: #E0F2FF;
             flex-direction: column;
-            padding: 0.5rem;
-            z-index: 999;
+            gap: 0.5rem;
+            align-items: center;
           }
-          .nav-list.open { display: flex; }
-          .nav-link { font-size: 0.8rem; padding: 0.4rem; }
-          .buttons { flex-direction: column; gap: 0.5rem; width: 100%; align-items: center; }
-          :global(.button) { width: 100%; max-width: 10rem; font-size: 0.8rem; padding: 0.5rem 1rem; }
+          .nav-link { font-size: 0.9rem; padding: 0.5rem 1rem; width: 100%; text-align: center; }
+          .buttons { flex-direction: column; gap: 0.5rem; width: 100%; padding: 0.5rem 0; }
+          :global(.button) { font-size: 0.9rem; padding: 0.6rem 1rem; max-width: 100%; }
           .hero { padding: 1.5rem 0; }
-          .hero-wrapper { flex-direction: column; gap: 1rem; }
-          .hero-content { max-width: 100%; }
-          .hero-content h1 { font-size: 1.4rem; }
+          .hero-wrapper { gap: 1rem; }
+          .hero-content h1 { font-size: 1.3rem; }
           .hero-content .highlight { font-size: 1.8rem; }
-          .hero-content p { font-size: 0.8rem; }
-          .hero-image { max-width: 80%; margin: 0 auto; }
+          .hero-content p { font-size: 0.85rem; margin-bottom: 0.75rem; }
+          .hero-content .buttons { gap: 0.5rem; }
+          .hero-image { max-width: 100%; }
+          .wave { height: 2.5rem; }
           .features, .services, .networks, .contact { padding: 1.5rem 0; }
-          .feature-grid, .service-grid, .contact-info { grid-template-columns: 1fr; }
-          .network-logos { gap: 1rem; }
+          .features h2, .services h2, .networks h2, .contact h2 { font-size: 1.2rem; }
+          .subtitle { font-size: 0.8rem; margin-bottom: 0.75rem; }
+          .feature-grid, .service-grid, .contact-info { grid-template-columns: 1fr; gap: 0.75rem; }
+          .feature-card, .service-card { padding: 0.75rem; }
+          .feature-card h3, .service-card h3 { font-size: 1rem; }
+          .feature-card p, .service-card p { font-size: 0.8rem; }
+          .feature-image-wrapper, .service-image-wrapper { width: 2.5rem; height: 2.5rem; }
+          .feature-image-wrapper img, .service-image-wrapper img { width: 1.75rem; height: 1.75rem; }
+          .service-features { font-size: 0.75rem; padding: 0 0.5rem; }
+          .service-features li { padding-left: 1rem; }
+          .network-logos { gap: 0.5rem; }
           .network-logos img { width: 4rem; height: 2rem; }
+          .contact-info { grid-template-columns: 1fr; }
+          .contact-item { padding: 0.75rem; }
+          .contact-item img { width: 1.75rem; height: 1.75rem; }
+          .contact-item h3 { font-size: 0.9rem; }
+          .contact-item p { font-size: 0.8rem; }
+          .whatsapp img { width: 2rem; height: 2rem; }
+          footer { font-size: 0.75rem; padding: 0.75rem 0; }
         }
 
         @media (min-width: 481px) and (max-width: 768px) {
           .container { padding: 0 1rem; }
+          .logo { font-size: 1.2rem; }
           .hamburger { display: block; }
-          .nav-list {
+          .nav-container {
             display: none;
             position: absolute;
-            top: 4rem;
+            top: 100%;
             left: 0;
             width: 100%;
             background: #E0F2FF;
             flex-direction: column;
             padding: 1rem;
-            z-index: 999;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: translateY(-20px);
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
           }
-          .nav-list.open { display: flex; }
-          .nav-link { font-size: 0.9rem; padding: 0.5rem; }
-          .buttons { flex-direction: row; gap: 0.5rem; }
-          :global(.button) { font-size: 0.9rem; padding: 0.5rem 1.2rem; }
+          .nav-container.open {
+            display: flex;
+            transform: translateY(0);
+            opacity: 1;
+          }
+          .nav-list { flex-direction: column; gap: 0.75rem; align-items: center; }
+          .nav-link { font-size: 1rem; padding: 0.6rem 1.2rem; width: 100%; text-align: center; }
+          .buttons { flex-direction: column; gap: 0.75rem; width: 100%; padding: 0.75rem 0; }
+          :global(.button) { font-size: 0.95rem; padding: 0.7rem 1.2rem; max-width: 100%; }
           .hero { padding: 2rem 0; }
-          .hero-wrapper { flex-direction: column; gap: 1.5rem; }
-          .hero-content { max-width: 100%; }
-          .hero-content h1 { font-size: 2rem; }
-          .hero-content .highlight { font-size: 2.5rem; }
+          .hero-wrapper { gap: 1.5rem; }
+          .hero-content h1 { font-size: 1.8rem; }
+          .hero-content .highlight { font-size: 2.2rem; }
           .hero-content p { font-size: 1rem; }
-          .hero-image { max-width: 70%; margin: 0 auto; }
+          .hero-image { max-width: 90%; }
+          .features, .services, .networks, .contact { padding: 2rem 0; }
           .feature-grid, .service-grid { grid-template-columns: repeat(2, 1fr); }
           .contact-info { grid-template-columns: repeat(2, 1fr); }
-          .network-logos { gap: 1.2rem; }
+          .network-logos { gap: 0.75rem; }
+          .network-logos img { width: 5rem; height: 2.5rem; }
         }
 
-        @media (min-width: 769px) and (max-width: 1200px) {
+        @media (min-width: 769px) and (max-width: 1024px) {
           .container { max-width: 960px; }
+          .hamburger { display: none; }
+          .nav-container { display: flex; }
+          .nav-list { flex-direction: row; }
+          .buttons { flex-direction: row; }
+          .hero-wrapper { flex-direction: row; justify-content: space-between; }
           .hero-content { max-width: 50%; }
-          .hero-image { max-width: 40%; }
-          .feature-grid, .service-grid { grid-template-columns: repeat(3, 1fr); }
-          :global(.button) { font-size: 0.95rem; padding: 0.6rem 1.3rem; }
+          .hero-image { max-width: 45%; }
+          .hero-content .buttons { flex-direction: row; }
+          .feature-grid, .service-grid { grid-template-columns: repeat(2, 1fr); }
+          .contact-info { grid-template-columns: repeat(3, 1fr); }
+          :global(.button) { font-size: 1rem; padding: 0.75rem 1.5rem; max-width: 11rem; }
         }
 
-        @media (min-width: 1201px) {
-          .container { max-width: 1600px; }
-          .logo { font-size: 1.4rem; }
-          .nav-link { font-size: 1rem; }
-          :global(.button) { font-size: 1rem; padding: 0.7rem 1.4rem; }
-          .hero { padding: 6rem 0; }
-          .hero-content h1 { font-size: 3.5rem; }
-          .hero-content .highlight { font-size: 4.5rem; }
-          .hero-content p { font-size: 1.8rem; }
-          .hero-image { max-width: 35%; }
-          .features h2, .services h2, .networks h2, .contact h2 { font-size: 2.2rem; }
-          .subtitle { font-size: 1.2rem; }
-          .feature-card h3, .service-card h3 { font-size: 1.4rem; }
+        @media (min-width: 1025px) {
+          .container { max-width: 1440px; }
+          .hamburger { display: none; }
+          .nav-container { display: flex; }
+          .nav-list { flex-direction: row; }
+          .logo { font-size: 1.5rem; }
+          .nav-link { font-size: 1.1rem; }
+          :global(.button) { font-size: 1.1rem; padding: 0.85rem 1.75rem; max-width: 12rem; }
+          .hero { padding: 5rem 0; }
+          .hero-wrapper { flex-direction: row; justify-content: space-between; }
+          .hero-content { max-width: 45%; }
+          .hero-content h1 { font-size: 3rem; }
+          .hero-content .highlight { font-size: 3.5rem; }
+          .hero-content p { font-size: 1.3rem; }
+          .hero-content .buttons { flex-direction: row; }
+          .hero-image { max-width: 40%; }
+          .features h2, .services h2, .networks h2, .contact h2 { font-size: 2rem; }
+          .subtitle { font-size: 1.1rem; }
+          .feature-card h3, .service-card h3 { font-size: 1.3rem; }
           .feature-card p, .service-card p { font-size: 1rem; }
-          .service-features { font-size: 0.95rem; }
-          .network-logos img { width: 6rem; height: 3rem; }
-          .contact-item h3 { font-size: 1.3rem; }
+          .service-features { font-size: 0.9rem; }
+          .network-logos img { width: 6.5rem; height: 3.25rem; }
+          .contact-item h3 { font-size: 1.2rem; }
           .contact-item p { font-size: 1rem; }
-          .whatsapp img { width: 3.5rem; height: 3.5rem; }
-          footer { font-size: 0.9rem; }
+          .whatsapp img { width: 2.75rem; height: 2.75rem; }
+          footer { font-size: 1rem; }
         }
       `}</style>
     </div>
