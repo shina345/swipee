@@ -56,10 +56,7 @@ const Home: NextPage = () => {
               <li><Link href="#faqs" className="nav-link">FAQs</Link></li>
               <li><Link href="#contact" className="nav-link">Contact Us</Link></li>
             </ul>
-            <div className="buttons">
-              <Link href="/login" className="button login">Login</Link>
-              <Link href="/signup" className="button signup">Signup</Link>
-            </div>
+           
           </div>
         </nav>
       </header>
