@@ -433,6 +433,7 @@ const Home: NextPage = () => {
           background: rgba(255, 255, 255, 0.8);
           backdrop-filter: blur(5px);
           -webkit-backdrop-filter: blur(5px);
+          border: 1px solid #E0F2FF;
         }
 
         .nav-link::after {
@@ -455,7 +456,7 @@ const Home: NextPage = () => {
 
         .nav-link:hover {
           color: #EC4899;
-          background: rgba(236, 72, 153, 0.1);
+          background: rgba(236, 72, 153, 0.15);
           transform: translateY(-2px) scale(1.05);
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
@@ -612,7 +613,7 @@ const Home: NextPage = () => {
         /* Hero Section Styles */
         .hero {
           background: linear-gradient(180deg, #003087 0%, #3B82F6 100%);
-          padding: clamp(1.5rem, 6vh, 3.5rem) 0;
+          padding: clamp(2rem, 6vh, 4rem) 0;
           position: relative;
           overflow: hidden;
           display: flex;
@@ -685,7 +686,7 @@ const Home: NextPage = () => {
 
         /* Features Section Styles */
         .features {
-          padding: clamp(1.5rem, 6vh, 3.5rem) 0;
+          padding: clamp(2rem, 6vh, 4rem) 0;
           text-align: center;
           background: #FFFFFF;
           width: 100%;
@@ -771,7 +772,7 @@ const Home: NextPage = () => {
 
         /* Services Section Styles */
         .services {
-          padding: clamp(1.5rem, 6vh, 3.5rem) 0;
+          padding: clamp(2rem, 6vh, 4rem) 0;
           text-align: center;
           background: #EFF6FF;
           width: 100%;
@@ -875,7 +876,7 @@ const Home: NextPage = () => {
 
         /* Networks Section Styles */
         .networks {
-          padding: clamp(1.5rem, 6vh, 3.5rem) 0;
+          padding: clamp(2rem, 6vh, 4rem) 0;
           text-align: center;
           background: #FFFFFF;
           width: 100%;
@@ -904,7 +905,7 @@ const Home: NextPage = () => {
 
         /* Contact Section Styles */
         .contact {
-          padding: clamp(1.5rem, 6vh, 3.5rem) 0;
+          padding: clamp(2rem, 6vh, 4rem) 0;
           text-align: center;
           background-color: #1E3A8A;
           color: #FFFFFF;
@@ -938,7 +939,7 @@ const Home: NextPage = () => {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(clamp(8.5rem, 28vw, 12rem), 1fr));
           gap: clamp(0.5rem, 2.5vw, 1.25rem);
-          max-width: clamp(16rem, 90vw, 40rem);
+          max-width: clamp(16rem, 90vw, 32rem);
           margin: 0 auto clamp(0.75rem, 3vw, 1.25rem);
         }
 
@@ -1321,10 +1322,10 @@ const Home: NextPage = () => {
         }
 
         /* Desktop-Specific Styles (1025px–1439px) */
-        @media (min-width: 1025px) {
+        @media (min-width: 1025px) and (max-width: 1439px) {
           .container {
-            max-width: clamp(769px, 92vw, 1280px);
-            padding: 0 clamp(1rem, 2vw, 1.5rem);
+            max-width: clamp(1024px, 90vw, 1400px);
+            padding: 0 clamp(1.5rem, 2vw, 2rem);
           }
 
           .logo {
@@ -1345,24 +1346,24 @@ const Home: NextPage = () => {
           }
 
           .nav-link {
-            font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-            padding: clamp(0.5rem, 1.2vw, 0.75rem) clamp(0.75rem, 1.8vw, 1rem);
+            font-size: clamp(1rem, 1.2vw, 1.15rem);
+            padding: clamp(0.6rem, 1vw, 0.8rem) clamp(1rem, 1.5vw, 1.2rem);
             background: rgba(255, 255, 255, 0.8);
             color: #1E3A8A;
             border: 1px solid #E0F2FF;
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
           }
 
           .nav-link:hover {
-            background: rgba(236, 72, 153, 0.1);
+            background: rgba(236, 72, 153, 0.15);
             color: #EC4899;
             transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
           }
 
           .nav-link:focus {
-            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.5);
           }
 
           .nav-link:active {
@@ -1375,25 +1376,25 @@ const Home: NextPage = () => {
           }
 
           :global(.button) {
-            font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+            font-size: clamp(1rem, 1.2vw, 1.15rem);
             padding: clamp(0.7rem, 1.5vw, 0.9rem) clamp(1.5rem, 2.5vw, 2rem);
-            max-width: clamp(10rem, 15vw, 12rem);
+            max-width: clamp(11rem, 14vw, 13rem);
             border-radius: 8px;
             font-weight: 600;
             letter-spacing: 0.01em;
             transition: all 0.2s ease, backdrop-filter 0.2s ease;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
           }
 
           :global(.button:hover) {
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
             transform: translateY(-2px) scale(1.05);
           }
 
           :global(.button:focus) {
-            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.5);
           }
 
           :global(.button:active) {
@@ -1438,24 +1439,24 @@ const Home: NextPage = () => {
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            gap: clamp(1.5rem, 2.5vw, 2rem);
+            gap: clamp(2rem, 3vw, 3rem);
           }
 
           .hero-content {
-            max-width: clamp(20rem, 50vw, 28rem);
+            max-width: clamp(24rem, 48vw, 36rem);
             text-align: left;
           }
 
           .hero-content h1 {
-            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-size: clamp(2.5rem, 3.5vw, 3.2rem);
           }
 
           .hero-content .highlight {
-            font-size: clamp(2.5rem, 5vw, 3rem);
+            font-size: clamp(3rem, 4.5vw, 3.8rem);
           }
 
           .hero-content p {
-            font-size: clamp(1rem, 1.8vw, 1.1rem);
+            font-size: clamp(1.1rem, 1.8vw, 1.25rem);
           }
 
           .hero-content .buttons {
@@ -1464,23 +1465,76 @@ const Home: NextPage = () => {
           }
 
           .hero-image {
-            max-width: clamp(20rem, 45vw, 30rem);
+            max-width: clamp(28rem, 45vw, 40rem);
           }
 
-          .feature-grid, .service-grid {
+          .feature-grid {
             grid-template-columns: repeat(4, 1fr);
+            gap: clamp(1rem, 2vw, 1.5rem);
+          }
+
+          .service-grid {
+            grid-template-columns: repeat(4, 1fr);
+            gap: clamp(1rem, 2vw, 1.5rem);
+          }
+
+          .feature-card, .service-card {
+            padding: clamp(0.75rem, 2vw, 1.5rem);
+          }
+
+          .feature-card h3, .service-card h3 {
+            font-size: clamp(1rem, 1.8vw, 1.25rem);
+          }
+
+          .feature-card p, .service-card p {
+            font-size: clamp(0.75rem, 1.5vw, 1rem);
+          }
+
+          .feature-image-wrapper, .service-image-wrapper {
+            width: clamp(3rem, 8vw, 4.5rem);
+            height: clamp(3rem, 8vw, 4.5rem);
+          }
+
+          .feature-image-wrapper img, .service-image-wrapper img {
+            width: clamp(2rem, 6vw, 3rem);
+            height: clamp(2rem, 6vw, 3rem);
+          }
+
+          .service-features {
+            font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+          }
+
+          .service-features li {
+            padding-left: clamp(1rem, 2vw, 1.25rem);
+          }
+
+          .service-features li::before {
+            font-size: clamp(0.8rem, 1.8vw, 0.95rem);
           }
 
           .contact-info {
             grid-template-columns: repeat(3, 1fr);
+            max-width: clamp(28rem, 75vw, 56rem);
+          }
+
+          .contact-item {
+            padding: clamp(0.75rem, 2vw, 1.5rem);
+          }
+
+          .contact-item h3 {
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+          }
+
+          .contact-item p {
+            font-size: clamp(0.75rem, 1.5vw, 1rem);
           }
         }
 
         /* Ultra-Wide Desktop Styles (≥1440px) */
         @media (min-width: 1440px) {
           .container {
-            max-width: clamp(1280px, 90vw, 1600px);
-            padding: 0 clamp(1.25rem, 1.8vw, 2rem);
+            max-width: clamp(1280px, 88vw, 1920px);
+            padding: 0 clamp(1.75rem, 1.8vw, 2.5rem);
           }
 
           .logo {
@@ -1488,8 +1542,10 @@ const Home: NextPage = () => {
           }
 
           .nav-link {
-            font-size: clamp(1rem, 1.2vw, 1.2rem);
-            padding: clamp(0.6rem, 1vw, 0.8rem) clamp(0.8rem, 1.5vw, 1.2rem);
+            font-size: clamp(1.1rem, 1vw, 1.25rem);
+            padding: clamp(0.7rem, 0.8vw, 0.9rem) clamp(1.2rem, 1.3vw, 1.5rem);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
           }
 
           .buttons {
@@ -1497,39 +1553,113 @@ const Home: NextPage = () => {
           }
 
           :global(.button) {
-            font-size: clamp(1rem, 1vw, 1.2rem);
+            font-size: clamp(1.1rem, 1vw, 1.25rem);
             padding: clamp(0.8rem, 1.2vw, 1rem) clamp(1.8rem, 2vw, 2.2rem);
-            max-width: clamp(11rem, 12vw, 14rem);
+            max-width: clamp(12rem, 12vw, 15rem);
           }
 
           .hero-content {
-            max-width: clamp(24rem, 50vw, 32rem);
+            max-width: clamp(28rem, 45vw, 40rem);
           }
 
           .hero-content h1 {
-            font-size: clamp(2.2rem, 3.5vw, 2.8rem);
+            font-size: clamp(2.8rem, 3.2vw, 3.5rem);
           }
 
           .hero-content .highlight {
-            font-size: clamp(2.8rem, 4.5vw, 3.5rem);
+            font-size: clamp(3.2rem, 4vw, 4rem);
           }
 
           .hero-content p {
-            font-size: clamp(1.1rem, 1.5vw, 1.2rem);
+            font-size: clamp(1.2rem, 1.5vw, 1.3rem);
           }
 
           .hero-image {
-            max-width: clamp(24rem, 45vw, 36rem);
+            max-width: clamp(32rem, 42vw, 48rem);
+          }
+
+          .features h2, .services h2, .networks h2, .contact h2 {
+            font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+          }
+
+          .subtitle {
+            font-size: clamp(0.9rem, 1.8vw, 1.1rem);
           }
 
           .feature-grid, .service-grid {
             grid-template-columns: repeat(4, 1fr);
-            gap: clamp(1rem, 2vw, 1.5rem);
+            gap: clamp(1.25rem, 1.8vw, 2rem);
+          }
+
+          .feature-card, .service-card {
+            padding: clamp(1rem, 1.8vw, 1.75rem);
+          }
+
+          .feature-card h3, .service-card h3 {
+            font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+          }
+
+          .feature-card p, .service-card p {
+            font-size: clamp(0.85rem, 1.3vw, 1.1rem);
+          }
+
+          .feature-image-wrapper, .service-image-wrapper {
+            width: clamp(3.5rem, 7vw, 5rem);
+            height: clamp(3.5rem, 7vw, 5rem);
+          }
+
+          .feature-image-wrapper img, .service-image-wrapper img {
+            width: clamp(2.5rem, 5.5vw, 3.5rem);
+            height: clamp(2.5rem, 5.5vw, 3.5rem);
+          }
+
+          .service-features {
+            font-size: clamp(0.8rem, 1.3vw, 1rem);
+          }
+
+          .service-features li {
+            padding-left: clamp(1.1rem, 1.8vw, 1.5rem);
+          }
+
+          .service-features li::before {
+            font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+          }
+
+          .service-cta {
+            font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+            max-width: clamp(20rem, 80vw, 40rem);
+          }
+
+          .network-logos img {
+            width: clamp(4rem, 8vw, 6.5rem);
+            height: clamp(2rem, 4vw, 3.25rem);
           }
 
           .contact-info {
             grid-template-columns: repeat(3, 1fr);
-            max-width: clamp(24rem, 80vw, 48rem);
+            max-width: clamp(32rem, 70vw, 64rem);
+          }
+
+          .contact-item {
+            padding: clamp(1rem, 1.8vw, 1.75rem);
+          }
+
+          .contact-item h3 {
+            font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+          }
+
+          .contact-item p {
+            font-size: clamp(0.85rem, 1.3vw, 1.1rem);
+          }
+
+          .whatsapp img {
+            width: clamp(2.5rem, 6vw, 3.2rem);
+            height: clamp(2.5rem, 6vw, 3.2rem);
+          }
+
+          footer {
+            padding: clamp(0.75rem, 2vh, 1.5rem);
+            font-size: clamp(0.8rem, 1.5vw, 1rem);
           }
         }
       `}</style>
