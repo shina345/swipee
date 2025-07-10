@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         <meta property="og:description" content="Your one-stop platform for airtime, data, and bill payments in Nigeria." />
         <meta property="og:image" content="/asset/swipelogo.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        
       </Head>
 
       {/* Header */}
