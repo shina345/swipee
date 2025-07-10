@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Swipe Telecom - Airtime, Data, and Bill Payments</title>
         <meta name="description" content="Your one-stop platform for airtime, data, and bill payments in Nigeria." />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
         <meta property="og:title" content="Swipe Telecom - Airtime, Data, and Bill Payments" />
         <meta property="og:description" content="Your one-stop platform for airtime, data, and bill payments in Nigeria." />
         <meta property="og:image" content="/asset/swipelogo.png" />
@@ -84,8 +84,8 @@ const Home: NextPage = () => {
               alt="Person with smartphone"
               width={600}
               height={400}
-              sizes="(max-width: 768px) 100vw, 40vw"
-              style={{ objectFit: 'contain' }}
+              sizes="(max-width: 768px) 100vw, 45vw"
+              style={{ objectFit: 'contain', maxWidth: '100%' }}
               priority
             />
           </div>
@@ -372,19 +372,19 @@ const Home: NextPage = () => {
 
         .container {
           width: 100%;
-          max-width: clamp(320px, 90vw, 1400px);
+          max-width: clamp(320px, 92vw, 1280px);
           margin: 0 auto;
-          padding: 0 clamp(0.75rem, 2.5vw, 1.5rem);
+          padding: 0 clamp(0.5rem, 2vw, 1.25rem);
         }
 
         /* Header Styles */
         header {
           background-color: #E0F2FF;
-          padding: clamp(0.75rem, 2.5vh, 1.25rem) 0;
+          padding: clamp(0.5rem, 2vh, 1rem) 0;
           position: sticky;
           top: 0;
           z-index: 1000;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
         }
 
         nav {
@@ -392,22 +392,22 @@ const Home: NextPage = () => {
           justify-content: space-between;
           align-items: center;
           flex-wrap: wrap;
-          gap: clamp(0.5rem, 2vw, 1rem);
+          gap: clamp(0.5rem, 1.5vw, 0.75rem);
         }
 
         .logo {
           display: flex;
           align-items: center;
-          gap: clamp(0.5rem, 1.5vw, 0.75rem);
+          gap: clamp(0.4rem, 1.2vw, 0.6rem);
           color: #003087;
-          font-size: clamp(1.1rem, 2.8vw, 1.6rem);
+          font-size: clamp(1rem, 2.5vw, 1.5rem);
           font-weight: 600;
         }
 
         .nav-container {
           display: flex;
           align-items: center;
-          gap: clamp(1rem, 3.5vw, 2rem);
+          gap: clamp(0.75rem, 2.5vw, 1.5rem);
           flex-grow: 1;
           justify-content: flex-end;
         }
@@ -415,16 +415,16 @@ const Home: NextPage = () => {
         .nav-list {
           list-style: none;
           display: flex;
-          gap: clamp(0.75rem, 2.5vw, 1.25rem);
+          gap: clamp(0.5rem, 2vw, 1rem);
           margin: 0;
         }
 
         .nav-link {
           color: #1E3A8A;
           text-decoration: none;
-          font-size: clamp(0.85rem, 2.2vw, 1.1rem);
+          font-size: clamp(0.8rem, 2vw, 1rem);
           font-weight: 500;
-          padding: clamp(0.5rem, 1.5vw, 0.75rem);
+          padding: clamp(0.4rem, 1.2vw, 0.6rem);
           border-radius: 8px;
           transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
           touch-action: manipulation;
@@ -458,8 +458,8 @@ const Home: NextPage = () => {
 
         .hamburger-icon {
           display: block;
-          width: clamp(1.6rem, 4.5vw, 2rem);
-          height: 0.25rem;
+          width: clamp(1.5rem, 4vw, 1.8rem);
+          height: 0.2rem;
           background: #1E3A8A;
           position: relative;
           transition: background 0.2s ease;
@@ -470,17 +470,17 @@ const Home: NextPage = () => {
           content: '';
           position: absolute;
           width: 100%;
-          height: 0.25rem;
+          height: 0.2rem;
           background: #1E3A8A;
           transition: transform 0.2s ease;
         }
 
         .hamburger-icon::before {
-          top: -0.65rem;
+          top: -0.5rem;
         }
 
         .hamburger-icon::after {
-          top: 0.65rem;
+          top: 0.5rem;
         }
 
         .hamburger[aria-expanded="true"] .hamburger-icon {
@@ -488,11 +488,11 @@ const Home: NextPage = () => {
         }
 
         .hamburger[aria-expanded="true"] .hamburger-icon::before {
-          transform: rotate(45deg) translate(0.5rem, 0.5rem);
+          transform: rotate(45deg) translate(0.35rem, 0.35rem);
         }
 
         .hamburger[aria-expanded="true"] .hamburger-icon::after {
-          transform: rotate(-45deg) translate(0.5rem, -0.5rem);
+          transform: rotate(-45deg) translate(0.35rem, -0.35rem);
         }
 
         .nav-container.open {
@@ -503,7 +503,7 @@ const Home: NextPage = () => {
 
         .buttons {
           display: flex;
-          gap: clamp(0.75rem, 2vw, 1.25rem);
+          gap: clamp(0.5rem, 1.5vw, 0.75rem);
           flex-wrap: wrap;
           justify-content: center;
         }
@@ -514,10 +514,10 @@ const Home: NextPage = () => {
           justify-content: center;
           align-items: center;
           width: 100%;
-          max-width: clamp(9rem, 30vw, 11rem);
-          padding: clamp(0.7rem, 2.2vw, 0.9rem) clamp(1.5rem, 3.5vw, 1.75rem);
-          border-radius: 12px;
-          font-size: clamp(0.95rem, 2.3vw, 1.15rem);
+          max-width: clamp(8rem, 28vw, 10rem);
+          padding: clamp(0.6rem, 2vw, 0.8rem) clamp(1.25rem, 3vw, 1.5rem);
+          border-radius: 10px;
+          font-size: clamp(0.9rem, 2.2vw, 1.1rem);
           font-weight: 600;
           text-decoration: none;
           text-align: center;
@@ -529,8 +529,8 @@ const Home: NextPage = () => {
         }
 
         :global(.button:hover) {
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-          transforma: translateY(-2px);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+          transform: translateY(-2px);
         }
 
         :global(.button:focus) {
@@ -539,7 +539,7 @@ const Home: NextPage = () => {
         }
 
         :global(.button:active) {
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
           transform: translateY(0);
         }
 
@@ -567,7 +567,7 @@ const Home: NextPage = () => {
         /* Hero Section Styles */
         .hero {
           background: linear-gradient(180deg, #003087 0%, #3B82F6 100%);
-          padding: clamp(2rem, 7vh, 4.5rem) 0;
+          padding: clamp(1.5rem, 6vh, 3.5rem) 0;
           position: relative;
           overflow: hidden;
           display: flex;
@@ -581,46 +581,47 @@ const Home: NextPage = () => {
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: clamp(1.25rem, 3.5vw, 1.75rem);
+          gap: clamp(1rem, 3vw, 1.5rem);
           max-width: 100%;
-          padding: 0 clamp(0.75rem, 2.5vw, 1.5rem);
+          padding: 0 clamp(0.5rem, 2vw, 1.25rem);
+          box-sizing: border-box;
         }
 
         .hero-content {
-          max-width: clamp(20rem, 90vw, 42rem);
+          max-width: clamp(18rem, 90vw, 38rem);
           z-index: 1;
           animation: fadeIn 0.8s ease-out;
           text-align: center;
         }
 
         .hero-content h1 {
-          font-size: clamp(1.4rem, 4.8vw, 2.8rem);
+          font-size: clamp(1.2rem, 4.5vw, 2.5rem);
           font-weight: 700;
-          margin: 0 0 clamp(0.6rem, 2vw, 1rem);
+          margin: 0 0 clamp(0.5rem, 1.5vw, 0.75rem);
           line-height: 1.3;
         }
 
         .hero-content .highlight {
-          font-size: clamp(1.8rem, 5.5vw, 3.2rem);
+          font-size: clamp(1.6rem, 5vw, 3rem);
           color: #EC4899;
           font-weight: 700;
         }
 
         .hero-content p {
-          font-size: clamp(0.85rem, 2.3vw, 1.2rem);
-          margin: 0 0 clamp(0.9rem, 2.8vw, 1.3rem);
+          font-size: clamp(0.8rem, 2vw, 1.1rem);
+          margin: 0 0 clamp(0.75rem, 2.5vw, 1rem);
           line-height: 1.6;
           color: #E0F2FF;
         }
 
         .hero-content .buttons {
-          gap: clamp(0.6rem, 1.8vw, 1rem);
+          gap: clamp(0.5rem, 1.5vw, 0.75rem);
           flex-direction: column;
           align-items: center;
         }
 
         .hero-image {
-          max-width: clamp(16rem, 90vw, 32rem);
+          max-width: clamp(14rem, 90vw, 30rem);
           z-index: 1;
           animation: slideInRight 0.8s ease-out;
         }
@@ -630,32 +631,34 @@ const Home: NextPage = () => {
           bottom: 0;
           left: 0;
           width: 100%;
-          height: clamp(2.5rem, 9vw, 4.5rem);
+          height: clamp(2rem, 8vw, 4rem);
           background: url('/wave.svg') no-repeat;
           background-size: cover;
+          background-position: center;
           animation: waveMove 5s infinite ease-in-out;
         }
 
         /* Features Section Styles */
         .features {
-          padding: clamp(1.75rem, 5.5vh, 3.5rem) 0;
+          padding: clamp(1.5rem, 5vh, 3rem) 0;
           text-align: center;
           background: #FFFFFF;
           width: 100%;
+          overflow-x: hidden;
         }
 
         .features h2 {
-          font-size: clamp(1.3rem, 3.2vw, 1.9rem);
+          font-size: clamp(1.2rem, 3vw, 1.8rem);
           color: #1E3A8A;
           font-weight: 600;
-          margin: 0 0 clamp(0.3rem, 1.2vw, 0.5rem);
+          margin: 0 0 clamp(0.25rem, 1vw, 0.4rem);
         }
 
         .underline {
-          width: clamp(2.2rem, 5.5vw, 3.2rem);
-          height: 0.25rem;
+          width: clamp(2rem, 5vw, 3rem);
+          height: 0.2rem;
           background-color: #FFFFFF;
-          margin: 0 auto clamp(0.3rem, 1.2vw, 0.5rem);
+          margin: 0 auto clamp(0.25rem, 1vw, 0.4rem);
         }
 
         .underline.pink {
@@ -663,50 +666,50 @@ const Home: NextPage = () => {
         }
 
         .subtitle {
-          font-size: clamp(0.75rem, 2.1vw, 1rem);
+          font-size: clamp(0.7rem, 2vw, 0.95rem);
           color: #6B7280;
-          margin: 0 0 clamp(0.9rem, 2.8vw, 1.3rem);
+          margin: 0 0 clamp(0.75rem, 2.5vw, 1rem);
           font-weight: 500;
         }
 
         .feature-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(clamp(9.5rem, 28vw, 11.5rem), 1fr));
-          gap: clamp(0.75rem, 2.5vw, 1.25rem);
+          grid-template-columns: repeat(auto-fit, minmax(clamp(9rem, 26vw, 11rem), 1fr));
+          gap: clamp(0.5rem, 2vw, 1rem);
         }
 
         .feature-card {
           background: #FFFFFF;
           border-radius: 10px;
-          padding: clamp(0.75rem, 2.5vw, 1.25rem);
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+          padding: clamp(0.5rem, 2vw, 1rem);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
           transition: transform 0.2s ease, box-shadow 0.2s ease;
           text-align: center;
           animation: fadeInUp 0.5s ease-out forwards;
         }
 
         .feature-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+          transform: translateY(-3px);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         }
 
         .feature-card h3 {
-          font-size: clamp(0.85rem, 2.3vw, 1.2rem);
+          font-size: clamp(0.8rem, 2vw, 1.1rem);
           color: #1E3A8A;
-          margin: clamp(0.3rem, 1.2vw, 0.5rem) 0;
+          margin: clamp(0.25rem, 1vw, 0.4rem) 0;
           font-weight: 600;
         }
 
         .feature-card p {
-          font-size: clamp(0.65rem, 1.9vw, 0.95rem);
+          font-size: clamp(0.6rem, 1.8vw, 0.9rem);
           color: #6B7280;
           line-height: 1.6;
         }
 
         .feature-image-wrapper {
-          width: clamp(2.8rem, 8.5vw, 3.8rem);
-          height: clamp(2.8rem, 8.5vw, 3.8rem);
-          margin: 0 auto clamp(0.4rem, 1.2vw, 0.6rem);
+          width: clamp(2.5rem, 8vw, 3.5rem);
+          height: clamp(2.5rem, 8vw, 3.5rem);
+          margin: 0 auto clamp(0.3rem, 1vw, 0.5rem);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -716,68 +719,69 @@ const Home: NextPage = () => {
         }
 
         .feature-image-wrapper img {
-          width: clamp(1.9rem, 6.5vw, 2.6rem);
-          height: clamp(1.9rem, 6.5vw, 2.6rem);
+          width: clamp(1.8rem, 6vw, 2.5rem);
+          height: clamp(1.8rem, 6vw, 2.5rem);
           object-fit: contain;
         }
 
         /* Services Section Styles */
         .services {
-          padding: clamp(1.75rem, 5.5vh, 3.5rem) 0;
+          padding: clamp(1.5rem, 5vh, 3rem) 0;
           text-align: center;
           background: #EFF6FF;
           width: 100%;
+          overflow-x: hidden;
         }
 
         .services h2 {
-          font-size: clamp(1.3rem, 3.2vw, 1.9rem);
+          font-size: clamp(1.2rem, 3vw, 1.8rem);
           color: #1E3A8A;
           font-weight: 600;
-          margin: 0 0 clamp(0.3rem, 1.2vw, 0.5rem);
+          margin: 0 0 clamp(0.25rem, 1vw, 0.4rem);
         }
 
         .service-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(clamp(9.5rem, 28vw, 11.5rem), 1fr));
-          gap: clamp(0.75rem, 2.5vw, 1.25rem);
-          margin: 0 0 clamp(0.9rem, 2.8vw, 1.3rem);
+          grid-template-columns: repeat(auto-fit, minmax(clamp(9rem, 26vw, 11rem), 1fr));
+          gap: clamp(0.5rem, 2vw, 1rem);
+          margin: 0 0 clamp(0.75rem, 2.5vw, 1rem);
         }
 
         .service-card {
           background: #FFFFFF;
           border-radius: 10px;
-          padding: clamp(0.75rem, 2.5vw, 1.25rem);
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+          padding: clamp(0.5rem, 2vw, 1rem);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
           transition: transform 0.2s ease, box-shadow 0.2s ease;
           text-align: center;
           animation: scaleIn 0.5s ease-out forwards;
         }
 
         .service-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+          transform: translateY(-3px);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         }
 
         .service-card h3 {
-          font-size: clamp(0.85rem, 2.3vw, 1.2rem);
+          font-size: clamp(0.8rem, 2vw, 1.1rem);
           color: #1E3A8A;
-          margin: clamp(0.3rem, 1.2vw, 0.5rem) 0;
+          margin: clamp(0.25rem, 1vw, 0.4rem) 0;
           font-weight: 600;
         }
 
         .service-card p {
-          font-size: clamp(0.65rem, 1.9vw, 0.95rem);
+          font-size: clamp(0.6rem, 1.8vw, 0.9rem);
           color: #6B7280;
-          margin: 0 0 clamp(0.4rem, 1.2vw, 0.6rem);
+          margin: 0 0 clamp(0.3rem, 1vw, 0.5rem);
           line-height: 1.6;
         }
 
         .service-features {
           list-style: none;
           text-align: left;
-          margin: 0 0 clamp(0.4rem, 1.2vw, 0.6rem);
-          padding: 0 clamp(0.5rem, 1.5vw, 0.75rem);
-          font-size: clamp(0.6rem, 1.7vw, 0.85rem);
+          margin: 0 0 clamp(0.3rem, 1vw, 0.5rem);
+          padding: 0 clamp(0.4rem, 1.2vw, 0.6rem);
+          font-size: clamp(0.55rem, 1.6vw, 0.8rem);
           color: #6B7280;
           line-height: 1.7;
         }
@@ -785,7 +789,7 @@ const Home: NextPage = () => {
         .service-features li {
           margin-bottom: clamp(0.2rem, 0.8vw, 0.3rem);
           position: relative;
-          padding-left: clamp(1rem, 2.5vw, 1.25rem);
+          padding-left: clamp(0.9rem, 2vw, 1rem);
         }
 
         .service-features li::before {
@@ -793,13 +797,13 @@ const Home: NextPage = () => {
           position: absolute;
           left: 0;
           color: #EC4899;
-          font-size: clamp(0.75rem, 1.8vw, 0.9rem);
+          font-size: clamp(0.7rem, 1.6vw, 0.85rem);
         }
 
         .service-image-wrapper {
-          width: clamp(2.8rem, 8.5vw, 3.8rem);
-          height: clamp(2.8rem, 8.5vw, 3.8rem);
-          margin: 0 auto clamp(0.4rem, 1.2vw, 0.6rem);
+          width: clamp(2.5rem, 8vw, 3.5rem);
+          height: clamp(2.5rem, 8vw, 3.5rem);
+          margin: 0 auto clamp(0.3rem, 1vw, 0.5rem);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -809,74 +813,77 @@ const Home: NextPage = () => {
         }
 
         .service-image-wrapper img {
-          width: clamp(1.9rem, 6.5vw, 2.6rem);
-          height: clamp(1.9rem, 6.5vw, 2.6rem);
+          width: clamp(1.8rem, 6vw, 2.5rem);
+          height: clamp(1.8rem, 6vw, 2.5rem);
           object-fit: contain;
         }
 
         .service-cta {
-          font-size: clamp(0.75rem, 2.1vw, 1rem);
+          font-size: clamp(0.7rem, 2vw, 0.95rem);
           color: #1E3A8A;
-          margin: clamp(0.75rem, 2.5vw, 1.25rem) 0 0;
+          margin: clamp(0.5rem, 2vw, 1rem) 0 0;
           line-height: 1.6;
-          max-width: clamp(18rem, 85vw, 32rem);
+          max-width: clamp(16rem, 85vw, 30rem);
           margin-left: auto;
           margin-right: auto;
         }
 
         /* Networks Section Styles */
         .networks {
-          padding: clamp(1.75rem, 5.5vh, 3.5rem) 0;
+          padding: clamp(1.5rem, 5vh, 3rem) 0;
           text-align: center;
           background: #FFFFFF;
           width: 100%;
+          overflow-x: hidden;
         }
 
         .networks h2 {
-          font-size: clamp(1.3rem, 3.2vw, 1.9rem);
+          font-size: clamp(1.2rem, 3vw, 1.8rem);
           color: #1E3A8A;
           font-weight: 600;
-          margin: 0 0 clamp(0.3rem, 1.2vw, 0.5rem);
+          margin: 0 0 clamp(0.25rem, 1vw, 0.4rem);
         }
 
         .network-logos {
           display: flex;
           justify-content: center;
-          gap: clamp(0.75rem, 2.5vw, 1.25rem);
+          gap: clamp(0.5rem, 2vw, 1rem);
           flex-wrap: wrap;
         }
 
         .network-logos img {
-          width: clamp(4rem, 10vw, 6rem);
-          height: clamp(2rem, 5vw, 3rem);
+          width: clamp(3.5rem, 9vw, 5.5rem);
+          height: clamp(1.75rem, 4.5vw, 2.75rem);
+          max-width: 100%;
         }
 
         /* Contact Section Styles */
         .contact {
-          padding: clamp(1.75rem, 5.5vh, 3.5rem) 0;
+          padding: clamp(1.5rem, 5vh, 3rem) 0;
           text-align: center;
           background-color: #1E3A8A;
           color: #FFFFFF;
           width: 100%;
+          overflow-x: hidden;
         }
 
         .contact h2 {
-          font-size: clamp(1.3rem, 3.2vw, 1.9rem);
+          font-size: clamp(1.2rem, 3vw, 1.8rem);
           font-weight: 700;
-          margin: 0 0 clamp(0.3rem, 1.2vw, 0.5rem);
+          margin: 0 0 clamp(0.25rem, 1vw, 0.4rem);
         }
 
         .contact .subtitle {
-          font-size: clamp(0.75rem, 2.1vw, 1rem);
-          margin: 0 0 clamp(0.6rem, 1.8vw, 0.9rem);
+          font-size: clamp(0.7rem, 2vw, 0.95rem);
+          margin: 0 0 clamp(0.5rem, 1.5vw, 0.75rem);
           font-weight: 500;
         }
 
         .contact-intro {
-          font-size: clamp(0.65rem, 1.9vw, 0.95rem);
+          font-size: clamp(0.6rem, 1.8vw, 0.9rem);
           color: #E0F2FF;
-          margin: 0 0 clamp(0.9rem, 2.8vw, 1.3rem);
-          max-width: clamp(18rem, 85vw, 32rem);
+          margin: 0 0 clamp(0.75rem, 2.5vw, 1rem);
+          max-width: clamp(16rem, 85vw, 30rem);
           margin-left: auto;
           margin-right: auto;
           line-height: 1.6;
@@ -884,26 +891,26 @@ const Home: NextPage = () => {
 
         .contact-info {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(clamp(9.5rem, 28vw, 11.5rem), 1fr));
-          gap: clamp(0.75rem, 2.5vw, 1.25rem);
-          max-width: clamp(20rem, 85vw, 40rem);
-          margin: 0 auto clamp(0.9rem, 2.8vw, 1.3rem);
+          grid-template-columns: repeat(auto-fit, minmax(clamp(9rem, 26vw, 11rem), 1fr));
+          gap: clamp(0.5rem, 2vw, 1rem);
+          max-width: clamp(18rem, 85vw, 36rem);
+          margin: 0 auto clamp(0.75rem, 2.5vw, 1rem);
         }
 
         .contact-item {
           text-align: center;
-          padding: clamp(0.75rem, 2.5vw, 1.25rem);
+          padding: clamp(0.5rem, 2vw, 1rem);
           animation: slideInLeft 0.5s ease-out forwards;
         }
 
         .contact-item h3 {
-          font-size: clamp(0.85rem, 2.3vw, 1.1rem);
+          font-size: clamp(0.8rem, 2vw, 1rem);
           font-weight: 600;
-          margin: clamp(0.3rem, 1.2vw, 0.5rem) 0;
+          margin: clamp(0.25rem, 1vw, 0.4rem) 0;
         }
 
         .contact-item p {
-          font-size: clamp(0.65rem, 1.9vw, 0.95rem);
+          font-size: clamp(0.6rem, 1.8vw, 0.9rem);
           color: #E0F2FF;
         }
 
@@ -912,8 +919,8 @@ const Home: NextPage = () => {
           background-color: #1E3A8A;
           color: #FFFFFF;
           text-align: center;
-          padding: clamp(0.75rem, 2.5vh, 1.25rem);
-          font-size: clamp(0.65rem, 1.9vw, 0.95rem);
+          padding: clamp(0.5rem, 2vh, 1rem);
+          font-size: clamp(0.6rem, 1.8vw, 0.9rem);
           margin-top: auto;
         }
 
@@ -924,24 +931,24 @@ const Home: NextPage = () => {
         /* WhatsApp Icon Styles */
         .whatsapp {
           position: fixed;
-          bottom: clamp(0.75rem, 2.5vw, 1.25rem);
-          right: clamp(0.75rem, 2.5vw, 1.25rem);
+          bottom: clamp(0.5rem, 2vw, 1rem);
+          right: clamp(0.5rem, 2vw, 1rem);
           z-index: 1000;
           background: #25D366;
           border-radius: 50%;
-          padding: clamp(0.4rem, 1.2vw, 0.6rem);
-          box-shadow: 0 3px 8px rgba(37, 211, 102, 0.4);
+          padding: clamp(0.3rem, 1vw, 0.5rem);
+          box-shadow: 0 2px 6px rgba(37, 211, 102, 0.4);
           transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .whatsapp:hover {
-          transform: scale(1.15);
-          box-shadow: 0 4px 10px rgba(37, 211, 102, 0.6);
+          transform: scale(1.1);
+          box-shadow: 0 3px 8px rgba(37, 211, 102, 0.5);
         }
 
         .whatsapp img {
-          width: clamp(2.2rem, 6.5vw, 2.8rem);
-          height: clamp(2.2rem, 6.5vw, 2.8rem);
+          width: clamp(2rem, 6vw, 2.5rem);
+          height: clamp(2rem, 6vw, 2.5rem);
         }
 
         /* Animations */
@@ -957,12 +964,12 @@ const Home: NextPage = () => {
 
         @keyframes waveMove {
           0% { transform: translateY(0); }
-          50% { transform: translateY(-0.3rem); }
+          50% { transform: translateY(-0.2rem); }
           100% { transform: translateY(0); }
         }
 
         @keyframes fadeInUp {
-          from { opacity: 0; transform: translateY(0.75rem); }
+          from { opacity: 0; transform: translateY(0.5rem); }
           to { opacity: 1; transform: translateY(0); }
         }
 
@@ -972,14 +979,14 @@ const Home: NextPage = () => {
         }
 
         @keyframes slideInLeft {
-          from { opacity: 0; transform: translateX(-0.75rem); }
+          from { opacity: 0; transform: translateX(-0.5rem); }
           to { opacity: 1; transform: translateX(0); }
         }
 
         /* Responsive Design */
         @media (max-width: 360px) {
-          .container { padding: 0 0.5rem; }
-          .logo { font-size: 1rem; }
+          .container { padding: 0 0.5rem; max-width: 100%; }
+          .logo { font-size: 0.95rem; }
           .logo img { width: 28px; height: 28px; }
           .hamburger { display: block; }
           .nav-container {
@@ -990,8 +997,8 @@ const Home: NextPage = () => {
             width: 100%;
             background: #E0F2FF;
             flex-direction: column;
-            padding: 0.75rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 0.5rem;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
             transform: translateY(-10px);
             opacity: 0;
             visibility: hidden;
@@ -1003,47 +1010,83 @@ const Home: NextPage = () => {
             opacity: 1;
             visibility: visible;
           }
-          .nav-list {
-            flex-direction: column;
-            gap: 0.5rem;
-            align-items: center;
+          .nav-list { flex-direction: column; gap: 0.4rem; align-items: center; width: 100%; }
+          .nav-link { font-size: 0.85rem; padding: 0.5rem 0.75rem; width: 100%; text-align: center; }
+          .buttons { flex-direction: column; gap: 0.4rem; width: 100%; padding: 0.4rem 0; }
+          :global(.button) { font-size: 0.85rem; padding: 0.5rem 1rem; max-width: 100%; }
+          .hero { padding: 1rem 0; }
+          .hero-wrapper { gap: 0.5rem; }
+          .hero-content h1 { font-size: 1.1rem; }
+          .hero-content .highlight { font-size: 1.5rem; }
+          .hero-content p { font-size: 0.75rem; margin-bottom: 0.5rem; }
+          .hero-content .buttons { gap: 0.4rem; }
+          .hero-image { max-width: 100%; }
+          .wave { height: 1.5rem; }
+          .features, .services, .networks, .contact { padding: 1rem 0; }
+          .features h2, .services h2, .networks h2, .contact h2 { font-size: 1rem; }
+          .subtitle { font-size: 0.7rem; margin-bottom: 0.5rem; }
+          .feature-grid, .service-grid, .contact-info { grid-template-columns: 1fr; gap: 0.5rem; }
+          .feature-card, .service-card { padding: 0.5rem; }
+          .feature-card h3, .service-card h3 { font-size: 0.85rem; }
+          .feature-card p, .service-card p { font-size: 0.7rem; }
+          .feature-image-wrapper, .service-image-wrapper { width: 2.25rem; height: 2.25rem; }
+          .feature-image-wrapper img, .service-image-wrapper img { width: 1.6rem; height: 1.6rem; }
+          .service-features { font-size: 0.65rem; padding: 0 0.4rem; }
+          .service-features li { padding-left: 0.85rem; }
+          .network-logos { gap: 0.4rem; }
+          .network-logos img { width: 3.25rem; height: 1.6rem; }
+          .contact-info { grid-template-columns: 1fr; }
+          .contact-item { padding: 0.5rem; }
+          .contact-item img { width: 1.5rem; height: 1.5rem; }
+          .contact-item h3 { font-size: 0.8rem; }
+          .contact-item p { font-size: 0.7rem; }
+          .whatsapp img { width: 1.8rem; height: 1.8rem; }
+          footer { font-size: 0.7rem; padding: 0.5rem 0; }
+        }
+
+        @media (min-width: 361px) and (max-width: 480px) {
+          .container { padding: 0 0.75rem; max-width: 100%; }
+          .logo { font-size: 1rem; }
+          .hamburger { display: block; }
+          .nav-container {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
             width: 100%;
+            background: #E0F2FF;
+            flex-direction: column;
+            padding: 0.75rem;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            transform: translateY(-10px);
+            opacity: 0;
+            visibility: hidden;
+            transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
           }
-          .nav-link { font-size: 0.9rem; padding: 0.6rem 1rem; width: 100%; text-align: center; }
+          .nav-container.open {
+            display: flex;
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+          }
+          .nav-list { flex-direction: column; gap: 0.5rem; align-items: center; width: 100%; }
+          .nav-link { font-size: 0.9rem; padding: 0.5rem 1rem; width: 100%; text-align: center; }
           .buttons { flex-direction: column; gap: 0.5rem; width: 100%; padding: 0.5rem 0; }
-          :global(.button) { font-size: 0.85rem; padding: 0.6rem 1rem; max-width: 100%; }
+          :global(.button) { font-size: 0.9rem; padding: 0.6rem 1.25rem; max-width: 100%; }
           .hero { padding: 1.25rem 0; }
           .hero-wrapper { gap: 0.75rem; }
           .hero-content h1 { font-size: 1.2rem; }
           .hero-content .highlight { font-size: 1.6rem; }
-          .hero-content p { font-size: 0.8rem; margin-bottom: 0.6rem; }
-          .hero-content .buttons { gap: 0.5rem; }
+          .hero-content p { font-size: 0.8rem; }
           .hero-image { max-width: 100%; }
-          .wave { height: 2rem; }
           .features, .services, .networks, .contact { padding: 1.25rem 0; }
-          .features h2, .services h2, .networks h2, .contact h2 { font-size: 1.1rem; }
-          .subtitle { font-size: 0.75rem; margin-bottom: 0.6rem; }
-          .feature-grid, .service-grid, .contact-info { grid-template-columns: 1fr; gap: 0.5rem; }
-          .feature-card, .service-card { padding: 0.6rem; }
-          .feature-card h3, .service-card h3 { font-size: 0.9rem; }
-          .feature-card p, .service-card p { font-size: 0.7rem; }
-          .feature-image-wrapper, .service-image-wrapper { width: 2.5rem; height: 2.5rem; }
-          .feature-image-wrapper img, .service-image-wrapper img { width: 1.8rem; height: 1.8rem; }
-          .service-features { font-size: 0.65rem; padding: 0 0.4rem; }
-          .service-features li { padding-left: 0.9rem; }
+          .feature-grid, .service-grid, .contact-info { grid-template-columns: 1fr; gap: 0.75rem; }
           .network-logos { gap: 0.5rem; }
           .network-logos img { width: 3.5rem; height: 1.75rem; }
-          .contact-info { grid-template-columns: 1fr; }
-          .contact-item { padding: 0.6rem; }
-          .contact-item img { width: 1.6rem; height: 1.6rem; }
-          .contact-item h3 { font-size: 0.85rem; }
-          .contact-item p { font-size: 0.7rem; }
-          .whatsapp img { width: 2rem; height: 2rem; }
-          footer { font-size: 0.7rem; padding: 0.6rem 0; }
         }
 
-        @media (min-width: 361px) and (max-width: 480px) {
-          .container { padding: 0 0.75rem; }
+        @media (min-width: 481px) and (max-width: 768px) {
+          .container { padding: 0 1rem; max-width: 100%; }
           .logo { font-size: 1.1rem; }
           .hamburger { display: block; }
           .nav-container {
@@ -1054,49 +1097,8 @@ const Home: NextPage = () => {
             width: 100%;
             background: #E0F2FF;
             flex-direction: column;
-            padding: 0.75rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transform: translateY(-10px);
-            opacity: 0;
-            visibility: hidden;
-            transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
-          }
-          .nav-container.open {
-            display: flex;
-            transform: translateY(0);
-            opacity: 1;
-            visibility: visible;
-          }
-          .nav-list { flex-direction: column; gap: 0.6rem; align-items: center; width: 100%; }
-          .nav-link { font-size: 0.95rem; padding: 0.6rem 1rem; width: 100%; text-align: center; }
-          .buttons { flex-direction: column; gap: 0.6rem; width: 100%; padding: 0.6rem 0; }
-          :global(.button) { font-size: 0.9rem; padding: 0.65rem 1.25rem; max-width: 100%; }
-          .hero { padding: 1.5rem 0; }
-          .hero-wrapper { gap: 1rem; }
-          .hero-content h1 { font-size: 1.4rem; }
-          .hero-content .highlight { font-size: 1.8rem; }
-          .hero-content p { font-size: 0.85rem; }
-          .hero-image { max-width: 100%; }
-          .features, .services, .networks, .contact { padding: 1.5rem 0; }
-          .feature-grid, .service-grid, .contact-info { grid-template-columns: 1fr; gap: 0.75rem; }
-          .network-logos { gap: 0.6rem; }
-          .network-logos img { width: 4rem; height: 2rem; }
-        }
-
-        @media (min-width: 481px) and (max-width: 768px) {
-          .container { padding: 0 1rem; }
-          .logo { font-size: 1.2rem; }
-          .hamburger { display: block; }
-          .nav-container {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background: #E0F2FF;
-            flex-direction: column;
             padding: 1rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
             transform: translateY(-10px);
             opacity: 0;
             visibility: hidden;
@@ -1109,20 +1111,20 @@ const Home: NextPage = () => {
             visibility: visible;
           }
           .nav-list { flex-direction: column; gap: 0.75rem; align-items: center; width: 100%; }
-          .nav-link { font-size: 1rem; padding: 0.75rem 1.25rem; width: 100%; text-align: center; }
+          .nav-link { font-size: 0.95rem; padding: 0.6rem 1.25rem; width: 100%; text-align: center; }
           .buttons { flex-direction: column; gap: 0.75rem; width: 100%; padding: 0.75rem 0; }
-          :global(.button) { font-size: 1rem; padding: 0.75rem 1.5rem; max-width: 100%; }
-          .hero { padding: 2rem 0; }
-          .hero-wrapper { gap: 1.25rem; }
-          .hero-content h1 { font-size: 1.6rem; }
-          .hero-content .highlight { font-size: 2rem; }
-          .hero-content p { font-size: 0.95rem; }
+          :global(.button) { font-size: 0.95rem; padding: 0.7rem 1.5rem; max-width: 100%; }
+          .hero { padding: 1.5rem 0; }
+          .hero-wrapper { gap: 1rem; }
+          .hero-content h1 { font-size: 1.4rem; }
+          .hero-content .highlight { font-size: 1.8rem; }
+          .hero-content p { font-size: 0.9rem; }
           .hero-image { max-width: 90%; }
-          .features, .services, .networks, .contact { padding: 2rem 0; }
-          .feature-grid, .service-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+          .features, .services, .networks, .contact { padding: 1.5rem 0; }
+          .feature-grid, .service-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
           .contact-info { grid-template-columns: repeat(2, 1fr); }
           .network-logos { gap: 0.75rem; }
-          .network-logos img { width: 4.5rem; height: 2.25rem; }
+          .network-logos img { width: 4rem; height: 2rem; }
         }
 
         @media (min-width: 769px) and (max-width: 1024px) {
@@ -1137,62 +1139,62 @@ const Home: NextPage = () => {
           .hero-content .buttons { flex-direction: row; }
           .feature-grid, .service-grid { grid-template-columns: repeat(2, 1fr); }
           .contact-info { grid-template-columns: repeat(3, 1fr); }
-          :global(.button) { font-size: 1rem; padding: 0.75rem 1.5rem; max-width: 10rem; }
+          :global(.button) { font-size: 0.95rem; padding: 0.7rem 1.5rem; max-width: 9.5rem; }
         }
 
-        @media (min-width: 1025px) and (max-width: 1440px) {
-          .container { max-width: 1200px; }
+        @media (min-width: 1025px) and (max-width: 1280px) {
+          .container { max-width: 1080px; }
           .hamburger { display: none; }
           .nav-container { display: flex; flex-direction: row; }
           .nav-list { flex-direction: row; }
-          .logo { font-size: 1.4rem; }
-          .nav-link { font-size: 1.05rem; }
-          :global(.button) { font-size: 1.05rem; padding: 0.8rem 1.6rem; max-width: 11rem; }
-          .hero { padding: 4rem 0; }
+          .logo { font-size: 1.3rem; }
+          .nav-link { font-size: 1rem; }
+          :global(.button) { font-size: 1rem; padding: 0.75rem 1.5rem; max-width: 10rem; }
+          .hero { padding: 2.5rem 0; }
           .hero-wrapper { flex-direction: row; justify-content: space-between; }
           .hero-content { max-width: 50%; }
-          .hero-content h1 { font-size: 2.6rem; }
-          .hero-content .highlight { font-size: 3rem; }
-          .hero-content p { font-size: 1.15rem; }
+          .hero-content h1 { font-size: 2rem; }
+          .hero-content .highlight { font-size: 2.5rem; }
+          .hero-content p { font-size: 1rem; }
           .hero-content .buttons { flex-direction: row; }
           .hero-image { max-width: 45%; }
+          .features h2, .services h2, .networks h2, .contact h2 { font-size: 1.6rem; }
+          .subtitle { font-size: 0.95rem; }
+          .feature-card h3, .service-card h3 { font-size: 1rem; }
+          .feature-card p, .service-card p { font-size: 0.9rem; }
+          .service-features { font-size: 0.8rem; }
+          .network-logos img { width: 5rem; height: 2.5rem; }
+          .contact-item h3 { font-size: 0.95rem; }
+          .contact-item p { font-size: 0.9rem; }
+        }
+
+        @media (min-width: 1281px) {
+          .container { max-width: 1280px; }
+          .hamburger { display: none; }
+          .nav-container { display: flex; flex-direction: row; }
+          .nav-list { flex-direction: row; }
+          .logo { font-size: 1.5rem; }
+          .nav-link { font-size: 1.1rem; }
+          :global(.button) { font-size: 1.1rem; padding: 0.8rem 1.6rem; max-width: 11rem; }
+          .hero { padding: 3rem 0; }
+          .hero-wrapper { flex-direction: row; justify-content: space-between; }
+          .hero-content { max-width: 45%; }
+          .hero-content h1 { font-size: 2.5rem; }
+          .hero-content .highlight { font-size: 3rem; }
+          .hero-content p { font-size: 1.1rem; }
+          .hero-content .buttons { flex-direction: row; }
+          .hero-image { max-width: 40%; }
           .features h2, .services h2, .networks h2, .contact h2 { font-size: 1.8rem; }
           .subtitle { font-size: 1rem; }
-          .feature-card h3, .service-card h3 { font-size: 1.15rem; }
+          .feature-grid, .service-grid { grid-template-columns: repeat(4, 1fr); }
+          .feature-card h3, .service-card h3 { font-size: 1.1rem; }
           .feature-card p, .service-card p { font-size: 0.95rem; }
           .service-features { font-size: 0.85rem; }
           .network-logos img { width: 5.5rem; height: 2.75rem; }
-          .contact-item h3 { font-size: 1.1rem; }
+          .contact-item h3 { font-size: 1rem; }
           .contact-item p { font-size: 0.95rem; }
-        }
-
-        @media (min-width: 1441px) {
-          .container { max-width: 1400px; }
-          .hamburger { display: none; }
-          .nav-container { display: flex; flex-direction: row; }
-          .nav-list { flex-direction: row; }
-          .logo { font-size: 1.6rem; }
-          .nav-link { font-size: 1.15rem; }
-          :global(.button) { font-size: 1.15rem; padding: 0.9rem 1.75rem; max-width: 12rem; }
-          .hero { padding: 5rem 0; }
-          .hero-wrapper { flex-direction: row; justify-content: space-between; }
-          .hero-content { max-width: 45%; }
-          .hero-content h1 { font-size: 3rem; }
-          .hero-content .highlight { font-size: 3.5rem; }
-          .hero-content p { font-size: 1.25rem; }
-          .hero-content .buttons { flex-direction: row; }
-          .hero-image { max-width: 40%; }
-          .features h2, .services h2, .networks h2, .contact h2 { font-size: 2rem; }
-          .subtitle { font-size: 1.1rem; }
-          .feature-grid, .service-grid { grid-template-columns: repeat(4, 1fr); }
-          .feature-card h3, .service-card h3 { font-size: 1.25rem; }
-          .feature-card p, .service-card p { font-size: 1rem; }
-          .service-features { font-size: 0.9rem; }
-          .network-logos img { width: 6rem; height: 3rem; }
-          .contact-item h3 { font-size: 1.2rem; }
-          .contact-item p { font-size: 1rem; }
-          .whatsapp img { width: 2.8rem; height: 2.8rem; }
-          footer { font-size: 1rem; }
+          .whatsapp img { width: 2.5rem; height: 2.5rem; }
+          footer { font-size: 0.95rem; }
         }
       `}</style>
     </div>
