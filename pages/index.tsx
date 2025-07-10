@@ -56,8 +56,8 @@ const Home: NextPage = () => {
             <li><Link href="#contact" className="nav-link" onClick={toggleMenu}>Contact Us</Link></li>
           </ul>
           <div className="buttons">
-            <Link href="/login" className="login">Login</Link>
-            <Link href="/signup" className="signup">Signup</Link>
+            <Link href="/login" className="button login">Login</Link>
+            <Link href="/signup" className="button signup">Signup</Link>
           </div>
         </nav>
       </header>
@@ -72,8 +72,8 @@ const Home: NextPage = () => {
             </h1>
             <p>Enjoy the best rates and quick support. Pay for cable, TV, and utilities with ease. Get affordable airtime and data plans.</p>
             <div className="buttons">
-              <Link href="/login" className="login">Login</Link>
-              <Link href="/signup" className="signup">Signup</Link>
+              <Link href="/login" className="button login">Login</Link>
+              <Link href="/signup" className="button signup">Signup</Link>
             </div>
           </div>
           <div className="hero-image">
@@ -189,7 +189,7 @@ const Home: NextPage = () => {
                 <li>Instant activation</li>
                 <li>Exclusive discounts</li>
               </ul>
-              <Link href="/login?returnUrl=buydata" className="btn">Subscribe Now</Link>
+              <Link href="/login?returnUrl=buydata" className="button btn">Subscribe Now</Link>
             </div>
             <div className="service-card" style={{ animationDelay: '0.4s' }}>
               <div className="service-image-wrapper">
@@ -211,7 +211,7 @@ const Home: NextPage = () => {
                 <li>Bulk recharge support</li>
                 <li>Secure e-wallet transactions</li>
               </ul>
-              <Link href="/login?returnUrl=buyairtime" className="btn">Recharge Now</Link>
+              <Link href="/login?returnUrl=buyairtime" className="button btn">Recharge Now</Link>
             </div>
             <div className="service-card" style={{ animationDelay: '0.6s' }}>
               <div className="service-image-wrapper">
@@ -233,7 +233,7 @@ const Home: NextPage = () => {
                 <li>Instant activation</li>
                 <li>Easy renewals</li>
               </ul>
-              <Link href="/login?returnUrl=cablesubscription" className="btn">Buy Now</Link>
+              <Link href="/login?returnUrl=cablesubscription" className="button btn">Buy Now</Link>
             </div>
             <div className="service-card" style={{ animationDelay: '0.8s' }}>
               <div className="service-image-wrapper">
@@ -255,7 +255,7 @@ const Home: NextPage = () => {
                 <li>Track payment history</li>
                 <li>Other utility bills</li>
               </ul>
-              <Link href="/login?returnUrl=billpayment" className="btn">Pay Now</Link>
+              <Link href="/login?returnUrl=billpayment" className="button btn">Pay Now</Link>
             </div>
           </div>
           <p className="service-cta">Explore our services and enjoy seamless transactions. Sign up today!</p>
@@ -499,50 +499,79 @@ const Home: NextPage = () => {
           gap: clamp(0.3rem, 1vw, 0.5rem);
         }
 
-        .login,
-        .signup {
+        /* Button Base Styles */
+        .button {
           display: inline-flex;
           justify-content: center;
           align-items: center;
-          padding: clamp(0.4rem, 1.5vw, 0.6rem) clamp(0.8rem, 2vw, 1rem);
-          border-radius: 5px;
-          font-size: clamp(0.7rem, 2vw, 0.9rem);
-          font-weight: 500;
+          padding: clamp(0.5rem, 1.5vw, 0.7rem) clamp(1rem, 2vw, 1.4rem);
+          border-radius: 8px;
+          font-size: clamp(0.8rem, 2vw, 1rem);
+          font-weight: 600;
           text-decoration: none;
-          transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
           cursor: pointer;
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .button:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .button:focus {
+          outline: none;
+          box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+        }
+
+        .button:active {
+          transform: translateY(0);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .button::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent
+          );
+          transition: left 0.5s ease;
+        }
+
+        .button:hover::after {
+          left: 100%;
         }
 
         .login {
           background-color: #BFDBFE;
           color: #1E3A8A;
-          border: 1px solid #93C5FD;
+          border: 2px solid #93C5FD;
         }
 
-        .signup {
+        .login:hover {
+          background-color: #93C5FD;
+          color: #1E3A8A;
+        }
+
+        .signup,
+        .btn {
           background-color: #EC4899;
           color: #FFFFFF;
           border: none;
         }
 
-        .login:hover,
-        .signup:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .login:hover {
-          background-color: #93C5FD;
-        }
-
-        .signup:hover {
+        .signup:hover,
+        .btn:hover {
           background-color: #F472B6;
-        }
-
-        .login:focus,
-        .signup:focus {
-          outline: none;
-          box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+          color: #FFFFFF;
         }
 
         /* Hero Section Styles */
@@ -779,22 +808,6 @@ const Home: NextPage = () => {
           color: #EC4899;
         }
 
-        .service-card .btn {
-          display: inline-block;
-          padding: clamp(0.4rem, 1.5vw, 0.6rem) clamp(0.8rem, 2vw, 1rem);
-          background-color: #EC4899;
-          color: #FFFFFF;
-          text-decoration: none;
-          border-radius: 5px;
-          font-size: clamp(0.7rem, 2vw, 0.9rem);
-          font-weight: 500;
-          transition: background-color 0.3s ease;
-        }
-
-        .service-card .btn:hover {
-          background-color: #F472B6;
-        }
-
         .service-image-wrapper {
           width: clamp(3rem, 10vw, 4rem);
           height: clamp(3rem, 10vw, 4rem);
@@ -918,13 +931,6 @@ const Home: NextPage = () => {
           transform: translateY(-0.3rem);
         }
 
-        .contact-form {
-          max-width: clamp(20rem, 50vw, 40rem);
-          margin: 0 auto;
-          text-align: left;
-          animation: slideInLeft 0.6s ease-out forwards;
-        }
-
         /* Footer Styles */
         footer {
           background-color: #1E3A8A;
@@ -1023,7 +1029,7 @@ const Home: NextPage = () => {
           .hero-content .highlight { font-size: 1.2rem; }
           .hero-content p { font-size: 0.7rem; margin-bottom: 0.5rem; }
           .hero-content .buttons { flex-direction: column; gap: 0.3rem; }
-          .login, .signup { font-size: 0.7rem; padding: 0.3rem 0.6rem; }
+          .button { font-size: 0.7rem; padding: 0.4rem 0.8rem; }
           .hero-image { display: none; }
           .wave { height: 2rem; }
           .features, .services, .networks, .contact { padding: 1rem 0; }
@@ -1036,7 +1042,6 @@ const Home: NextPage = () => {
           .feature-image-wrapper, .service-image-wrapper { width: 2.5rem; height: 2.5rem; }
           .feature-image-wrapper img, .service-image-wrapper img { width: 1.8rem; height: 1.8rem; }
           .service-features { font-size: 0.65rem; padding: 0 0.3rem; }
-          .service-card .btn { font-size: 0.7rem; padding: 0.3rem 0.6rem; }
           .network-logos { gap: 0.5rem; }
           .network-logos img { width: 2.5rem; height: 1.2rem; }
           .contact-info { grid-template-columns: 1fr; }
@@ -1066,7 +1071,7 @@ const Home: NextPage = () => {
           .nav-list.open { display: flex; }
           .nav-link { font-size: 0.8rem; padding: 0.4rem; }
           .buttons { flex-direction: column; gap: 0.5rem; width: 100%; align-items: center; }
-          .login, .signup { width: 100%; max-width: 10rem; font-size: 0.8rem; }
+          .button { width: 100%; max-width: 10rem; font-size: 0.8rem; padding: 0.5rem 1rem; }
           .hero { padding: 1.5rem 0; }
           .hero-wrapper { flex-direction: column; gap: 1rem; }
           .hero-content { max-width: 100%; }
@@ -1097,6 +1102,7 @@ const Home: NextPage = () => {
           .nav-list.open { display: flex; }
           .nav-link { font-size: 0.9rem; padding: 0.5rem; }
           .buttons { flex-direction: row; gap: 0.5rem; }
+          .button { font-size: 0.9rem; padding: 0.5rem 1.2rem; }
           .hero { padding: 2rem 0; }
           .hero-wrapper { flex-direction: column; gap: 1.5rem; }
           .hero-content { max-width: 100%; }
@@ -1114,13 +1120,14 @@ const Home: NextPage = () => {
           .hero-content { max-width: 50%; }
           .hero-image { max-width: 40%; }
           .feature-grid, .service-grid { grid-template-columns: repeat(3, 1fr); }
+          .button { font-size: 0.95rem; padding: 0.6rem 1.3rem; }
         }
 
         @media (min-width: 1201px) {
           .container { max-width: 1600px; }
           .logo { font-size: 1.4rem; }
           .nav-link { font-size: 1rem; }
-          .login, .signup { font-size: 1rem; padding: 0.6rem 1.2rem; }
+          .button { font-size: 1rem; padding: 0.7rem 1.4rem; }
           .hero { padding: 6rem 0; }
           .hero-content h1 { font-size: 3.5rem; }
           .hero-content .highlight { font-size: 4.5rem; }
