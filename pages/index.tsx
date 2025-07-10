@@ -539,7 +539,7 @@ const Home: NextPage = () => {
           text-decoration: none;
           text-align: center;
           cursor: pointer;
-          transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+          transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
           border: none;
           line-height: 1.5;
           touch-action: manipulation;
@@ -554,10 +554,10 @@ const Home: NextPage = () => {
           left: 50%;
           width: 0;
           height: 0;
-          background: rgba(255, 255, 255, 0.2);
+          background: rgba(255, 255, 255, 0.3);
           border-radius: 50%;
           transform: translate(-50%, -50%);
-          transition: width 0.4s ease, height 0.4s ease;
+          transition: width 0.3s ease, height 0.3s ease;
         }
 
         :global(.button:hover::after) {
@@ -567,12 +567,12 @@ const Home: NextPage = () => {
 
         :global(.button:hover) {
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-          transform: translateY(-3px);
+          transform: translateY(-2px);
         }
 
         :global(.button:focus) {
           outline: none;
-          box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+          box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4);
         }
 
         :global(.button:active) {
@@ -1065,51 +1065,72 @@ const Home: NextPage = () => {
           }
 
           :global(.button) {
-            font-size: 1.1rem;
-            padding: 0.75rem 2rem;
-            max-width: 12rem;
-            border-radius: 12px;
-            font-weight: 700;
-            letter-spacing: 0.02em;
-            transition: all 0.3s ease-in-out;
+            font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+            padding: clamp(0.7rem, 1.5vw, 0.9rem) clamp(1.5rem, 2.5vw, 2rem);
+            max-width: clamp(10rem, 15vw, 12rem);
+            border-radius: 8px;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            transition: all 0.2s ease, backdrop-filter 0.2s ease;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+          }
+
+          :global(.button:hover) {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px) scale(1.05);
+          }
+
+          :global(.button:focus) {
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.4);
+          }
+
+          :global(.button:active) {
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            transform: scale(0.98);
+          }
+
+          :global(.button::after) {
+            background: rgba(255, 255, 255, 0.3);
           }
 
           :global(.login) {
-            background: linear-gradient(45deg, #93C5FD, #BFDBFE);
-            color: #1E3A8A;
-            border: 2px solid #3B82F6;
+            background: rgba(37, 99, 235, 0.9);
+            color: #FFFFFF;
+            border: 1px solid #2563EB;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
           }
 
           :global(.login:hover) {
-            background: linear-gradient(45deg, #60A5FA, #93C5FD);
-            box-shadow: 0 6px 14px rgba(59, 130, 246, 0.3);
-            transform: translateY(-3px) scale(1.02);
+            background: rgba(59, 130, 246, 0.9);
+            border-color: #60A5FA;
           }
 
           :global(.login:active) {
-            box-shadow: 0 2px 6px rgba(59, 130, 246, 0.2);
-            transform: translateY(0) scale(1);
+            background: rgba(29, 78, 216, 0.9);
+            border-color: #1D4ED8;
           }
 
           :global(.signup),
           :global(.btn) {
-            background: linear-gradient(45deg, #EC4899, #F472B6);
+            background: rgba(219, 39, 119, 0.9);
             color: #FFFFFF;
             border: none;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
           }
 
           :global(.signup:hover),
           :global(.btn:hover) {
-            background: linear-gradient(45deg, #DB2777, #EC4899);
-            box-shadow: 0 6px 14px rgba(236, 72, 153, 0.3);
-            transform: translateY(-3px) scale(1.02);
+            background: rgba(244, 114, 182, 0.9);
           }
 
           :global(.signup:active),
           :global(.btn:active) {
-            box-shadow: 0 2px 6px rgba(236, 72, 153, 0.2);
-            transform: translateY(0) scale(1);
+            background: rgba(190, 24, 93, 0.9);
           }
 
           .hero-wrapper {
@@ -1151,6 +1172,23 @@ const Home: NextPage = () => {
 
           .contact-info {
             grid-template-columns: repeat(3, 1fr);
+          }
+        }
+
+        /* Ultra-Wide Desktop Styles (e.g., 1440p, 4K) */
+        @media (min-width: 1440px) {
+          .container {
+            max-width: clamp(1280px, 90vw, 1600px);
+          }
+
+          :global(.button) {
+            font-size: clamp(1rem, 1vw, 1.2rem);
+            padding: clamp(0.8rem, 1.2vw, 1rem) clamp(1.8rem, 2vw, 2.2rem);
+            max-width: clamp(11rem, 12vw, 14rem);
+          }
+
+          .buttons {
+            gap: 1.2rem;
           }
         }
 
