@@ -1661,6 +1661,153 @@ const Home: NextPage = () => {
             padding: clamp(0.75rem, 2vh, 1.5rem);
             font-size: clamp(0.8rem, 1.5vw, 1rem);
           }
+          /* Existing styles remain unchanged up to media queries */
+
+/* Desktop-Specific Styles (1025px–1439px) */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .container {
+    max-width: clamp(1024px, 90vw, 1400px);
+    padding: 0 clamp(1.5rem, 2vw, 2rem);
+  }
+
+  .hero-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(2rem, 3vw, 3rem);
+  }
+
+  .hero-content {
+    max-width: clamp(24rem, 48vw, 36rem);
+    text-align: left;
+  }
+
+  .hero-image {
+    max-width: clamp(28rem, 45vw, 40rem);
+  }
+
+  .feature-grid, .service-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .feature-card, .service-card {
+    max-width: 16rem;
+    margin: 0 auto;
+  }
+
+  .nav-link {
+    font-size: clamp(1rem, 1.2vw, 1.15rem);
+    padding: clamp(0.6rem, 1vw, 0.8rem) clamp(1rem, 1.5vw, 1.2rem);
+  }
+
+  .buttons {
+    gap: clamp(0.75rem, 1.5vw, 1rem);
+  }
+
+  :global(.button) {
+    font-size: clamp(1rem, 1.2vw, 1.15rem);
+    padding: clamp(0.7rem, 1.5vw, 0.9rem) clamp(1.5rem, 2.5vw, 2rem);
+    max-width: clamp(11rem, 14vw, 13rem);
+  }
+
+  .network-logos img {
+    width: clamp(4rem, 8vw, 6rem);
+    height: auto;
+  }
+}
+
+/* Ultra-Wide Desktop Styles (1440px–1599px) */
+@media (min-width: 1440px) and (max-width: 1599px) {
+  .container {
+    max-width: clamp(1280px, 88vw, 1920px);
+    padding: 0 clamp(1.75rem, 1.8vw, 2.5rem);
+  }
+
+  .hero-content {
+    max-width: clamp(28rem, 45vw, 40rem);
+  }
+
+  .hero-image {
+    max-width: clamp(32rem, 42vw, 48rem);
+  }
+
+  .feature-grid, .service-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(1.25rem, 1.8vw, 2rem);
+  }
+
+  .feature-card, .service-card {
+    max-width: 18rem;
+    margin: 0 auto;
+  }
+
+  .nav-link {
+    font-size: clamp(1.1rem, 1vw, 1.25rem);
+    padding: clamp(0.7rem, 0.8vw, 0.9rem) clamp(1.2rem, 1.3vw, 1.5rem);
+  }
+
+  :global(.button) {
+    font-size: clamp(1.1rem, 1vw, 1.25rem);
+    padding: clamp(0.8rem, 1.2vw, 1rem) clamp(1.8rem, 2vw, 2.2rem);
+    max-width: clamp(12rem, 12vw, 15rem);
+  }
+
+  .network-logos img {
+    width: clamp(4.5rem, 8vw, 6.5rem);
+    height: auto;
+  }
+}
+
+/* Additional Breakpoint for Ultra-Wide Screens (≥1600px) */
+@media (min-width: 1600px) {
+  .container {
+    max-width: clamp(1400px, 85vw, 1920px);
+    padding: 0 clamp(2rem, 1.5vw, 2.5rem);
+  }
+
+  .hero-wrapper {
+    gap: clamp(2.5rem, 3vw, 3.5rem);
+  }
+
+  .hero-content {
+    max-width: clamp(30rem, 45vw, 40rem);
+  }
+
+  .hero-image {
+    max-width: clamp(35rem, 42vw, 50rem);
+  }
+
+  .feature-grid, .service-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(1.5rem, 1.5vw, 2.5rem);
+  }
+
+  .feature-card, .service-card {
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+
+  .nav-link {
+    font-size: clamp(1.15rem, 1vw, 1.3rem);
+    padding: clamp(0.8rem, 0.9vw, 1rem) clamp(1.3rem, 1.4vw, 1.6rem);
+  }
+
+  .buttons {
+    gap: clamp(1rem, 1.5vw, 1.25rem);
+  }
+
+  :global(.button) {
+    font-size: clamp(1.15rem, 1vw, 1.3rem);
+    padding: clamp(0.9rem, 1.2vw, 1.1rem) clamp(2rem, 2vw, 2.5rem);
+    max-width: clamp(13rem, 12vw, 16rem);
+  }
+
+  .network-logos img {
+    width: clamp(5rem, 8vw, 7rem);
+    height: auto;
+  }
+}
         }
       `}</style>
     </div>
