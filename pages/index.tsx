@@ -372,15 +372,15 @@ const Home: NextPage = () => {
 
         .container {
           width: 100%;
-          max-width: clamp(320px, 92vw, 1280px);
+          max-width: clamp(300px, 94vw, 1280px);
           margin: 0 auto;
-          padding: 0 clamp(0.5rem, 2vw, 1.25rem);
+          padding: 0 clamp(0.5rem, 3vw, 1.5rem);
         }
 
         /* Header Styles */
         header {
           background-color: #E0F2FF;
-          padding: clamp(0.5rem, 2vh, 1rem) 0;
+          padding: clamp(0.5rem, 2.5vh, 1.25rem) 0;
           position: sticky;
           top: 0;
           z-index: 1000;
@@ -392,15 +392,15 @@ const Home: NextPage = () => {
           justify-content: space-between;
           align-items: center;
           flex-wrap: wrap;
-          gap: clamp(0.5rem, 1.5vw, 0.75rem);
+          gap: clamp(0.5rem, 2vw, 1rem);
         }
 
         .logo {
           display: flex;
           align-items: center;
-          gap: clamp(0.4rem, 1.2vw, 0.6rem);
+          gap: clamp(0.4rem, 1.5vw, 0.75rem);
           color: #003087;
-          font-size: clamp(1rem, 2.5vw, 1.5rem);
+          font-size: clamp(1rem, 2.8vw, 1.6rem);
           font-weight: 600;
         }
 
@@ -422,45 +422,53 @@ const Home: NextPage = () => {
         .nav-link {
           color: #1E3A8A;
           text-decoration: none;
-          font-size: clamp(0.8rem, 2vw, 1rem);
-          font-weight: 500;
-          padding: clamp(0.4rem, 1.2vw, 0.6rem) clamp(0.6rem, 1.8vw, 0.8rem);
+          font-size: clamp(0.85rem, 2vw, 1.05rem);
+          font-weight: 600;
+          padding: clamp(0.4rem, 1.5vw, 0.7rem) clamp(0.6rem, 2vw, 1rem);
           border-radius: 8px;
-          transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+          transition: all 0.2s ease, backdrop-filter 0.2s ease;
           touch-action: manipulation;
           position: relative;
+          overflow: hidden;
+          background: rgba(255, 255, 255, 0.8);
+          backdrop-filter: blur(5px);
+          -webkit-backdrop-filter: blur(5px);
         }
 
         .nav-link::after {
           content: '';
           position: absolute;
-          bottom: 0;
+          top: 50%;
           left: 50%;
           width: 0;
-          height: 2px;
-          background-color: #EC4899;
-          transition: width 0.3s ease, left 0.3s ease;
+          height: 0;
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+          transition: width 0.3s ease, height 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+          width: 200%;
+          height: 200%;
         }
 
         .nav-link:hover {
           color: #EC4899;
-          background-color: rgba(236, 72, 153, 0.1);
-          transform: translateY(-2px);
-        }
-
-        .nav-link:hover::after {
-          width: 100%;
-          left: 0;
+          background: rgba(236, 72, 153, 0.1);
+          transform: translateY(-2px) scale(1.05);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .nav-link:focus {
           color: #F472B6;
           outline: none;
-          box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.3);
+          box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.4);
         }
 
         .nav-link:active {
-          transform: translateY(0);
+          transform: scale(0.98);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
         }
 
         .hamburger {
@@ -468,14 +476,14 @@ const Home: NextPage = () => {
           background: none;
           border: none;
           cursor: pointer;
-          padding: clamp(0.5rem, 1.5vw, 0.75rem);
+          padding: clamp(0.5rem, 2vw, 0.75rem);
           z-index: 1001;
           touch-action: manipulation;
         }
 
         .hamburger-icon {
           display: block;
-          width: clamp(1.5rem, 4vw, 1.8rem);
+          width: clamp(1.5rem, 4.5vw, 1.8rem);
           height: 0.2rem;
           background: #1E3A8A;
           position: relative;
@@ -520,7 +528,7 @@ const Home: NextPage = () => {
 
         .buttons {
           display: flex;
-          gap: clamp(0.5rem, 1.5vw, 0.75rem);
+          gap: clamp(0.5rem, 2vw, 1rem);
           flex-wrap: wrap;
           justify-content: center;
         }
@@ -531,8 +539,8 @@ const Home: NextPage = () => {
           justify-content: center;
           align-items: center;
           width: 100%;
-          max-width: clamp(8rem, 28vw, 10rem);
-          padding: clamp(0.6rem, 2vw, 0.8rem) clamp(1.25rem, 3vw, 1.5rem);
+          max-width: clamp(8rem, 30vw, 10rem);
+          padding: clamp(0.6rem, 2.5vw, 0.8rem) clamp(1.25rem, 3.5vw, 1.5rem);
           border-radius: 10px;
           font-size: clamp(0.9rem, 2.2vw, 1.1rem);
           font-weight: 600;
@@ -618,47 +626,47 @@ const Home: NextPage = () => {
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: clamp(1rem, 3vw, 1.5rem);
+          gap: clamp(1rem, 3.5vw, 2rem);
           max-width: 100%;
-          padding: 0 clamp(0.5rem, 2vw, 1.25rem);
+          padding: 0 clamp(0.5rem, 3vw, 1.5rem);
           box-sizing: border-box;
         }
 
         .hero-content {
-          max-width: clamp(18rem, 90vw, 38rem);
+          max-width: clamp(16rem, 90vw, 40rem);
           z-index: 1;
           animation: fadeIn 0.8s ease-out;
           text-align: center;
         }
 
         .hero-content h1 {
-          font-size: clamp(1.2rem, 4.5vw, 2.5rem);
+          font-size: clamp(1.2rem, 5vw, 2.8rem);
           font-weight: 700;
-          margin: 0 0 clamp(0.5rem, 1.5vw, 0.75rem);
+          margin: 0 0 clamp(0.5rem, 2vw, 0.75rem);
           line-height: 1.3;
         }
 
         .hero-content .highlight {
-          font-size: clamp(1.6rem, 5vw, 3rem);
+          font-size: clamp(1.6rem, 5.5vw, 3.2rem);
           color: #EC4899;
           font-weight: 700;
         }
 
         .hero-content p {
-          font-size: clamp(0.8rem, 2vw, 1.1rem);
-          margin: 0 0 clamp(0.75rem, 2.5vw, 1rem);
+          font-size: clamp(0.85rem, 2.2vw, 1.15rem);
+          margin: 0 0 clamp(0.75rem, 3vw, 1.25rem);
           line-height: 1.6;
           color: #E0F2FF;
         }
 
         .hero-content .buttons {
-          gap: clamp(0.5rem, 1.5vw, 0.75rem);
+          gap: clamp(0.5rem, 2vw, 1rem);
           flex-direction: column;
           align-items: center;
         }
 
         .hero-image {
-          max-width: clamp(14rem, 90vw, 30rem);
+          max-width: clamp(12rem, 90vw, 32rem);
           z-index: 1;
           animation: slideInRight 0.8s ease-out;
         }
@@ -668,7 +676,7 @@ const Home: NextPage = () => {
           bottom: 0;
           left: 0;
           width: 100%;
-          height: clamp(2rem, 8vw, 4rem);
+          height: clamp(2rem, 10vw, 4.5rem);
           background: url('/wave.svg') no-repeat;
           background-size: cover;
           background-position: center;
@@ -677,7 +685,7 @@ const Home: NextPage = () => {
 
         /* Features Section Styles */
         .features {
-          padding: clamp(1.5rem, 5vh, 3rem) 0;
+          padding: clamp(1.5rem, 6vh, 3.5rem) 0;
           text-align: center;
           background: #FFFFFF;
           width: 100%;
@@ -685,17 +693,17 @@ const Home: NextPage = () => {
         }
 
         .features h2 {
-          font-size: clamp(1.2rem, 3vw, 1.8rem);
+          font-size: clamp(1.2rem, 3.5vw, 2rem);
           color: #1E3A8A;
           font-weight: 600;
-          margin: 0 0 clamp(0.25rem, 1vw, 0.4rem);
+          margin: 0 0 clamp(0.25rem, 1.5vw, 0.5rem);
         }
 
         .underline {
-          width: clamp(2rem, 5vw, 3rem);
+          width: clamp(2rem, 6vw, 3.5rem);
           height: 0.2rem;
           background-color: #FFFFFF;
-          margin: 0 auto clamp(0.25rem, 1vw, 0.4rem);
+          margin: 0 auto clamp(0.25rem, 1.5vw, 0.5rem);
         }
 
         .underline.pink {
@@ -703,22 +711,22 @@ const Home: NextPage = () => {
         }
 
         .subtitle {
-          font-size: clamp(0.7rem, 2vw, 0.95rem);
+          font-size: clamp(0.75rem, 2.2vw, 1rem);
           color: #6B7280;
-          margin: 0 0 clamp(0.75rem, 2.5vw, 1rem);
+          margin: 0 0 clamp(0.75rem, 3vw, 1.25rem);
           font-weight: 500;
         }
 
         .feature-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(clamp(9rem, 26vw, 11rem), 1fr));
-          gap: clamp(0.5rem, 2vw, 1rem);
+          grid-template-columns: repeat(auto-fit, minmax(clamp(8.5rem, 28vw, 12rem), 1fr));
+          gap: clamp(0.5rem, 2.5vw, 1.25rem);
         }
 
         .feature-card {
           background: #FFFFFF;
           border-radius: 10px;
-          padding: clamp(0.5rem, 2vw, 1rem);
+          padding: clamp(0.5rem, 2.5vw, 1.25rem);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
           transition: transform 0.2s ease, box-shadow 0.2s ease;
           text-align: center;
@@ -731,22 +739,22 @@ const Home: NextPage = () => {
         }
 
         .feature-card h3 {
-          font-size: clamp(0.8rem, 2vw, 1.1rem);
+          font-size: clamp(0.85rem, 2.2vw, 1.15rem);
           color: #1E3A8A;
-          margin: clamp(0.25rem, 1vw, 0.4rem) 0;
+          margin: clamp(0.25rem, 1.5vw, 0.5rem) 0;
           font-weight: 600;
         }
 
         .feature-card p {
-          font-size: clamp(0.6rem, 1.8vw, 0.9rem);
+          font-size: clamp(0.65rem, 2vw, 0.95rem);
           color: #6B7280;
           line-height: 1.6;
         }
 
         .feature-image-wrapper {
-          width: clamp(2.5rem, 8vw, 3.5rem);
-          height: clamp(2.5rem, 8vw, 3.5rem);
-          margin: 0 auto clamp(0.3rem, 1vw, 0.5rem);
+          width: clamp(2.5rem, 9vw, 4rem);
+          height: clamp(2.5rem, 9vw, 4rem);
+          margin: 0 auto clamp(0.3rem, 1.5vw, 0.6rem);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -756,14 +764,14 @@ const Home: NextPage = () => {
         }
 
         .feature-image-wrapper img {
-          width: clamp(1.8rem, 6vw, 2.5rem);
-          height: clamp(1.8rem, 6vw, 2.5rem);
+          width: clamp(1.8rem, 7vw, 2.8rem);
+          height: clamp(1.8rem, 7vw, 2.8rem);
           object-fit: contain;
         }
 
         /* Services Section Styles */
         .services {
-          padding: clamp(1.5rem, 5vh, 3rem) 0;
+          padding: clamp(1.5rem, 6vh, 3.5rem) 0;
           text-align: center;
           background: #EFF6FF;
           width: 100%;
@@ -771,23 +779,23 @@ const Home: NextPage = () => {
         }
 
         .services h2 {
-          font-size: clamp(1.2rem, 3vw, 1.8rem);
+          font-size: clamp(1.2rem, 3.5vw, 2rem);
           color: #1E3A8A;
           font-weight: 600;
-          margin: 0 0 clamp(0.25rem, 1vw, 0.4rem);
+          margin: 0 0 clamp(0.25rem, 1.5vw, 0.5rem);
         }
 
         .service-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(clamp(9rem, 26vw, 11rem), 1fr));
-          gap: clamp(0.5rem, 2vw, 1rem);
-          margin: 0 0 clamp(0.75rem, 2.5vw, 1rem);
+          grid-template-columns: repeat(auto-fit, minmax(clamp(8.5rem, 28vw, 12rem), 1fr));
+          gap: clamp(0.5rem, 2.5vw, 1.25rem);
+          margin: 0 0 clamp(0.75rem, 3vw, 1.25rem);
         }
 
         .service-card {
           background: #FFFFFF;
           border-radius: 10px;
-          padding: clamp(0.5rem, 2vw, 1rem);
+          padding: clamp(0.5rem, 2.5vw, 1.25rem);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
           transition: transform 0.2s ease, box-shadow 0.2s ease;
           text-align: center;
@@ -800,33 +808,33 @@ const Home: NextPage = () => {
         }
 
         .service-card h3 {
-          font-size: clamp(0.8rem, 2vw, 1.1rem);
+          font-size: clamp(0.85rem, 2.2vw, 1.15rem);
           color: #1E3A8A;
-          margin: clamp(0.25rem, 1vw, 0.4rem) 0;
+          margin: clamp(0.25rem, 1.5vw, 0.5rem) 0;
           font-weight: 600;
         }
 
         .service-card p {
-          font-size: clamp(0.6rem, 1.8vw, 0.9rem);
+          font-size: clamp(0.65rem, 2vw, 0.95rem);
           color: #6B7280;
-          margin: 0 0 clamp(0.3rem, 1vw, 0.5rem);
+          margin: 0 0 clamp(0.3rem, 1.5vw, 0.6rem);
           line-height: 1.6;
         }
 
         .service-features {
           list-style: none;
           text-align: left;
-          margin: 0 0 clamp(0.3rem, 1vw, 0.5rem);
-          padding: 0 clamp(0.4rem, 1.2vw, 0.6rem);
-          font-size: clamp(0.55rem, 1.6vw, 0.8rem);
+          margin: 0 0 clamp(0.3rem, 1.5vw, 0.6rem);
+          padding: 0 clamp(0.4rem, 1.5vw, 0.75rem);
+          font-size: clamp(0.6rem, 1.8vw, 0.85rem);
           color: #6B7280;
           line-height: 1.7;
         }
 
         .service-features li {
-          margin-bottom: clamp(0.2rem, 0.8vw, 0.3rem);
+          margin-bottom: clamp(0.2rem, 1vw, 0.4rem);
           position: relative;
-          padding-left: clamp(0.9rem, 2vw, 1rem);
+          padding-left: clamp(0.9rem, 2.5vw, 1.2rem);
         }
 
         .service-features li::before {
@@ -834,13 +842,13 @@ const Home: NextPage = () => {
           position: absolute;
           left: 0;
           color: #EC4899;
-          font-size: clamp(0.7rem, 1.6vw, 0.85rem);
+          font-size: clamp(0.7rem, 2vw, 0.9rem);
         }
 
         .service-image-wrapper {
-          width: clamp(2.5rem, 8vw, 3.5rem);
-          height: clamp(2.5rem, 8vw, 3.5rem);
-          margin: 0 auto clamp(0.3rem, 1vw, 0.5rem);
+          width: clamp(2.5rem, 9vw, 4rem);
+          height: clamp(2.5rem, 9vw, 4rem);
+          margin: 0 auto clamp(0.3rem, 1.5vw, 0.6rem);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -850,24 +858,24 @@ const Home: NextPage = () => {
         }
 
         .service-image-wrapper img {
-          width: clamp(1.8rem, 6vw, 2.5rem);
-          height: clamp(1.8rem, 6vw, 2.5rem);
+          width: clamp(1.8rem, 7vw, 2.8rem);
+          height: clamp(1.8rem, 7vw, 2.8rem);
           object-fit: contain;
         }
 
         .service-cta {
-          font-size: clamp(0.7rem, 2vw, 0.95rem);
+          font-size: clamp(0.75rem, 2.2vw, 1rem);
           color: #1E3A8A;
-          margin: clamp(0.5rem, 2vw, 1rem) 0 0;
+          margin: clamp(0.5rem, 2.5vw, 1.25rem) 0 0;
           line-height: 1.6;
-          max-width: clamp(16rem, 85vw, 30rem);
+          max-width: clamp(16rem, 90vw, 32rem);
           margin-left: auto;
           margin-right: auto;
         }
 
         /* Networks Section Styles */
         .networks {
-          padding: clamp(1.5rem, 5vh, 3rem) 0;
+          padding: clamp(1.5rem, 6vh, 3.5rem) 0;
           text-align: center;
           background: #FFFFFF;
           width: 100%;
@@ -875,28 +883,28 @@ const Home: NextPage = () => {
         }
 
         .networks h2 {
-          font-size: clamp(1.2rem, 3vw, 1.8rem);
+          font-size: clamp(1.2rem, 3.5vw, 2rem);
           color: #1E3A8A;
           font-weight: 600;
-          margin: 0 0 clamp(0.25rem, 1vw, 0.4rem);
+          margin: 0 0 clamp(0.25rem, 1.5vw, 0.5rem);
         }
 
         .network-logos {
           display: flex;
           justify-content: center;
-          gap: clamp(0.5rem, 2vw, 1rem);
+          gap: clamp(0.5rem, 2.5vw, 1.25rem);
           flex-wrap: wrap;
         }
 
         .network-logos img {
-          width: clamp(3.5rem, 9vw, 5.5rem);
-          height: clamp(1.75rem, 4.5vw, 2.75rem);
+          width: clamp(3.5rem, 10vw, 6rem);
+          height: clamp(1.75rem, 5vw, 3rem);
           max-width: 100%;
         }
 
         /* Contact Section Styles */
         .contact {
-          padding: clamp(1.5rem, 5vh, 3rem) 0;
+          padding: clamp(1.5rem, 6vh, 3.5rem) 0;
           text-align: center;
           background-color: #1E3A8A;
           color: #FFFFFF;
@@ -905,22 +913,22 @@ const Home: NextPage = () => {
         }
 
         .contact h2 {
-          font-size: clamp(1.2rem, 3vw, 1.8rem);
+          font-size: clamp(1.2rem, 3.5vw, 2rem);
           font-weight: 700;
-          margin: 0 0 clamp(0.25rem, 1vw, 0.4rem);
+          margin: 0 0 clamp(0.25rem, 1.5vw, 0.5rem);
         }
 
         .contact .subtitle {
-          font-size: clamp(0.7rem, 2vw, 0.95rem);
-          margin: 0 0 clamp(0.5rem, 1.5vw, 0.75rem);
+          font-size: clamp(0.75rem, 2.2vw, 1rem);
+          margin: 0 0 clamp(0.5rem, 2vw, 0.75rem);
           font-weight: 500;
         }
 
         .contact-intro {
-          font-size: clamp(0.6rem, 1.8vw, 0.9rem);
+          font-size: clamp(0.65rem, 2vw, 0.95rem);
           color: #E0F2FF;
-          margin: 0 0 clamp(0.75rem, 2.5vw, 1rem);
-          max-width: clamp(16rem, 85vw, 30rem);
+          margin: 0 0 clamp(0.75rem, 3vw, 1.25rem);
+          max-width: clamp(16rem, 90vw, 32rem);
           margin-left: auto;
           margin-right: auto;
           line-height: 1.6;
@@ -928,26 +936,26 @@ const Home: NextPage = () => {
 
         .contact-info {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(clamp(9rem, 26vw, 11rem), 1fr));
-          gap: clamp(0.5rem, 2vw, 1rem);
-          max-width: clamp(18rem, 85vw, 36rem);
-          margin: 0 auto clamp(0.75rem, 2.5vw, 1rem);
+          grid-template-columns: repeat(auto-fit, minmax(clamp(8.5rem, 28vw, 12rem), 1fr));
+          gap: clamp(0.5rem, 2.5vw, 1.25rem);
+          max-width: clamp(16rem, 90vw, 40rem);
+          margin: 0 auto clamp(0.75rem, 3vw, 1.25rem);
         }
 
         .contact-item {
           text-align: center;
-          padding: clamp(0.5rem, 2vw, 1rem);
+          padding: clamp(0.5rem, 2.5vw, 1.25rem);
           animation: slideInLeft 0.5s ease-out forwards;
         }
 
         .contact-item h3 {
-          font-size: clamp(0.8rem, 2vw, 1rem);
+          font-size: clamp(0.85rem, 2.2vw, 1.1rem);
           font-weight: 600;
-          margin: clamp(0.25rem, 1vw, 0.4rem) 0;
+          margin: clamp(0.25rem, 1.5vw, 0.5rem) 0;
         }
 
         .contact-item p {
-          font-size: clamp(0.6rem, 1.8vw, 0.9rem);
+          font-size: clamp(0.65rem, 2vw, 0.95rem);
           color: #E0F2FF;
         }
 
@@ -956,8 +964,8 @@ const Home: NextPage = () => {
           background-color: #1E3A8A;
           color: #FFFFFF;
           text-align: center;
-          padding: clamp(0.5rem, 2vh, 1rem);
-          font-size: clamp(0.6rem, 1.8vw, 0.9rem);
+          padding: clamp(0.5rem, 2.5vh, 1.25rem);
+          font-size: clamp(0.65rem, 2vw, 0.95rem);
           margin-top: auto;
         }
 
@@ -968,12 +976,12 @@ const Home: NextPage = () => {
         /* WhatsApp Icon Styles */
         .whatsapp {
           position: fixed;
-          bottom: clamp(0.5rem, 2vw, 1rem);
-          right: clamp(0.5rem, 2vw, 1rem);
+          bottom: clamp(0.5rem, 2.5vw, 1rem);
+          right: clamp(0.5rem, 2.5vw, 1rem);
           z-index: 1000;
           background: #25D366;
           border-radius: 50%;
-          padding: clamp(0.3rem, 1vw, 0.5rem);
+          padding: clamp(0.3rem, 1.5vw, 0.6rem);
           box-shadow: 0 2px 6px rgba(37, 211, 102, 0.4);
           transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
@@ -984,8 +992,8 @@ const Home: NextPage = () => {
         }
 
         .whatsapp img {
-          width: clamp(2rem, 6vw, 2.5rem);
-          height: clamp(2rem, 6vw, 2.5rem);
+          width: clamp(2rem, 7vw, 2.8rem);
+          height: clamp(2rem, 7vw, 2.8rem);
         }
 
         /* Animations */
@@ -1020,180 +1028,13 @@ const Home: NextPage = () => {
           to { opacity: 1; transform: translateX(0); }
         }
 
-        /* Desktop-Specific Styles */
-        @media (min-width: 769px) {
-          .container {
-            max-width: clamp(769px, 90vw, 1280px);
-          }
-
-          nav {
-            justify-content: space-between;
-            align-items: center;
-            gap: 0;
-          }
-
-          .logo {
-            font-size: 1.5rem;
-          }
-
-          .nav-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1.5rem;
-          }
-
-          .nav-list {
-            display: flex;
-            gap: 1.5rem;
-          }
-
-          .nav-link {
-            font-size: 1.1rem;
-            padding: 0.5rem 1rem;
-            position: relative;
-          }
-
-          .nav-link::after {
-            bottom: -0.5rem;
-            height: 3px;
-          }
-
-          .buttons {
-            gap: 1rem;
-          }
-
-          :global(.button) {
-            font-size: clamp(0.95rem, 1.2vw, 1.1rem);
-            padding: clamp(0.7rem, 1.5vw, 0.9rem) clamp(1.5rem, 2.5vw, 2rem);
-            max-width: clamp(10rem, 15vw, 12rem);
-            border-radius: 8px;
-            font-weight: 600;
-            letter-spacing: 0.01em;
-            transition: all 0.2s ease, backdrop-filter 0.2s ease;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-          }
-
-          :global(.button:hover) {
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-            transform: translateY(-2px) scale(1.05);
-          }
-
-          :global(.button:focus) {
-            outline: none;
-            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.4);
-          }
-
-          :global(.button:active) {
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-            transform: scale(0.98);
-          }
-
-          :global(.button::after) {
-            background: rgba(255, 255, 255, 0.3);
-          }
-
-          :global(.login) {
-            background: rgba(37, 99, 235, 0.9);
-            color: #FFFFFF;
-            border: 1px solid #2563EB;
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-          }
-
-          :global(.login:hover) {
-            background: rgba(59, 130, 246, 0.9);
-            border-color: #60A5FA;
-          }
-
-          :global(.login:active) {
-            background: rgba(29, 78, 216, 0.9);
-            border-color: #1D4ED8;
-          }
-
-          :global(.signup),
-          :global(.btn) {
-            background: rgba(219, 39, 119, 0.9);
-            color: #FFFFFF;
-            border: none;
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-          }
-
-          :global(.signup:hover),
-          :global(.btn:hover) {
-            background: rgba(244, 114, 182, 0.9);
-          }
-
-          :global(.signup:active),
-          :global(.btn:active) {
-            background: rgba(190, 24, 93, 0.9);
-          }
-
-          .hero-wrapper {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2rem;
-          }
-
-          .hero-content {
-            max-width: 50%;
-            text-align: left;
-          }
-
-          .hero-content h1 {
-            font-size: 2.5rem;
-          }
-
-          .hero-content .highlight {
-            font-size: 3rem;
-          }
-
-          .hero-content p {
-            font-size: 1.1rem;
-          }
-
-          .hero-content .buttons {
-            flex-direction: row;
-            justify-content: flex-start;
-          }
-
-          .hero-image {
-            max-width: 45%;
-          }
-
-          .feature-grid, .service-grid {
-            grid-template-columns: repeat(4, 1fr);
-          }
-
-          .contact-info {
-            grid-template-columns: repeat(3, 1fr);
-          }
-        }
-
-        /* Ultra-Wide Desktop Styles (e.g., 1440p, 4K) */
-        @media (min-width: 1440px) {
-          .container {
-            max-width: clamp(1280px, 90vw, 1600px);
-          }
-
-          :global(.button) {
-            font-size: clamp(1rem, 1vw, 1.2rem);
-            padding: clamp(0.8rem, 1.2vw, 1rem) clamp(1.8rem, 2vw, 2.2rem);
-            max-width: clamp(11rem, 12vw, 14rem);
-          }
-
-          .buttons {
-            gap: 1.2rem;
-          }
-        }
-
-        /* Mobile-Specific Styles (unchanged) */
+        /* Mobile-Specific Styles (≤768px) */
         @media (max-width: 768px) {
+          .container {
+            max-width: clamp(300px, 100vw, 768px);
+            padding: 0 clamp(0.5rem, 3vw, 1rem);
+          }
+
           .hamburger {
             display: block;
           }
@@ -1206,7 +1047,7 @@ const Home: NextPage = () => {
             width: 100%;
             background: #E0F2FF;
             flex-direction: column;
-            padding: 1rem;
+            padding: clamp(0.75rem, 3vw, 1rem);
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
             transform: translateY(-10px);
             opacity: 0;
@@ -1223,28 +1064,47 @@ const Home: NextPage = () => {
 
           .nav-list {
             flex-direction: column;
-            gap: 0.75rem;
+            gap: clamp(0.5rem, 2.5vw, 0.75rem);
             align-items: center;
             width: 100%;
           }
 
           .nav-link {
-            font-size: 1rem;
-            padding: 0.75rem 1.25rem;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            padding: clamp(0.5rem, 2.5vw, 0.75rem) clamp(1rem, 3vw, 1.25rem);
             width: 100%;
             text-align: center;
+            background: #BFDBFE;
+            color: #1E3A8A;
+            border: 1px solid #93C5FD;
+            backdrop-filter: none;
+          }
+
+          .nav-link:hover {
+            background: #93C5FD;
+            color: #1E3A8A;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+          }
+
+          .nav-link:focus {
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+          }
+
+          .nav-link:active {
+            transform: scale(0.98);
           }
 
           .buttons {
             flex-direction: column;
-            gap: 0.75rem;
+            gap: clamp(0.5rem, 2.5vw, 0.75rem);
             width: 100%;
-            padding: 0.75rem 0;
+            padding: clamp(0.5rem, 2.5vw, 0.75rem) 0;
           }
 
           :global(.button) {
-            font-size: 1rem;
-            padding: 0.75rem 1.5rem;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            padding: clamp(0.5rem, 2.5vw, 0.75rem) clamp(1rem, 3vw, 1.25rem);
             max-width: 100%;
           }
 
@@ -1270,7 +1130,7 @@ const Home: NextPage = () => {
           }
 
           .hero-wrapper {
-            gap: 1.5rem;
+            gap: clamp(1rem, 3.5vw, 1.5rem);
           }
 
           .hero-content {
@@ -1278,15 +1138,15 @@ const Home: NextPage = () => {
           }
 
           .hero-content h1 {
-            font-size: 1.8rem;
+            font-size: clamp(1.2rem, 5vw, 1.8rem);
           }
 
           .hero-content .highlight {
-            font-size: 2.2rem;
+            font-size: clamp(1.6rem, 5.5vw, 2.2rem);
           }
 
           .hero-content p {
-            font-size: 1rem;
+            font-size: clamp(0.85rem, 2.5vw, 1rem);
           }
 
           .hero-image {
@@ -1294,11 +1154,382 @@ const Home: NextPage = () => {
           }
 
           .feature-grid, .service-grid {
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: 1fr;
           }
 
           .contact-info {
             grid-template-columns: 1fr;
+          }
+        }
+
+        /* Tablet-Specific Styles (769px–1024px) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+          .container {
+            max-width: clamp(769px, 94vw, 1024px);
+            padding: 0 clamp(0.75rem, 2.5vw, 1.25rem);
+          }
+
+          .logo {
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+          }
+
+          .nav-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: clamp(0.75rem, 2vw, 1rem);
+          }
+
+          .nav-list {
+            display: flex;
+            gap: clamp(0.5rem, 1.5vw, 0.75rem);
+          }
+
+          .nav-link {
+            font-size: clamp(0.9rem, 1.8vw, 1rem);
+            padding: clamp(0.4rem, 1.2vw, 0.6rem) clamp(0.6rem, 1.8vw, 0.8rem);
+            background: rgba(191, 219, 254, 0.9);
+            color: #1E3A8A;
+            border: 1px solid #93C5FD;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+          }
+
+          .nav-link:hover {
+            background: rgba(147, 197, 253, 0.9);
+            color: #EC4899;
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+          }
+
+          .nav-link:focus {
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.4);
+          }
+
+          .nav-link:active {
+            transform: scale(0.98);
+          }
+
+          .buttons {
+            gap: clamp(0.5rem, 1.5vw, 0.75rem);
+          }
+
+          :global(.button) {
+            font-size: clamp(0.9rem, 1.8vw, 1rem);
+            padding: clamp(0.6rem, 1.5vw, 0.8rem) clamp(1.25rem, 2.5vw, 1.5rem);
+            max-width: clamp(9rem, 20vw, 11rem);
+            border-radius: 8px;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+          }
+
+          :global(.button:hover) {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px) scale(1.05);
+          }
+
+          :global(.button:focus) {
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.4);
+          }
+
+          :global(.button:active) {
+            transform: scale(0.98);
+          }
+
+          :global(.login) {
+            background: rgba(37, 99, 235, 0.9);
+            color: #FFFFFF;
+            border: 1px solid #2563EB;
+          }
+
+          :global(.login:hover) {
+            background: rgba(59, 130, 246, 0.9);
+            border-color: #60A5FA;
+          }
+
+          :global(.login:active) {
+            background: rgba(29, 78, 216, 0.9);
+            border-color: #1D4ED8;
+          }
+
+          :global(.signup),
+          :global(.btn) {
+            background: rgba(219, 39, 119, 0.9);
+            color: #FFFFFF;
+            border: none;
+          }
+
+          :global(.signup:hover),
+          :global(.btn:hover) {
+            background: rgba(244, 114, 182, 0.9);
+          }
+
+          :global(.signup:active),
+          :global(.btn:active) {
+            background: rgba(190, 24, 93, 0.9);
+          }
+
+          .hero-wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: clamp(1rem, 2.5vw, 1.5rem);
+          }
+
+          .hero-content {
+            max-width: clamp(18rem, 50vw, 22rem);
+            text-align: left;
+          }
+
+          .hero-content h1 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+          }
+
+          .hero-content .highlight {
+            font-size: clamp(1.8rem, 4.5vw, 2.5rem);
+          }
+
+          .hero-content p {
+            font-size: clamp(0.9rem, 2vw, 1rem);
+          }
+
+          .hero-content .buttons {
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+
+          .hero-image {
+            max-width: clamp(18rem, 45vw, 24rem);
+          }
+
+          .feature-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          .service-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          .contact-info {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        /* Desktop-Specific Styles (1025px–1439px) */
+        @media (min-width: 1025px) {
+          .container {
+            max-width: clamp(769px, 92vw, 1280px);
+            padding: 0 clamp(1rem, 2vw, 1.5rem);
+          }
+
+          .logo {
+            font-size: clamp(1.4rem, 2vw, 1.6rem);
+          }
+
+          .nav-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: clamp(1rem, 2vw, 1.5rem);
+          }
+
+          .nav-list {
+            display: flex;
+            gap: clamp(0.75rem, 1.5vw, 1rem);
+          }
+
+          .nav-link {
+            font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+            padding: clamp(0.5rem, 1.2vw, 0.75rem) clamp(0.75rem, 1.8vw, 1rem);
+            background: rgba(255, 255, 255, 0.8);
+            color: #1E3A8A;
+            border: 1px solid #E0F2FF;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+          }
+
+          .nav-link:hover {
+            background: rgba(236, 72, 153, 0.1);
+            color: #EC4899;
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+          }
+
+          .nav-link:focus {
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.4);
+          }
+
+          .nav-link:active {
+            transform: scale(0.98);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+          }
+
+          .buttons {
+            gap: clamp(0.75rem, 1.5vw, 1rem);
+          }
+
+          :global(.button) {
+            font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+            padding: clamp(0.7rem, 1.5vw, 0.9rem) clamp(1.5rem, 2.5vw, 2rem);
+            max-width: clamp(10rem, 15vw, 12rem);
+            border-radius: 8px;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            transition: all 0.2s ease, backdrop-filter 0.2s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+          }
+
+          :global(.button:hover) {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px) scale(1.05);
+          }
+
+          :global(.button:focus) {
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.4);
+          }
+
+          :global(.button:active) {
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            transform: scale(0.98);
+          }
+
+          :global(.login) {
+            background: rgba(37, 99, 235, 0.9);
+            color: #FFFFFF;
+            border: 1px solid #2563EB;
+          }
+
+          :global(.login:hover) {
+            background: rgba(59, 130, 246, 0.9);
+            border-color: #60A5FA;
+          }
+
+          :global(.login:active) {
+            background: rgba(29, 78, 216, 0.9);
+            border-color: #1D4ED8;
+          }
+
+          :global(.signup),
+          :global(.btn) {
+            background: rgba(219, 39, 119, 0.9);
+            color: #FFFFFF;
+            border: none;
+          }
+
+          :global(.signup:hover),
+          :global(.btn:hover) {
+            background: rgba(244, 114, 182, 0.9);
+          }
+
+          :global(.signup:active),
+          :global(.btn:active) {
+            background: rgba(190, 24, 93, 0.9);
+          }
+
+          .hero-wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: clamp(1.5rem, 2.5vw, 2rem);
+          }
+
+          .hero-content {
+            max-width: clamp(20rem, 50vw, 28rem);
+            text-align: left;
+          }
+
+          .hero-content h1 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+          }
+
+          .hero-content .highlight {
+            font-size: clamp(2.5rem, 5vw, 3rem);
+          }
+
+          .hero-content p {
+            font-size: clamp(1rem, 1.8vw, 1.1rem);
+          }
+
+          .hero-content .buttons {
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+
+          .hero-image {
+            max-width: clamp(20rem, 45vw, 30rem);
+          }
+
+          .feature-grid, .service-grid {
+            grid-template-columns: repeat(4, 1fr);
+          }
+
+          .contact-info {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+
+        /* Ultra-Wide Desktop Styles (≥1440px) */
+        @media (min-width: 1440px) {
+          .container {
+            max-width: clamp(1280px, 90vw, 1600px);
+            padding: 0 clamp(1.25rem, 1.8vw, 2rem);
+          }
+
+          .logo {
+            font-size: clamp(1.5rem, 1.8vw, 1.8rem);
+          }
+
+          .nav-link {
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
+            padding: clamp(0.6rem, 1vw, 0.8rem) clamp(0.8rem, 1.5vw, 1.2rem);
+          }
+
+          .buttons {
+            gap: clamp(1rem, 1.5vw, 1.2rem);
+          }
+
+          :global(.button) {
+            font-size: clamp(1rem, 1vw, 1.2rem);
+            padding: clamp(0.8rem, 1.2vw, 1rem) clamp(1.8rem, 2vw, 2.2rem);
+            max-width: clamp(11rem, 12vw, 14rem);
+          }
+
+          .hero-content {
+            max-width: clamp(24rem, 50vw, 32rem);
+          }
+
+          .hero-content h1 {
+            font-size: clamp(2.2rem, 3.5vw, 2.8rem);
+          }
+
+          .hero-content .highlight {
+            font-size: clamp(2.8rem, 4.5vw, 3.5rem);
+          }
+
+          .hero-content p {
+            font-size: clamp(1.1rem, 1.5vw, 1.2rem);
+          }
+
+          .hero-image {
+            max-width: clamp(24rem, 45vw, 36rem);
+          }
+
+          .feature-grid, .service-grid {
+            grid-template-columns: repeat(4, 1fr);
+            gap: clamp(1rem, 2vw, 1.5rem);
+          }
+
+          .contact-info {
+            grid-template-columns: repeat(3, 1fr);
+            max-width: clamp(24rem, 80vw, 48rem);
           }
         }
       `}</style>
