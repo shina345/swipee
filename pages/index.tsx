@@ -1,11 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link'; // Correct case for Next.js
+import Link from 'next/link'; 
 import { useState } from 'react';
 
 const Home: NextPage = () => {
-  const fallbackImage = 'https://via.placeholder.com/600x400?text=Hero+Image';
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -85,7 +84,7 @@ const Home: NextPage = () => {
               sizes="(max-width: 768px) 80vw, 40vw"
               style={{ objectFit: 'contain' }}
               priority
-              onError={(e) => {
+              onError={() => {
                 // For Next/Image, fallback onError not supported. Use on loading error fallback in production
               }}
             />
