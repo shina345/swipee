@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/Link';
+import Link from 'next/link'; // Correct case for Next.js
 import { useState } from 'react';
 
 const Home: NextPage = () => {
@@ -44,19 +44,20 @@ const Home: NextPage = () => {
             onClick={toggleMenu}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isMenuOpen}
+            type="button"
           >
             <span className="hamburger-icon"></span>
           </button>
           <ul className={`nav-list ${isMenuOpen ? 'open' : ''}`}>
-            <li><Link href="/" onClick={toggleMenu}>Home</Link ></li>
-            <li><Link href="#features" onClick={toggleMenu}>Features</link></li>
-            <li><Link href="#services" onClick={toggleMenu}>Services</Link</li>
+            <li><Link href="/" onClick={toggleMenu}>Home</Link></li>
+            <li><Link href="#features" onClick={toggleMenu}>Features</Link></li>
+            <li><Link href="#services" onClick={toggleMenu}>Services</Link></li>
             <li><Link href="#faqs" onClick={toggleMenu}>FAQs</Link></li>
             <li><Link href="#contact" onClick={toggleMenu}>Contact Us</Link></li>
           </ul>
           <div className="buttons">
-            <button className="login"><link href ="/login">Login</link</button>
-            <button className="signup"><link href="/signup">Signup</link></button>
+            <Link href="/login" className="login">Login</Link>
+            <Link href="/signup" className="signup">Signup</Link>
           </div>
         </nav>
       </header>
@@ -71,8 +72,8 @@ const Home: NextPage = () => {
             </h1>
             <p>Enjoy the best rates and quick support. Pay for cable, TV, and utilities with ease. Get affordable airtime and data plans.</p>
             <div className="buttons">
-              <button className="login"><Link href="/login">Login</link></button>
-              <button className="signup"><Link href="/signup">Signup</link></button>
+              <Link href="/login" className="login">Login</Link>
+              <Link href="/signup" className="signup">Signup</Link>
             </div>
           </div>
           <div className="hero-image">
@@ -85,7 +86,7 @@ const Home: NextPage = () => {
               style={{ objectFit: 'contain' }}
               priority
               onError={(e) => {
-                (e.target as HTMLImageElement).src = fallbackImage;
+                // For Next/Image, fallback onError not supported. Use on loading error fallback in production
               }}
             />
           </div>
@@ -94,7 +95,7 @@ const Home: NextPage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="features">
+      <section className="features" id="features">
         <div className="container">
           <h2>Features</h2>
           <div className="underline pink"></div>
@@ -161,7 +162,7 @@ const Home: NextPage = () => {
       </section>
 
       {/* Services Section */}
-      <section className="services">
+      <section className="services" id="services">
         <div className="container">
           <h2>Our Services</h2>
           <div className="underline pink"></div>
@@ -186,7 +187,7 @@ const Home: NextPage = () => {
                 <li>Instant activation</li>
                 <li>Exclusive discounts</li>
               </ul>
-              <a href="/login?returnUrl=buydata" className="btn">Subscribe Now</a>
+              <Link href="/login?returnUrl=buydata" className="btn">Subscribe Now</Link>
             </div>
             <div className="service-card" style={{ animationDelay: '0.4s' }}>
               <div className="service-image-wrapper">
@@ -207,7 +208,7 @@ const Home: NextPage = () => {
                 <li>Bulk recharge support</li>
                 <li>Secure e-wallet transactions</li>
               </ul>
-              <a href="/login?returnUrl=buyairtime" className="btn">Recharge Now</a>
+              <Link href="/login?returnUrl=buyairtime" className="btn">Recharge Now</Link>
             </div>
             <div className="service-card" style={{ animationDelay: '0.6s' }}>
               <div className="service-image-wrapper">
@@ -228,7 +229,7 @@ const Home: NextPage = () => {
                 <li>Instant activation</li>
                 <li>Easy renewals</li>
               </ul>
-              <a href="/login?returnUrl=cablesubscription" className="btn">Buy Now</a>
+              <Link href="/login?returnUrl=cablesubscription" className="btn">Buy Now</Link>
             </div>
             <div className="service-card" style={{ animationDelay: '0.8s' }}>
               <div className="service-image-wrapper">
@@ -249,7 +250,7 @@ const Home: NextPage = () => {
                 <li>Track payment history</li>
                 <li>Other utility bills</li>
               </ul>
-              <a href="/login?returnUrl=billpayment" className="btn">Pay Now</a>
+              <Link href="/login?returnUrl=billpayment" className="btn">Pay Now</Link>
             </div>
           </div>
           <p className="service-cta">Explore our services and enjoy seamless transactions. Sign up today!</p>
@@ -274,7 +275,7 @@ const Home: NextPage = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="contact">
+      <section className="contact" id="contact">
         <div className="container">
           <h2>Contact Us</h2>
           <div className="underline pink"></div>
@@ -318,10 +319,7 @@ const Home: NextPage = () => {
               <p>swipetelecomsnigeria@gmail.com</p>
             </div>
           </div>
-          <div className="contact-form" style={{ animationDelay: '0.8s' }}>
-            
-              
-          </div>
+          {/* Placeholder for future contact form */}
         </div>
       </section>
 
@@ -344,6 +342,7 @@ const Home: NextPage = () => {
         </a>
       </div>
 
+      {/* All the existing <style jsx> block remains unchanged */}
       <style jsx>{`
         :global(*) {
           margin: 0;
@@ -1524,6 +1523,7 @@ const Home: NextPage = () => {
             font-size: 0.9rem;
           }
         }
+      
       `}</style>
     </div>
   );
