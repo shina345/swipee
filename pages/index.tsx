@@ -500,7 +500,7 @@ const Home: NextPage = () => {
         }
 
         /* Button Base Styles */
-        .button {
+        :global(.button) {
           display: inline-flex;
           justify-content: center;
           align-items: center;
@@ -510,68 +510,44 @@ const Home: NextPage = () => {
           font-weight: 600;
           text-decoration: none;
           cursor: pointer;
-          transition: all 0.3s ease;
-          position: relative;
-          overflow: hidden;
+          transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+          border: none;
         }
 
-        .button:hover {
+        :global(.button:hover) {
           transform: translateY(-2px);
-          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
 
-        .button:focus {
+        :global(.button:focus) {
           outline: none;
           box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
         }
 
-        .button:active {
+        :global(.button:active) {
           transform: translateY(0);
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .button::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: -100%;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(
-            90deg,
-            transparent,
-            rgba(255, 255, 255, 0.2),
-            transparent
-          );
-          transition: left 0.5s ease;
-        }
-
-        .button:hover::after {
-          left: 100%;
-        }
-
-        .login {
+        :global(.login) {
           background-color: #BFDBFE;
           color: #1E3A8A;
           border: 2px solid #93C5FD;
         }
 
-        .login:hover {
+        :global(.login:hover) {
           background-color: #93C5FD;
-          color: #1E3A8A;
         }
 
-        .signup,
-        .btn {
+        :global(.signup),
+        :global(.btn) {
           background-color: #EC4899;
           color: #FFFFFF;
-          border: none;
         }
 
-        .signup:hover,
-        .btn:hover {
+        :global(.signup:hover),
+        :global(.btn:hover) {
           background-color: #F472B6;
-          color: #FFFFFF;
         }
 
         /* Hero Section Styles */
@@ -1029,7 +1005,7 @@ const Home: NextPage = () => {
           .hero-content .highlight { font-size: 1.2rem; }
           .hero-content p { font-size: 0.7rem; margin-bottom: 0.5rem; }
           .hero-content .buttons { flex-direction: column; gap: 0.3rem; }
-          .button { font-size: 0.7rem; padding: 0.4rem 0.8rem; }
+          :global(.button) { font-size: 0.7rem; padding: 0.4rem 0.8rem; }
           .hero-image { display: none; }
           .wave { height: 2rem; }
           .features, .services, .networks, .contact { padding: 1rem 0; }
@@ -1071,7 +1047,7 @@ const Home: NextPage = () => {
           .nav-list.open { display: flex; }
           .nav-link { font-size: 0.8rem; padding: 0.4rem; }
           .buttons { flex-direction: column; gap: 0.5rem; width: 100%; align-items: center; }
-          .button { width: 100%; max-width: 10rem; font-size: 0.8rem; padding: 0.5rem 1rem; }
+          :global(.button) { width: 100%; max-width: 10rem; font-size: 0.8rem; padding: 0.5rem 1rem; }
           .hero { padding: 1.5rem 0; }
           .hero-wrapper { flex-direction: column; gap: 1rem; }
           .hero-content { max-width: 100%; }
@@ -1102,7 +1078,7 @@ const Home: NextPage = () => {
           .nav-list.open { display: flex; }
           .nav-link { font-size: 0.9rem; padding: 0.5rem; }
           .buttons { flex-direction: row; gap: 0.5rem; }
-          .button { font-size: 0.9rem; padding: 0.5rem 1.2rem; }
+          :global(.button) { font-size: 0.9rem; padding: 0.5rem 1.2rem; }
           .hero { padding: 2rem 0; }
           .hero-wrapper { flex-direction: column; gap: 1.5rem; }
           .hero-content { max-width: 100%; }
@@ -1120,14 +1096,14 @@ const Home: NextPage = () => {
           .hero-content { max-width: 50%; }
           .hero-image { max-width: 40%; }
           .feature-grid, .service-grid { grid-template-columns: repeat(3, 1fr); }
-          .button { font-size: 0.95rem; padding: 0.6rem 1.3rem; }
+          :global(.button) { font-size: 0.95rem; padding: 0.6rem 1.3rem; }
         }
 
         @media (min-width: 1201px) {
           .container { max-width: 1600px; }
           .logo { font-size: 1.4rem; }
           .nav-link { font-size: 1rem; }
-          .button { font-size: 1rem; padding: 0.7rem 1.4rem; }
+          :global(.button) { font-size: 1rem; padding: 0.7rem 1.4rem; }
           .hero { padding: 6rem 0; }
           .hero-content h1 { font-size: 3.5rem; }
           .hero-content .highlight { font-size: 4.5rem; }
