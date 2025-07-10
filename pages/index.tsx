@@ -539,15 +539,35 @@ const Home: NextPage = () => {
           text-decoration: none;
           text-align: center;
           cursor: pointer;
-          transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+          transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
           border: none;
           line-height: 1.5;
           touch-action: manipulation;
+          position: relative;
+          overflow: hidden;
+        }
+
+        :global(.button::after) {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 0;
+          height: 0;
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+          transition: width 0.4s ease, height 0.4s ease;
+        }
+
+        :global(.button:hover::after) {
+          width: 200%;
+          height: 200%;
         }
 
         :global(.button:hover) {
-          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
-          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          transform: translateY(-3px);
         }
 
         :global(.button:focus) {
@@ -556,7 +576,7 @@ const Home: NextPage = () => {
         }
 
         :global(.button:active) {
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
           transform: translateY(0);
         }
 
@@ -1046,8 +1066,50 @@ const Home: NextPage = () => {
 
           :global(.button) {
             font-size: 1.1rem;
-            padding: 0.75rem 1.5rem;
-            max-width: 10rem;
+            padding: 0.75rem 2rem;
+            max-width: 12rem;
+            border-radius: 12px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          }
+
+          :global(.login) {
+            background: linear-gradient(45deg, #93C5FD, #BFDBFE);
+            color: #1E3A8A;
+            border: 2px solid #3B82F6;
+          }
+
+          :global(.login:hover) {
+            background: linear-gradient(45deg, #60A5FA, #93C5FD);
+            box-shadow: 0 6px 14px rgba(59, 130, 246, 0.3);
+            transform: translateY(-3px) scale(1.02);
+          }
+
+          :global(.login:active) {
+            box-shadow: 0 2px 6px rgba(59, 130, 246, 0.2);
+            transform: translateY(0) scale(1);
+          }
+
+          :global(.signup),
+          :global(.btn) {
+            background: linear-gradient(45deg, #EC4899, #F472B6);
+            color: #FFFFFF;
+            border: none;
+          }
+
+          :global(.signup:hover),
+          :global(.btn:hover) {
+            background: linear-gradient(45deg, #DB2777, #EC4899);
+            box-shadow: 0 6px 14px rgba(236, 72, 153, 0.3);
+            transform: translateY(-3px) scale(1.02);
+          }
+
+          :global(.signup:active),
+          :global(.btn:active) {
+            box-shadow: 0 2px 6px rgba(236, 72, 153, 0.2);
+            transform: translateY(0) scale(1);
           }
 
           .hero-wrapper {
@@ -1146,6 +1208,27 @@ const Home: NextPage = () => {
             font-size: 1rem;
             padding: 0.75rem 1.5rem;
             max-width: 100%;
+          }
+
+          :global(.login) {
+            background-color: #BFDBFE;
+            color: #1E3A8A;
+            border: 2px solid #93C5FD;
+          }
+
+          :global(.login:hover) {
+            background-color: #93C5FD;
+          }
+
+          :global(.signup),
+          :global(.btn) {
+            background-color: #EC4899;
+            color: #FFFFFF;
+          }
+
+          :global(.signup:hover),
+          :global(.btn:hover) {
+            background-color: #F472B6;
           }
 
           .hero-wrapper {
